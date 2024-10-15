@@ -1,0 +1,9 @@
+# ninja log v6
+6	1343	7506827163114261	codeEdit_autogen/timestamp	fc3f6a82a795a684
+6	1343	7506827163114261	codeEdit_autogen/mocs_compilation.cpp	fc3f6a82a795a684
+6	1343	7506827163114261	D:/Qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/codeEdit_autogen/timestamp	fc3f6a82a795a684
+6	1343	7506827163114261	D:/Qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/codeEdit_autogen/mocs_compilation.cpp	fc3f6a82a795a684
+1349	4668	7506827164924867	CMakeFiles/codeEdit.dir/codeEdit_autogen/mocs_compilation.cpp.obj	660ed621b9929f12
+1399	4756	7506827165331645	CMakeFiles/codeEdit.dir/main.cpp.obj	299fb6fdbc9aff37
+1458	4954	7506827166014427	CMakeFiles/codeEdit.dir/mainwindow.cpp.obj	a0613c5a98fbf74e
+4954	5346	7506827200976482	codeEdit.exe	b4e266dcb1f0c484
