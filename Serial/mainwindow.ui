@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>853</width>
+    <height>624</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="1,7" columnstretch="0">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QWidget" name="widget_3" native="true">
+          <property name="styleSheet">
+           <string notr="true">
+background-color: rgb(248, 248, 248);</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="2,1">
+           <item>
+            <widget class="QPlainTextEdit" name="plainTextEdit_receive"/>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="7,2">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QPlainTextEdit" name="plainTextEdit_send"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="send_btn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+background-color: rgb(255, 255, 255);
+border:1px solid gray;
+border-radius:10px;
+padding:2px 4px;
+border-style: outset;
+}
+ QPushButton:hover{
+background-color:rgb(229, 241, 251); 
+color: black;
+}
+ QPushButton:pressed{
+background-color:rgb(204, 228, 247);
+border-style: inset;
+}</string>
+               </property>
+               <property name="text">
+                <string>发送</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="widget_2" native="true">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(248, 248, 248);</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="1">
+            <widget class="QComboBox" name="comboBox_baud">
+             <item>
+              <property name="text">
+               <string>9600</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>115200</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>停止位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="comboBox_dataBit">
+             <item>
+              <property name="text">
+               <string>8</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>7</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>6</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>端口号</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="customCombox" name="comboBox_serialName"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>校验位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="comboBox_checkBit">
+             <item>
+              <property name="text">
+               <string>无</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>奇校验</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>偶校验</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>波特率</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QComboBox" name="comboBox_stopBit">
+             <item>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1.5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>数据位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="2">
+            <widget class="QPushButton" name="open_btn">
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+border:1px solid gray;
+border-radius:5px;
+padding:2px 4px;
+border-style: outset;
+}
+QPushButton[color=&quot;on&quot;]
+{
+	background-color: rgb(255, 255, 255);
+}
+QPushButton[color=&quot;off&quot;]
+{
+	background-color: rgb(85, 170, 0);
+}
+ QPushButton:hover{
+background-color:rgb(229, 241, 251); 
+color: black;
+}
+ QPushButton:pressed{
+background-color:rgb(204, 228, 247);
+border-style: inset;
+}</string>
+             </property>
+             <property name="text">
+              <string>打开</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 255);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 255, 255);</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="widget" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="page1_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+    background-color: lightgrey;
+    color: grey;
+    border-radius: 0px;
+    padding: 8px;
+    border-top: none;
+    border-left: none;            /* 左边框无 */
+    border-right: none;           /* 右边框无 */
+    border-bottom: none;          /* 底边框无 */
+
+}
+
+QPushButton:hover {
+    border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+}
+
+QPushButton:pressed, QPushButton:checked {
+    color: black;    
+    border-radius: 0px;
+    border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+      background-color: white;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}</string>
+         </property>
+         <property name="text">
+          <string>第一页</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="page2_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+    background-color: lightgrey;
+    color: grey;
+    border-radius: 0px;
+    padding: 8px;
+    border-top: none;
+    border-left: none;            /* 左边框无 */
+    border-right: none;           /* 右边框无 */
+    border-bottom: none;          /* 底边框无 */
+
+}
+
+QPushButton:hover {
+    border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+}
+
+QPushButton:pressed, QPushButton:checked {
+    color: black;    
+    border-radius: 0px;
+    border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+      background-color: white;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}</string>
+         </property>
+         <property name="text">
+          <string>第二页</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="page3_btn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+    background-color: lightgrey;
+    color: grey;
+    border-radius: 0px;
+    padding: 8px;
+    border-top: none;
+    border-left: none;            /* 左边框无 */
+    border-right: none;           /* 右边框无 */
+    border-bottom: none;          /* 底边框无 */
+
+}
+
+QPushButton:hover {
+    border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+}
+
+QPushButton:pressed, QPushButton:checked {
+    color: black;    
+    border-radius: 0px;
+    border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+      background-color: white;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}</string>
+         </property>
+         <property name="text">
+          <string>第三页</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>853</width>
+     <height>27</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>customCombox</class>
+   <extends>QComboBox</extends>
+   <header>../../../../code/Serial/customcombox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
