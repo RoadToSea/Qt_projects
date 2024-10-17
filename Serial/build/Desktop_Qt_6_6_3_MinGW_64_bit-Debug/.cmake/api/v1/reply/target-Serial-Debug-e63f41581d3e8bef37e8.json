@@ -384,11 +384,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "Serial_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "Serial_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "Serial_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Serial::@6890427a1f51a3e7e1df",

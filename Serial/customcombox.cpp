@@ -13,4 +13,5 @@ void customCombox::showPopup()
         addItem(info.portName());
     }
     QComboBox::showPopup();
+    pullDownList();
 }

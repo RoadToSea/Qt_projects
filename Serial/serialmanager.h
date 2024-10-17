@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
+#include <QTimer>
+
 
 #define DEBUG 1
 

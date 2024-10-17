@@ -40,7 +40,7 @@
        <property name="styleSheet">
         <string notr="true"/>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,1">
         <item>
          <widget class="QWidget" name="widget_3" native="true">
           <property name="font">
@@ -246,6 +246,18 @@ border-style: inset;
            <string notr="true">background-color: rgb(248, 248, 248);</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="checkBox_hexReceive">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>16进制接收</string>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="0">
             <widget class="QLabel" name="label_2">
              <property name="font">
@@ -262,8 +274,31 @@ border-style: inset;
             <widget class="QComboBox" name="comboBox_dataBit">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>-1</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+  background-color: rgb(255, 255, 255);
+  font-size:16px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:5px 5px 0px 0px;
+}   
+QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+	width: 20px;
+      border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+  }
+
+QComboBox::down-arrow {
+    image: url(:/img/arrow.png);
+}</string>
              </property>
              <item>
               <property name="text">
@@ -341,11 +376,31 @@ border-style: inset;
             <widget class="customCombox" name="comboBox_serialName">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>-1</pointsize>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true"/>
+              <string notr="true">QComboBox{
+  background-color: rgb(255, 255, 255);
+  font-size:16px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:5px 5px 0px 0px;
+}   
+QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+	width: 20px;
+      border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+  }
+
+QComboBox::down-arrow {
+    image: url(:/img/arrow.png);
+}</string>
              </property>
             </widget>
            </item>
@@ -353,8 +408,31 @@ border-style: inset;
             <widget class="QComboBox" name="comboBox_checkBit">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>-1</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+  background-color: rgb(255, 255, 255);
+  font-size:16px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:5px 5px 0px 0px;
+}   
+QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+	width: 20px;
+      border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+  }
+
+QComboBox::down-arrow {
+    image: url(:/img/arrow.png);
+}</string>
              </property>
              <item>
               <property name="text">
@@ -373,6 +451,18 @@ border-style: inset;
              </item>
             </widget>
            </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="checkBox_hexSend">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>16进制发送</string>
+             </property>
+            </widget>
+           </item>
            <item row="4" column="0">
             <widget class="QLabel" name="label_5">
              <property name="font">
@@ -389,8 +479,31 @@ border-style: inset;
             <widget class="QComboBox" name="comboBox_baud">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>-1</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+  background-color: rgb(255, 255, 255);
+  font-size:16px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:5px 5px 0px 0px;
+}   
+QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+	width: 20px;
+      border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+  }
+
+QComboBox::down-arrow {
+    image: url(:/img/arrow.png);
+}</string>
              </property>
              <item>
               <property name="text">
@@ -420,8 +533,31 @@ border-style: inset;
             <widget class="QComboBox" name="comboBox_stopBit">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>-1</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QComboBox{
+  background-color: rgb(255, 255, 255);
+  font-size:16px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid rgba(228,228,228,1);
+  border-radius:5px 5px 0px 0px;
+}   
+QComboBox::drop-down {
+      subcontrol-origin: padding;
+      subcontrol-position: top right;
+	width: 20px;
+      border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+  }
+
+QComboBox::down-arrow {
+    image: url(:/img/arrow.png);
+}</string>
              </property>
              <item>
               <property name="text">
@@ -452,27 +588,13 @@ border-style: inset;
              </property>
             </widget>
            </item>
-           <item row="6" column="1">
-            <widget class="QCheckBox" name="checkBox_hexSend">
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>16进制发送</string>
-             </property>
-            </widget>
+           <item row="7" column="0">
+            <widget class="QLineEdit" name="lineEdit_time"/>
            </item>
-           <item row="6" column="0">
-            <widget class="QCheckBox" name="checkBox_hexReceive">
-             <property name="font">
-              <font>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
+           <item row="7" column="1">
+            <widget class="QCheckBox" name="checkBox_time">
              <property name="text">
-              <string>16进制接收</string>
+              <string>定时发送(ms)</string>
              </property>
             </widget>
            </item>
@@ -542,6 +664,7 @@ border-style: inset;
 
 QPushButton:hover {
     border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+	background-color: rgb(231, 247, 255);
 }
 
 QPushButton:pressed, QPushButton:checked {
@@ -590,6 +713,7 @@ QPushButton:disabled {
 
 QPushButton:hover {
     border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+	background-color: rgb(231, 247, 255);
 }
 
 QPushButton:pressed, QPushButton:checked {
@@ -638,6 +762,7 @@ QPushButton:disabled {
 
 QPushButton:hover {
     border-top: 4px solid rgb(4,126,154);  /* 上边框为2px黑色实线 */
+	background-color: rgb(231, 247, 255);
 }
 
 QPushButton:pressed, QPushButton:checked {

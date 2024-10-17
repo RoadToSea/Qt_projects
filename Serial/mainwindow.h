@@ -20,6 +20,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void updateCount();
+    void sendHandle(void);
 
 private slots:
     void on_page1_btn_clicked();
@@ -32,7 +33,7 @@ private slots:
 
     void on_send_btn_clicked();
 
-    void slot_updateSerialPorts();
+    void slot_showSerialPortsDcp();
 
     void slot_showRead();
 
@@ -44,8 +45,14 @@ private slots:
 
     void on_checkBox_hexSend_stateChanged(int arg1);
 
+    void on_checkBox_time_stateChanged(int arg1);
+
+    void slot_delaySend(void);
+
 private:
     Ui::MainWindow *ui;
     SerialManager* serial;
+    QTimer* sendTimer;
+    void chooseSelect(bool choice);
 };
 #endif // MAINWINDOW_H

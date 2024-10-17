@@ -1,6 +1,7 @@
 D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEGA46WW/moc_serialmanager.cpp: D:/Qt/code/Serial/serialmanager.h \
   D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/moc_predefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/QObject \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QTimer \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -13,6 +14,7 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/6.6.3/mingw_64/include/QtCore/qatomic.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qatomic_cxx11.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbasicatomic.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qbasictimer.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbindingstorage.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearray.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -83,6 +85,7 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtcoreexports.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qtimer.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtnoop.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h \

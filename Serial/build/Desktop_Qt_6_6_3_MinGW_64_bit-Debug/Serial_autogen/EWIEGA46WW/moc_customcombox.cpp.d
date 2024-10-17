@@ -1,7 +1,5 @@
-D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Qt/code/Serial/mainwindow.h \
+D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEGA46WW/moc_customcombox.cpp: D:/Qt/code/Serial/customcombox.h \
   D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/moc_predefs.h \
-  D:/Qt/6.6.3/mingw_64/include/QtCore/QObject \
-  D:/Qt/6.6.3/mingw_64/include/QtCore/QTimer \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -16,7 +14,6 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/6.6.3/mingw_64/include/QtCore/qatomic.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qatomic_cxx11.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbasicatomic.h \
-  D:/Qt/6.6.3/mingw_64/include/QtCore/qbasictimer.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbindingstorage.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearray.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -46,7 +43,6 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/6.6.3/mingw_64/include/QtCore/qglobalstatic.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qhash.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qhashfunctions.h \
-  D:/Qt/6.6.3/mingw_64/include/QtCore/qiodevice.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qiodevicebase.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qiterable.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qiterator.h \
@@ -105,7 +101,6 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtextstream.h \
-  D:/Qt/6.6.3/mingw_64/include/QtCore/qtimer.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtnoop.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -147,20 +142,12 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/6.6.3/mingw_64/include/QtGui/qvalidator.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
-  D:/Qt/6.6.3/mingw_64/include/QtSerialPort/QSerialPort \
-  D:/Qt/6.6.3/mingw_64/include/QtSerialPort/QSerialPortInfo \
-  D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qserialport.h \
-  D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qserialportglobal.h \
-  D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qserialportinfo.h \
-  D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qtserialportexports.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QComboBox \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qabstractslider.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qcombobox.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qframe.h \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qrubberband.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qslider.h \
@@ -370,6 +357,4 @@ D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Serial_autogen/EWIEG
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h \
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/Qt/code/Serial/customcombox.h \
-  D:/Qt/code/Serial/serialmanager.h
+  D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
