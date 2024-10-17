@@ -16,6 +16,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::updateCount()
+{
+    QString info = QString("发送: %1\t接收: %2")
+                       .arg(serial->getsendCount())
+                       .arg(serial->getreceiveCount());
+    ui->label_count->setText(info);
+}
+
 
 void MainWindow::on_page1_btn_clicked()
 {
@@ -42,7 +50,9 @@ void MainWindow::slot_updateSerialPorts()
 void MainWindow::slot_showRead()
 {
     QString message = serial->read();
-    ui->plainTextEdit_receive->setPlainText(message);
+    LOG("receive Info :"<<message);
+    ui->plainTextEdit_receive->appendPlainText(message);
+    updateCount();
 }
 
 
@@ -72,7 +82,11 @@ void MainWindow::on_open_btn_clicked()
             parity = QSerialPort::EvenParity;
         }
         serial = new SerialManager(serialName, baud, dataBits, parity, stopBit);
-
+        if(!serial->isopen())
+        {
+            QMessageBox::warning(this,"警告","串口开启失败");
+            return;
+        }
 
         //将串口接收绑定显示槽函数
         connect(serial->getInstance(),&QSerialPort::readyRead,this,&MainWindow::slot_showRead);
@@ -104,9 +118,42 @@ void MainWindow::on_send_btn_clicked()
         QString message = ui->plainTextEdit_send->toPlainText();
         if(!serial->send(message))
         {
-            qDebug()<<"send error";
+            LOG("send error");
+            updateCount();
         }
     }
 }
 
+
+
+void MainWindow::on_clearPlace_btn_clicked()
+{
+    ui->plainTextEdit_receive->clear();
+}
+
+
+void MainWindow::on_clearCount_btn_clicked()
+{
+    serial->resetCount();
+    updateCount();
+}
+
+
+
+void MainWindow::on_checkBox_hexReceive_stateChanged(int arg1)
+{
+    if(arg1 == Qt::Checked)
+        serial->sethexReceive(true);
+    else
+        serial->sethexReceive(false);
+}
+
+
+void MainWindow::on_checkBox_hexSend_stateChanged(int arg1)
+{
+    if(arg1 == Qt::Checked)
+        serial->sethexSend(true);
+    else
+        serial->sethexSend(false);
+}
 

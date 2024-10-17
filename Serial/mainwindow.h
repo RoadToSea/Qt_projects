@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void updateCount();
 
 private slots:
     void on_page1_btn_clicked();
@@ -34,6 +35,14 @@ private slots:
     void slot_updateSerialPorts();
 
     void slot_showRead();
+
+    void on_clearPlace_btn_clicked();
+
+    void on_clearCount_btn_clicked();
+
+    void on_checkBox_hexReceive_stateChanged(int arg1);
+
+    void on_checkBox_hexSend_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;

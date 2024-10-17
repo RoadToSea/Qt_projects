@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/纸飞机发送.png</file>
+        <file>img/arrow.png</file>
+    </qresource>
+</RCC>

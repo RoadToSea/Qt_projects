@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>853</width>
-    <height>624</height>
+    <width>1050</width>
+    <height>743</height>
    </rect>
   </property>
   <property name="font">
    <font>
-    <pointsize>10</pointsize>
+    <pointsize>9</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -25,6 +25,11 @@
     </property>
     <item row="1" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="styleSheet">
        <string notr="true"/>
       </property>
@@ -38,13 +43,132 @@
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QWidget" name="widget_3" native="true">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">
 background-color: rgb(248, 248, 248);</string>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout" stretch="2,1">
+          <layout class="QVBoxLayout" name="verticalLayout" stretch="9,1,4">
            <item>
-            <widget class="QPlainTextEdit" name="plainTextEdit_receive"/>
+            <widget class="QPlainTextEdit" name="plainTextEdit_receive">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_count">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>发送:    0  接收:   0</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="clearPlace_btn">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+border:1px solid gray;
+border-radius:5px;
+padding:2px 4px;
+border-style: outset;
+}
+QPushButton[color=&quot;on&quot;]
+{
+	background-color: rgb(255, 255, 255);
+}
+QPushButton[color=&quot;off&quot;]
+{
+	background-color: rgb(85, 170, 0);
+}
+ QPushButton:hover{
+background-color:rgb(229, 241, 251); 
+color: black;
+}
+ QPushButton:pressed{
+background-color:rgb(204, 228, 247);
+border-style: inset;
+}</string>
+               </property>
+               <property name="text">
+                <string>清空接收</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="clearCount_btn">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton
+{
+border:1px solid gray;
+border-radius:5px;
+padding:2px 4px;
+border-style: outset;
+}
+QPushButton[color=&quot;on&quot;]
+{
+	background-color: rgb(255, 255, 255);
+}
+QPushButton[color=&quot;off&quot;]
+{
+	background-color: rgb(85, 170, 0);
+}
+ QPushButton:hover{
+background-color:rgb(229, 241, 251); 
+color: black;
+}
+ QPushButton:pressed{
+background-color:rgb(204, 228, 247);
+border-style: inset;
+}</string>
+               </property>
+               <property name="text">
+                <string>清空计数</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="7,2">
@@ -52,7 +176,13 @@ background-color: rgb(248, 248, 248);</string>
               <number>2</number>
              </property>
              <item>
-              <widget class="QPlainTextEdit" name="plainTextEdit_send"/>
+              <widget class="QPlainTextEdit" name="plainTextEdit_send">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="QPushButton" name="send_btn">
@@ -86,7 +216,17 @@ border-style: inset;
 }</string>
                </property>
                <property name="text">
-                <string>发送</string>
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="src.qrc">
+                 <normaloff>:/img/纸飞机发送.png</normaloff>:/img/纸飞机发送.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>76</width>
+                 <height>76</height>
+                </size>
                </property>
               </widget>
              </item>
@@ -97,33 +237,34 @@ border-style: inset;
         </item>
         <item>
          <widget class="QWidget" name="widget_2" native="true">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(248, 248, 248);</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_2">
-           <item row="1" column="1">
-            <widget class="QComboBox" name="comboBox_baud">
-             <item>
-              <property name="text">
-               <string>9600</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>115200</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_5">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
-              <string>停止位</string>
+              <string>波特率</string>
              </property>
             </widget>
            </item>
            <item row="2" column="1">
             <widget class="QComboBox" name="comboBox_dataBit">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <item>
               <property name="text">
                <string>8</string>
@@ -148,78 +289,27 @@ border-style: inset;
            </item>
            <item row="0" column="0">
             <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="text">
               <string>端口号</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-            <widget class="customCombox" name="comboBox_serialName"/>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_4">
-             <property name="text">
-              <string>校验位</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QComboBox" name="comboBox_checkBit">
-             <item>
-              <property name="text">
-               <string>无</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>奇校验</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>偶校验</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="text">
-              <string>波特率</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QComboBox" name="comboBox_stopBit">
-             <item>
-              <property name="text">
-               <string>1</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>1.5</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>2</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>数据位</string>
-             </property>
-            </widget>
-           </item>
            <item row="5" column="0" colspan="2">
             <widget class="QPushButton" name="open_btn">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
              <property name="styleSheet">
               <string notr="true">QPushButton
 {
+	background-color: rgb(255, 255, 255);
 border:1px solid gray;
 border-radius:5px;
 padding:2px 4px;
@@ -247,6 +337,145 @@ border-style: inset;
              </property>
             </widget>
            </item>
+           <item row="0" column="1">
+            <widget class="customCombox" name="comboBox_serialName">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QComboBox" name="comboBox_checkBit">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>无</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>奇校验</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>偶校验</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>停止位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="comboBox_baud">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>9600</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>115200</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>校验位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QComboBox" name="comboBox_stopBit">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1.5</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>数据位</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QCheckBox" name="checkBox_hexSend">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>16进制发送</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="checkBox_hexReceive">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>16进制接收</string>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </item>
@@ -266,6 +495,11 @@ border-style: inset;
     </item>
     <item row="0" column="0">
      <widget class="QWidget" name="widget" native="true">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <property name="spacing">
         <number>0</number>
@@ -287,10 +521,15 @@ border-style: inset;
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton
 {
-    background-color: lightgrey;
+	background-color: white;
     color: grey;
     border-radius: 0px;
     padding: 8px;
@@ -330,10 +569,15 @@ QPushButton:disabled {
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton
 {
-    background-color: lightgrey;
+    background-color: white;
     color: grey;
     border-radius: 0px;
     padding: 8px;
@@ -373,10 +617,15 @@ QPushButton:disabled {
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton
 {
-    background-color: lightgrey;
+    background-color: white;
     color: grey;
     border-radius: 0px;
     padding: 8px;
@@ -418,8 +667,8 @@ QPushButton:disabled {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>853</width>
-     <height>27</height>
+     <width>1050</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -432,6 +681,8 @@ QPushButton:disabled {
    <header>../../../../code/Serial/customcombox.h</header>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
  <connections/>
 </ui>
