@@ -23,6 +23,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(codeEdit
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        codeeditor.h codeeditor.cpp
+        linearea.h linearea.cpp
+        highlighter.h highlighter.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET codeEdit APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
