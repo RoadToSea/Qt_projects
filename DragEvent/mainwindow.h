@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDropEvent>
+#include <QDragEnterEvent>
+#include <QMimeData>
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +21,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+protected:
+    virtual  void dragEnterEvent(QDragEnterEvent *e) override;
+    virtual  void dropEvent(QDropEvent *e) override;
 
 private:
     Ui::MainWindow *ui;
