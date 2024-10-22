@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-7d08744389c40d9d1419.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "keyEvents",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "keyEvents::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-keyEvents-Debug-9fc19ae18057033b0af4.json",
+					"name" : "keyEvents",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "keyEvents_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-keyEvents_autogen-Debug-8de977343a0c4b5d370f.json",
+					"name" : "keyEvents_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "keyEvents_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-keyEvents_autogen_timestamp_deps-Debug-7ee82939f362378bb253.json",
+					"name" : "keyEvents_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Qt/code/keyEvents/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
+		"source" : "D:/Qt/code/keyEvents"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

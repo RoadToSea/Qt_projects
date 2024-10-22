@@ -14,12 +14,14 @@ QT_END_NAMESPACE
 class Widget : public QWidget
 {
     Q_OBJECT
-
+public slots:
+    void onButtonClicked();
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 protected:
     bool eventFilter(QObject *obj, QEvent *ev) override;
+    bool event(QEvent* ev) override;
 
 private:
     Ui::Widget *ui;

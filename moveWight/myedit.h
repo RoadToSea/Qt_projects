@@ -10,6 +10,7 @@ class myEdit : public QLineEdit
 public:
     myEdit(QWidget* parent);
     bool event(QEvent* ev) override;
+    bool eventFilter(QObject *obj, QEvent *ev) override;
 };
 
 #endif // MYEDIT_H

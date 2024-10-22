@@ -297,6 +297,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Qt/code/moveWight/Mycustomevent.h",
+			"MU",
+			"EWIEGA46WW/moc_Mycustomevent.cpp",
+			null
+		],
+		[
 			"D:/Qt/code/moveWight/myedit.h",
 			"MU",
 			"EWIEGA46WW/moc_myedit.cpp",
@@ -379,6 +385,7 @@
 	"SETTINGS_FILE" : "D:/Qt/code/moveWight/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/moveWight_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/Qt/code/moveWight/Mycustomevent.cpp", "MU", null ],
 		[ "D:/Qt/code/moveWight/main.cpp", "MU", null ],
 		[ "D:/Qt/code/moveWight/myedit.cpp", "MU", null ],
 		[ "D:/Qt/code/moveWight/widget.cpp", "MU", null ]

@@ -1,0 +1,15 @@
+# ninja log v6
+7	1125	7512985341622189	keyEvents_autogen/timestamp	1694dad418ec96c4
+7	1125	7512985341622189	keyEvents_autogen/mocs_compilation.cpp	1694dad418ec96c4
+7	1125	7512985341622189	D:/Qt/code/keyEvents/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/keyEvents_autogen/timestamp	1694dad418ec96c4
+7	1125	7512985341622189	D:/Qt/code/keyEvents/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/keyEvents_autogen/mocs_compilation.cpp	1694dad418ec96c4
+1131	4483	7512985343142877	CMakeFiles/keyEvents.dir/keyEvents_autogen/mocs_compilation.cpp.obj	50e491b61d173a00
+1178	4560	7512985343611605	CMakeFiles/keyEvents.dir/main.cpp.obj	9ea4f652b6835d5b
+1228	4643	7512985344081611	CMakeFiles/keyEvents.dir/widget.cpp.obj	239cc76bae6132bb
+4643	5075	7512985378260580	keyEvents.exe	5799f62ba3f5715f
+33	389	7512985561521206	keyEvents_autogen/timestamp	1694dad418ec96c4
+33	389	7512985561521206	keyEvents_autogen/mocs_compilation.cpp	1694dad418ec96c4
+33	389	7512985561521206	D:/Qt/code/keyEvents/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/keyEvents_autogen/timestamp	1694dad418ec96c4
+33	389	7512985561521206	D:/Qt/code/keyEvents/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/keyEvents_autogen/mocs_compilation.cpp	1694dad418ec96c4
+390	3775	7512985565191987	CMakeFiles/keyEvents.dir/widget.cpp.obj	239cc76bae6132bb
+3775	4152	7512985599042569	keyEvents.exe	5799f62ba3f5715f

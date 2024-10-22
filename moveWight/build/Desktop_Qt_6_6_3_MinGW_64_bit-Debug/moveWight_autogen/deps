@@ -552,6 +552,8 @@ moveWight_autogen/timestamp: \
 	D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
 	D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
 	D:/Qt/code/moveWight/CMakeLists.txt \
+	D:/Qt/code/moveWight/Mycustomevent.cpp \
+	D:/Qt/code/moveWight/Mycustomevent.h \
 	D:/Qt/code/moveWight/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/Qt/code/moveWight/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeCXXCompiler.cmake \
 	D:/Qt/code/moveWight/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
