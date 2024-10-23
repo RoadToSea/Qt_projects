@@ -7,7 +7,7 @@
 #include <QTimer>
 
 
-#define DEBUG 1
+#define DEBUG 0
 
 #if DEBUG
     #define LOG(message)    qDebug()<<message
@@ -19,6 +19,7 @@ class SerialManager : public QObject
 {
     Q_OBJECT
 signals:
+    void readyRead();
 public:
     //流控不可改成硬件流控,否则发送不成功
     explicit SerialManager(const QString &serialName,
@@ -29,7 +30,7 @@ public:
                                           QSerialPort::FlowControl flowControl = QSerialPort::SoftwareControl,
                            QObject *parent = nullptr);
     ~SerialManager();
-    bool send(QString &mes);
+    bool send(QString mes);
     QString read();
     QSerialPort* getInstance();
     bool isopen();
@@ -39,12 +40,14 @@ public:
     void sethexReceive(bool s);
     void resetCount();
 private:
+    QByteArray buf;
     QSerialPort* m_serial;
     bool state=false;
     unsigned sendCount=0;
     unsigned receiveCount=0;
     bool hexSend=false;
     bool hexReceive =false;
+    void readHandler();
 };
 
 

@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Serial::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Serial-Debug-d8f15f5a085e2669b02a.json",
+					"jsonFile" : "target-Serial-Debug-20dea4bb0c2ae3fa011d.json",
 					"name" : "Serial",
 					"projectIndex" : 0
 				},
@@ -58,7 +58,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Serial_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Serial_autogen_timestamp_deps-Debug-4a3785efab4ff2f66850.json",
+					"jsonFile" : "target-Serial_autogen_timestamp_deps-Debug-e94649249c000bb42f4f.json",
 					"name" : "Serial_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
@@ -68,12 +68,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
-		"source" : "D:/Qt/code/Serial"
+		"build" : "D:/qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
+		"source" : "D:/qt/code/Serial"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 7
+		"minor" : 6
 	}
 }

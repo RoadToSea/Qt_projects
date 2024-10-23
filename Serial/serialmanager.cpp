@@ -26,10 +26,8 @@ SerialManager::SerialManager(const QString &serialName,
         LOG("无法打开串口：" << serialName);
         return;  // 如果打开失败，直接返回
     }
-    else
-    {
-        state = true;
-    }
+    state = true;
+    connect(m_serial,&QSerialPort::readyRead,this,&SerialManager::readHandler);
 }
 
 SerialManager::~SerialManager()
@@ -38,8 +36,9 @@ SerialManager::~SerialManager()
     state=false;
 }
 
-bool SerialManager::send(QString &mes)
+bool SerialManager::send(QString mes)
 {
+    mes.append("\n\r");
     QByteArray dataToSend = mes.toUtf8();
     if(hexSend)
     {
@@ -55,18 +54,17 @@ bool SerialManager::send(QString &mes)
     }
     sendCount+=dataToSend.length();
     m_serial->flush(); // 确保所有数据都已发送
-        LOG("发送成功，字节数：" << bytesWritten<<"数据是:"<<dataToSend);
+    LOG("发送成功，字节数：" << bytesWritten<<"数据是:"<<dataToSend);
     return true;
 }
 
 QString SerialManager::read()
 {
-    QByteArray data = m_serial->readAll();     // 从串口读取数据
-    receiveCount+=data.length();
+    receiveCount+=buf.length();
     QString ret;
     if(hexReceive)
     {
-        QString temp=QString::fromUtf8(QByteArray::fromHex(data));
+        QString temp=QString::fromUtf8(QByteArray::fromHex(buf));
         for(int i=0;i<temp.length();i+=2)
         {
             ret.append(temp.mid(i,2));
@@ -75,9 +73,9 @@ QString SerialManager::read()
     }
     else
     {
-        ret=QString::fromUtf8(data);
+        ret=QString::fromUtf8(buf);
     }
-
+    buf.clear();
     return ret;            // 将 QByteArray 转换为 QString
 }
 
@@ -116,4 +114,12 @@ void SerialManager::resetCount()
     sendCount=0;
     receiveCount=0;
 }
+
+void SerialManager::readHandler()
+{
+    buf.append(m_serial->readAll());
+    emit readyRead();
+}
+
+
 
