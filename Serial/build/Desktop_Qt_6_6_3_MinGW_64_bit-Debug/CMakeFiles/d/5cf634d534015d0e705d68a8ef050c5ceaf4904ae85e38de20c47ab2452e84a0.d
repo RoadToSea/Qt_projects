@@ -1,5 +1,9 @@
 Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/QObject \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QRegularExpression \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QRunnable \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QTimer \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QVector \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -14,6 +18,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qatomic.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qatomic_cxx11.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbasicatomic.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qbasictimer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbindingstorage.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbytearray.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -72,6 +77,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qrect.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qrefcount.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qregularexpression.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qrunnable.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qscopedpointer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qscopeguard.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qset.h \
@@ -102,6 +108,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtextstream.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qtimer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtnoop.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -112,9 +119,11 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtversionchecks.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtypeinfo.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtypes.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qurl.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qutf8stringview.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qvariant.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qvarlengtharray.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qvector.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qversiontagging.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qxptype_traits.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qaction.h \
@@ -130,12 +139,18 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtGui/qkeysequence.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qpaintdevice.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qpalette.h \
+  D:/qt/6.6.3/mingw_64/include/QtGui/qpen.h \
+  D:/qt/6.6.3/mingw_64/include/QtGui/qpicture.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qpixelformat.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qpixmap.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qpolygon.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qregion.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qrgb.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qrgba64.h \
+  D:/qt/6.6.3/mingw_64/include/QtGui/qtextcursor.h \
+  D:/qt/6.6.3/mingw_64/include/QtGui/qtextdocument.h \
+  D:/qt/6.6.3/mingw_64/include/QtGui/qtextformat.h \
+  D:/qt/6.6.3/mingw_64/include/QtGui/qtextoption.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qtgui-config.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qtguiexports.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qtguiglobal.h \
@@ -150,13 +165,28 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtSerialPort/qserialportinfo.h \
   D:/qt/6.6.3/mingw_64/include/QtSerialPort/qtserialportexports.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/QComboBox \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/QLabel \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/QLineEdit \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/QPushButton \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/QTextEdit \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/QVBoxLayout \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/QWidget \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qabstractslider.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qboxlayout.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qcombobox.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qframe.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qgridlayout.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qlabel.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qlayout.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qlayoutitem.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qlineedit.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qrubberband.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qslider.h \
@@ -164,6 +194,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qstyleoption.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qtabbar.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qtabwidget.h \
+  D:/qt/6.6.3/mingw_64/include/QtWidgets/qtextedit.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   D:/qt/6.6.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -583,9 +614,14 @@ Serial_autogen/timestamp: \
   Serial_autogen/moc_predefs.h \
   D:/qt/code/Serial/customcombox.cpp \
   D:/qt/code/Serial/customcombox.h \
+  D:/qt/code/Serial/infohelper.cpp \
+  D:/qt/code/Serial/infohelper.h \
   D:/qt/code/Serial/main.cpp \
   D:/qt/code/Serial/mainwindow.cpp \
   D:/qt/code/Serial/mainwindow.h \
   D:/qt/code/Serial/mainwindow.ui \
   D:/qt/code/Serial/serialmanager.cpp \
-  D:/qt/code/Serial/serialmanager.h
+  D:/qt/code/Serial/serialmanager.h \
+  D:/qt/code/Serial/src.qrc \
+  D:/qt/code/Serial/test.cpp \
+  D:/qt/code/Serial/test.h

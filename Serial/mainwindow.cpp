@@ -9,9 +9,21 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //串口定时发送定时器
     sendTimer = new QTimer(this);
+    //定时获取传感器数据定时器
+    sensorTimer = new QTimer(this);
+    helper = new infoHelper(this);
+    //绑定串口定时发送函数
     connect(sendTimer,&QTimer::timeout,this,&MainWindow::slot_delaySend);
+    //绑定定时获取传感器数据
+    connect(sensorTimer,&QTimer::timeout,helper,&infoHelper::getSensorInfo);
+    //绑定下拉查看串口端口号函数
     connect(ui->comboBox_serialName,&customCombox::pullDownList,this,&MainWindow::slot_showSerialPortsDcp);
+    //绑定解析函数
+    connect(this,&MainWindow::parseInfo,helper,&infoHelper::parseSensorInfo);
+    //绑定解析完毕,界面显示函数
+    connect(helper,&infoHelper::readyRead,this,&MainWindow::updateSensor);
 }
 
 MainWindow::~MainWindow()
@@ -35,6 +47,38 @@ void MainWindow::sendHandle()
             LOG("send error");
             updateCount();
         }
+}
+
+void MainWindow::updateSensor(sensorInfo &info)
+{
+    if(info.temperature!=0)
+    {
+        ui->label_temp->setText(QString::number(info.temperature, 'f', 1) + "   ℃");
+    }
+    if(info.humidity!=0)
+    {
+        ui->label_humidity->setText(QString::number(info.humidity,'f',1)+"   %");
+    }
+    if(info.pressure!=0)
+    {
+        ui->label_pressure->setText(QString::number(info.pressure,'f',1)+"   hPa");
+    }
+    if(info.light!=0)
+    {
+        ui->label_light->setText(QString::number(info.light,'f',1)+"   lux");
+    }
+    if(info.accX!=0)
+    {
+        ui->label_accX->setText(QString::number(info.accX,'f',1)+"   m/s2");
+    }
+    if(info.accY!=0)
+    {
+        ui->label_accY->setText(QString::number(info.accY,'f',1)+"   m/s2");
+    }
+    if(info.accZ!=0)
+    {
+        ui->label_accZ->setText(QString::number(info.accZ,'f',1)+"   m/s2");
+    }
 }
 
 
@@ -70,10 +114,17 @@ void MainWindow::slot_showSerialPortsDcp()
 
 void MainWindow::slot_showRead()
 {
-    QString message = serial->read();
-    LOG("receive Info :"<<message);
-    ui->plainTextEdit_receive->appendPlainText(message);
-    updateCount();
+    if(ui->stackedWidget->currentIndex()== 0)
+    {
+        QString message = serial->read();
+        LOG("receive Info :"<<message);
+        ui->plainTextEdit_receive->appendPlainText(message);
+        updateCount();
+    }
+    else if(ui->stackedWidget->currentIndex() == 1)
+    {
+        emit parseInfo(serial->read());
+    }
 }
 
 
@@ -110,7 +161,9 @@ void MainWindow::on_open_btn_clicked()
         }
 
         //将串口接收绑定显示槽函数
-        connect(serial->getInstance(),&QSerialPort::readyRead,this,&MainWindow::slot_showRead);
+        connect(serial,&SerialManager::readyRead,this,&MainWindow::slot_showRead);
+        //将serialManager添加到infoHelper中
+        helper->setSerialManager(serial);
 
         //清空接收窗口
         ui->plainTextEdit_receive->clear();
@@ -184,7 +237,7 @@ void MainWindow::on_checkBox_hexSend_stateChanged(int arg1)
 
 void MainWindow::on_checkBox_time_stateChanged(int arg1)
 {
-    if(arg1==Qt::Checked)
+    if(arg1==Qt::Checked&&ui->open_btn->text()=="关闭")
     {
         sendTimer->start(ui->lineEdit_time->text().toInt());
     }
@@ -227,4 +280,16 @@ void MainWindow::chooseSelect(bool choice)
     }
 }
 
+
+
+void MainWindow::on_startRead_btn_clicked()
+{
+    sensorTimer->start(1000);
+}
+
+
+void MainWindow::on_stopRead_btn_clicked()
+{
+    sensorTimer->stop();
+}
 
