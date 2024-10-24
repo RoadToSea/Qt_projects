@@ -1,14 +1,17 @@
 #include "infohelper.h"
 #include <QThread>
+#include "mainwindow.h"
 
-void infoHelper::slot_startParse(QString data)
-{
-    parseSensorInfo(data);
-}
+
 
 infoHelper::infoHelper(QObject *parent, SerialManager *serialmanager):QObject{parent}
 {
     serial = serialmanager;
+}
+
+void infoHelper::slot_startParse(QString data)
+{
+    parseSensorInfo(data);
 }
 
 void infoHelper::setSerialManager(SerialManager *pserial)
@@ -16,7 +19,7 @@ void infoHelper::setSerialManager(SerialManager *pserial)
     serial = pserial;
 }
 
-const sensorInfo &infoHelper::parseSensorInfo(QString data)
+void infoHelper::parseInfoHandle(QString& data,sensorInfo& info)
 {
     QVector<double> t = parseTempAndHumi(data);
     if(!t.isEmpty())
@@ -34,14 +37,19 @@ const sensorInfo &infoHelper::parseSensorInfo(QString data)
         info.accZ = t[2];
     }
     LOG("Temperature:" << info.temperature << "℃,"
-             << "Humidity:" << info.humidity << "%,"
-             << "Pressure:" << info.pressure << "hPa,"
-             << "Light:" << info.light << "lux,"
-             << "Accelerometer X:" << info.accX << "m/s²,"
-             << "Accelerometer Y:" << info.accY << "m/s²,"
-        << "Accelerometer Z:" << info.accZ << "m/s²");
-    emit readyRead(info);
-    return info;
+                       << "Humidity:" << info.humidity << "%,"
+                       << "Pressure:" << info.pressure << "hPa,"
+                       << "Light:" << info.light << "lux,"
+                       << "Accelerometer X:" << info.accX << "m/s²,"
+                       << "Accelerometer Y:" << info.accY << "m/s²,"
+                       << "Accelerometer Z:" << info.accZ << "m/s²");
+}
+
+void infoHelper::parseSensorInfo(QString data)
+{
+    QMutexLocker<QMutex> locker(&mutex);
+    buf = data;
+    condition.wakeOne();
 }
 
 void infoHelper::getSensorInfo()
@@ -111,7 +119,11 @@ QVector<double> infoHelper::parseAccelerate(QString& data)
 
 void infoHelper::run()
 {
+    QMutexLocker<QMutex> lock(&mutex);
+    condition.wait(&mutex);
 
+    parseInfoHandle(buf,info);
+    emit readyRead(info);
 }
 
 

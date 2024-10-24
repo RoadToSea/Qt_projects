@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug"
+			"value" : "d:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "27"
+			"value" : "29"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "7"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -115,7 +115,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/qt/Tools/CMake_64/bin/cmake.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/qt/Tools/CMake_64/bin/cpack.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/qt/Tools/CMake_64/bin/ctest.exe"
+			"value" : "D:/Qt/Tools/CMake_64/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -1287,7 +1287,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/qt/Tools/CMake_64/share/cmake-3.27"
+			"value" : "D:/Qt/Tools/CMake_64/share/cmake-3.29"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -6111,7 +6111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug"
+			"value" : "D:/Qt/code/Serial/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug"
 		},
 		{
 			"name" : "Serial_IS_TOP_LEVEL",
@@ -6135,7 +6135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/qt/code/Serial"
+			"value" : "D:/Qt/code/Serial"
 		},
 		{
 			"name" : "Vulkan_GLSLANG_VALIDATOR_EXECUTABLE",

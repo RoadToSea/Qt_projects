@@ -6,6 +6,10 @@
 #include <QVector>
 #include <QRunnable>
 #include <QRegularExpression>
+#include <QMutex>
+#include <QWaitCondition>
+
+
 
 typedef struct sensor
 {
@@ -30,7 +34,7 @@ public:
     sensorInfo info;
     explicit infoHelper(QObject *parent = nullptr,SerialManager* serialmanager= nullptr);
     /*解析串口接收到的数据转换成传感器结构体*/
-    const sensorInfo& parseSensorInfo(QString data);
+    void parseSensorInfo(QString data);
     /*发送获取传感器数据的指令*/
     void getSensorInfo(void);
     void setSerialManager(SerialManager* pserial);
@@ -40,8 +44,11 @@ public:
     QVector<double> parseAccelerate(QString& data);
     void run() override ;
 private:
+    void parseInfoHandle(QString& data,sensorInfo& info);
     SerialManager* serial;
-
+    QMutex mutex;
+    QWaitCondition condition;
+    QString buf;
 
 };
 

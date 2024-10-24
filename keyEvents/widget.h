@@ -17,8 +17,13 @@ public:
     ~Widget();
 protected:
     virtual void keyPressEvent(QKeyEvent *e);
-
+    virtual void keyReleaseEvent(QKeyEvent *e);
 private:
     Ui::Widget *ui;
+    bool b_upflag = false;
+    bool b_downflag = false;
+    bool b_leftflag = false;
+    bool b_rightflag = false;
+    void updateButtonPosition(); // 移动按钮的方法
 };
 #endif // WIDGET_H

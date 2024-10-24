@@ -23,6 +23,7 @@ signals:
 public:
     //流控不可改成硬件流控,否则发送不成功
     explicit SerialManager(const QString &serialName,
+                                          QString lineBreak,
                                           QSerialPort::BaudRate baudRate = QSerialPort::Baud9600,
                                           QSerialPort::DataBits dataBits = QSerialPort::Data8,
                                           QSerialPort::Parity parity = QSerialPort::NoParity,
@@ -42,6 +43,7 @@ public:
 private:
     QByteArray buf;
     QSerialPort* m_serial;
+    QString m_lineBreak;
     bool state=false;
     unsigned sendCount=0;
     unsigned receiveCount=0;

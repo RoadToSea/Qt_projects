@@ -3,6 +3,7 @@
 
 
 SerialManager::SerialManager(const QString &serialName,
+                             QString lineBreak,
                              QSerialPort::BaudRate baudRate ,
                              QSerialPort::DataBits dataBits ,
                              QSerialPort::Parity parity ,
@@ -13,6 +14,8 @@ SerialManager::SerialManager(const QString &serialName,
 {
     // 创建 QSerialPort 对象并设置端口名称
     m_serial = new QSerialPort(serialName, this);
+    //设置换行符
+    m_lineBreak = lineBreak;
 
     // 配置串口参数
     m_serial->setBaudRate(baudRate);

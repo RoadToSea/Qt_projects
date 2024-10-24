@@ -134,6 +134,7 @@ void MainWindow::on_open_btn_clicked()
     if(text == "打开")
     {
         QString serialName = ui->comboBox_serialName->currentText();
+        QString lineBreak = "";
         QSerialPort::BaudRate baud = static_cast<QSerialPort::BaudRate>(ui->comboBox_baud->currentText().toInt());
         QSerialPort::DataBits dataBits = static_cast<QSerialPort::DataBits>(ui->comboBox_dataBit->currentText().toInt());
         QSerialPort::StopBits stopBit = QSerialPort::OneStop;
@@ -153,7 +154,19 @@ void MainWindow::on_open_btn_clicked()
         }else if(ui->comboBox_checkBit->currentText() == "偶校验"){
             parity = QSerialPort::EvenParity;
         }
-        serial = new SerialManager(serialName, baud, dataBits, parity, stopBit);
+        //获取换行符
+        if(ui->comboBox_lineBreak->currentText() == "\r\n")
+            lineBreak = "\r\n";
+        else if(ui->comboBox_lineBreak->currentText() == "\r")
+            lineBreak = "\r";
+        else if(ui->comboBox_lineBreak->currentText() == "\n")
+            lineBreak = "\n";
+        else if(ui->comboBox_lineBreak->currentText() == "\n\r")
+            lineBreak = "\n\r";
+        else if(ui->comboBox_lineBreak->currentText() == "无")
+            lineBreak = "";
+
+        serial = new SerialManager(serialName, lineBreak, baud, dataBits, parity, stopBit);
         if(!serial->isopen())
         {
             QMessageBox::warning(this,"警告","串口开启失败");
