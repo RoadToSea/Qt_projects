@@ -1,0 +1,18 @@
+# ninja log v6
+72	690	7524083147468122	album_autogen/timestamp	ad8b3d74861f062
+72	690	7524083147468122	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/mocs_compilation.cpp	ad8b3d74861f062
+1315	6465	7522483242715011	CMakeFiles/album.dir/main.cpp.obj	38194267f25c48ad
+785	7443	7524083154616246	CMakeFiles/album.dir/wizard.cpp.obj	74c6ef1ac38a8052
+46	149	7522441761405271	CMakeFiles/clean.additional	adcc2f785672e3a3
+72	690	7524083147468122	album_autogen/mocs_compilation.cpp	ad8b3d74861f062
+691	7585	7524083153784367	CMakeFiles/album.dir/mainwindow.cpp.obj	830fb9a4d514e918
+72	690	7524083147468122	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/timestamp	ad8b3d74861f062
+535	1133	7524085708929298	album.exe	f06400bf795856c7
+1345	6516	7522528625656492	CMakeFiles/album.dir/album_autogen/mocs_compilation.cpp.obj	47752d153e669d5b
+44	220	7524085705599754	album_autogen/EWIEGA46WW/qrc_src.cpp	c3b02b486c71edfc
+44	220	7524085705599754	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA46WW/qrc_src.cpp	c3b02b486c71edfc
+220	534	7524085705788924	CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj	28205d9ffa45222e
+27	1555	7524089101383397	build.ninja	3b18dfc982bc00e1
+149	212	7522441762444548	clean	101d0f6048d5fe99
+854	8265	7524083155402800	CMakeFiles/album.dir/prosetpage.cpp.obj	5d295e5ee3d605c6
+923	7453	7524083156027756	CMakeFiles/album.dir/comfirmpage.cpp.obj	6ab4d69f91280b6e

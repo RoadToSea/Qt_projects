@@ -1,0 +1,45 @@
+/*mainwindow 样式*/
+MainWindow {
+    /* 背景色 */
+    background-color:rgb(46,47,48);
+}
+
+MainWindow QLabel{
+    color:white;
+}
+
+MainWindow QTreeView{
+    background-color:rgb(46,47,48);
+}
+
+/*菜单栏基本样式*/
+QMenuBar{
+    color:rgb(231,231,231);
+    background-color:rgb(46,47,48);
+}
+
+/*菜单基本样式*/
+QMenu{
+    color:rgb(231,231,231);
+    background-color:rgb(55,55,55);
+}
+
+
+/* 菜单栏选中条目时 */
+
+QMenuBar::item:selected {
+        background-color:rgb(80,80,80);
+}
+
+/*菜单选中条目*/
+QMenu::item:selected {
+    background-color:rgb(39,96,154);
+}
+QWizard{
+    color:rgb(231,231,231);
+    background-color:rgb(46,47,47);
+}
+
+QWizard QLabel#tips{
+    color: red;
+}

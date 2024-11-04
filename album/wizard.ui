@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Wizard</class>
+ <widget class="QWizard" name="Wizard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>839</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wizard</string>
+  </property>
+  <widget class="Prosetpage" name="wizardPage1">
+   <property name="title">
+    <string>选择项目配置</string>
+   </property>
+  </widget>
+  <widget class="Comfirmpage" name="wizardPage2">
+   <property name="title">
+    <string>确认配置</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Comfirmpage</class>
+   <extends>QWizardPage</extends>
+   <header>../../../code/album/comfirmpage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Prosetpage</class>
+   <extends>QWizardPage</extends>
+   <header>../../../code/album/prosetpage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

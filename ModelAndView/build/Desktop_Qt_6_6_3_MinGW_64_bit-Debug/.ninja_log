@@ -1,0 +1,24 @@
+# ninja log v6
+43	482	7516524931998639	ModelAndView_autogen/timestamp	b492068e0e7dc07a
+546	5120	7516524604972541	CMakeFiles/ModelAndView.dir/main.cpp.obj	fd94d7782af7db93
+483	5726	7516524936396762	CMakeFiles/ModelAndView.dir/mainwindow.cpp.obj	639a54317dd45cd3
+5726	6378	7516524988829141	ModelAndView.exe	b1f1a62be03109f4
+43	482	7516524931998639	ModelAndView_autogen/mocs_compilation.cpp	b492068e0e7dc07a
+43	482	7516524931998639	D:/Qt/code/ModelAndView/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ModelAndView_autogen/timestamp	b492068e0e7dc07a
+43	482	7516524931998639	D:/Qt/code/ModelAndView/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ModelAndView_autogen/mocs_compilation.cpp	b492068e0e7dc07a
+1229	5612	7516516484067027	CMakeFiles/ModelAndView.dir/ModelAndView_autogen/mocs_compilation.cpp.obj	eda54d5681c9220c
+541	4072	7516524936928929	CMakeFiles/ModelAndView.dir/stringlistmodel.cpp.obj	d70caab11bed6e8f
+36	376	7516526368782346	ModelAndView_autogen/timestamp	b492068e0e7dc07a
+36	376	7516526368782346	ModelAndView_autogen/mocs_compilation.cpp	b492068e0e7dc07a
+36	376	7516526368782346	D:/Qt/code/ModelAndView/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ModelAndView_autogen/timestamp	b492068e0e7dc07a
+36	376	7516526368782346	D:/Qt/code/ModelAndView/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ModelAndView_autogen/mocs_compilation.cpp	b492068e0e7dc07a
+432	3769	7516526372740846	CMakeFiles/ModelAndView.dir/stringlistmodel.cpp.obj	d70caab11bed6e8f
+376	5437	7516526372179583	CMakeFiles/ModelAndView.dir/mainwindow.cpp.obj	639a54317dd45cd3
+5437	6060	7516526422788736	ModelAndView.exe	b1f1a62be03109f4
+33	390	7516526725965415	ModelAndView_autogen/timestamp	b492068e0e7dc07a
+33	390	7516526725965415	ModelAndView_autogen/mocs_compilation.cpp	b492068e0e7dc07a
+33	390	7516526725965415	D:/Qt/code/ModelAndView/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ModelAndView_autogen/timestamp	b492068e0e7dc07a
+33	390	7516526725965415	D:/Qt/code/ModelAndView/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/ModelAndView_autogen/mocs_compilation.cpp	b492068e0e7dc07a
+391	4588	7516526729534086	CMakeFiles/ModelAndView.dir/main.cpp.obj	fd94d7782af7db93
+445	5695	7516526730068628	CMakeFiles/ModelAndView.dir/mainwindow.cpp.obj	639a54317dd45cd3
+5695	6264	7516526782586488	ModelAndView.exe	b1f1a62be03109f4

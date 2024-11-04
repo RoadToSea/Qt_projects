@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1081</width>
-    <height>732</height>
+    <width>899</width>
+    <height>637</height>
    </rect>
   </property>
   <property name="font">
@@ -458,7 +458,7 @@ border-style: inset;
                 <string/>
                </property>
                <property name="icon">
-                <iconset resource="src.qrc">
+                <iconset>
                  <normaloff>:/img/纸飞机发送.png</normaloff>:/img/纸飞机发送.png</iconset>
                </property>
                <property name="iconSize">
@@ -1431,7 +1431,7 @@ border-style: inset;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1081</width>
+     <width>899</width>
      <height>25</height>
     </rect>
    </property>
@@ -1445,8 +1445,6 @@ border-style: inset;
    <header>../../../../code/Serial/customcombox.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="src.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
