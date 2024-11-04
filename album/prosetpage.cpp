@@ -11,6 +11,9 @@ Prosetpage::Prosetpage(QWidget *parent)
 {
     ui->setupUi(this);
 
+    registerField("name",ui->ProjectName);
+    registerField("path",ui->ProjectPath);
+
     connect(ui->ProjectName,&QLineEdit::textEdited,this,&Prosetpage::completeChanged);
     connect(ui->ProjectPath,&QLineEdit::textEdited,this,&Prosetpage::completeChanged);
 
@@ -26,24 +29,30 @@ bool Prosetpage::isComplete() const
 {
     QString ProjectName = ui->ProjectName->text();
     QString ProjectPath = ui->ProjectPath->text();
+    QDir ProjectDir(ProjectPath);
 
     //判断选择路径是否存在
-    if(!QDir(ProjectPath).exists())
+    if(!ProjectDir.exists())
     {
         ui->tips->setText("目录不存在");
         return false;
     }
-    QString path = ProjectPath+ProjectName;
-    QDir fullDir(path);
+    QDir FileDir = QDir(ProjectDir.absoluteFilePath(ProjectName));
 
     //判断选择的文件夹是否已有项目
-    if(fullDir.exists())
+    if(FileDir.exists())
     {
         ui->tips->setText("选择的文件夹已有项目");
         return false;
     }
     ui->tips->setText("");
     return QWizardPage::isComplete();
+}
+
+void Prosetpage::getSettings(QString &name, QString &path)
+{
+    name = ui->ProjectName->text();
+    path = ui->ProjectPath->text();
 }
 
 Prosetpage::~Prosetpage()

@@ -303,6 +303,7 @@
 			"EWIEGA46WW/moc_comfirmpage.cpp",
 			null
 		],
+		[ "D:/Qt/code/album/config.h", "MU", "EWIEGA46WW/moc_config.cpp", null ],
 		[
 			"D:/Qt/code/album/mainwindow.h",
 			"MU",

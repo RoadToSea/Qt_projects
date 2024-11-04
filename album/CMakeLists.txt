@@ -31,6 +31,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         mainwindow.ui
         protree.h protree.cpp
         protreeitem.h protreeitem.cpp
+        config.h
 
     )
 # Define target properties for Android with Qt 6 as:

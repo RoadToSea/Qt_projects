@@ -14,6 +14,7 @@ class Prosetpage : public QWizardPage
 public:
     explicit Prosetpage(QWidget *parent = nullptr);
     bool isComplete() const override;
+    void getSettings(QString& name,QString& path);
     ~Prosetpage();
 
 private slots:

@@ -555,11 +555,16 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/moc_predefs.h \
 	D:/Qt/code/album/comfirmpage.cpp \
 	D:/Qt/code/album/comfirmpage.h \
+	D:/Qt/code/album/config.h \
 	D:/Qt/code/album/main.cpp \
 	D:/Qt/code/album/mainwindow.cpp \
 	D:/Qt/code/album/mainwindow.h \
 	D:/Qt/code/album/prosetpage.cpp \
 	D:/Qt/code/album/prosetpage.h \
+	D:/Qt/code/album/protree.cpp \
+	D:/Qt/code/album/protree.h \
+	D:/Qt/code/album/protreeitem.cpp \
+	D:/Qt/code/album/protreeitem.h \
 	D:/Qt/code/album/src.qrc \
 	D:/Qt/code/album/wizard.cpp \
 	D:/Qt/code/album/wizard.h \

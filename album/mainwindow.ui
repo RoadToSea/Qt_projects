@@ -32,7 +32,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QTreeView" name="treeView"/>
+        <widget class="ProTree" name="treeView"/>
        </item>
       </layout>
      </widget>
@@ -73,6 +73,13 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ProTree</class>
+   <extends>QTreeView</extends>
+   <header>../../../code/album/protree.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

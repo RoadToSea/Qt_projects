@@ -6,8 +6,10 @@ void MainWindow::slot_createPro()
     Wizard wizard(this);
     auto* page1 = wizard.page(0);
     wizard.setWindowTitle("创建项目");
+    connect(&wizard,&Wizard::finishSetting,ui->treeView,&ProTree::addItem);
     wizard.show();
     wizard.exec();
+    disconnect(&wizard);
 }
 
 MainWindow::MainWindow(QWidget *parent)

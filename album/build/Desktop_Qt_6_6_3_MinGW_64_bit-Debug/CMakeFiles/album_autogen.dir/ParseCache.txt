@@ -1050,6 +1050,7 @@ D:/Qt/code/album/mainwindow.h
  mdp:D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/moc_predefs.h
  mdp:D:/Qt/code/album/mainwindow.h
  mdp:D:/Qt/code/album/wizard.h
+D:/Qt/code/album/protree.h
 D:/Qt/code/album/wizard.h
  mmc:Q_OBJECT
  mdp:D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h
@@ -1403,8 +1404,12 @@ D:/Qt/code/album/comfirmpage.cpp
  uic:ui_comfirmpage.h
 D:/Qt/code/album/prosetpage.cpp
  uic:ui_prosetpage.h
-D:/Qt/code/album/main.cpp
 D:/Qt/code/album/mainwindow.cpp
  uic:./ui_mainwindow.h
+D:/Qt/code/album/main.cpp
 D:/Qt/code/album/wizard.cpp
  uic:ui_wizard.h
+D:/Qt/code/album/protree.cpp
+D:/Qt/code/album/config.h
+D:/Qt/code/album/protreeitem.h
+D:/Qt/code/album/protreeitem.cpp

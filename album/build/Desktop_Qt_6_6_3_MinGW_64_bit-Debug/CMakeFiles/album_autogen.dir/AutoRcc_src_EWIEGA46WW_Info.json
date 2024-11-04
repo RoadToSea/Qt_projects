@@ -7,7 +7,11 @@
 	"CROSS_CONFIG" : false,
 	"GENERATOR" : "Ninja",
 	"INCLUDE_DIR" : "D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include",
-	"INPUTS" : [ "D:/Qt/code/album/res/style/mainwindow.qss" ],
+	"INPUTS" : 
+	[
+		"D:/Qt/code/album/res/icon/\u6587\u4ef6\u5939.svg",
+		"D:/Qt/code/album/res/style/mainwindow.qss"
+	],
 	"LOCK_FILE" : "D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,
 	"OPTIONS" : [ "--no-zstd", "-name", "src" ],
