@@ -12,3 +12,8 @@ ProTreeItem::ProTreeItem(QTreeWidget *parent, QTreeWidgetItem *root, QString nam
 {
 
 }
+
+QString ProTreeItem::getPath()
+{
+    return _path;
+}

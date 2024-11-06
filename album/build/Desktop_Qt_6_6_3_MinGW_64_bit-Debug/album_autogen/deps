@@ -568,6 +568,8 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/protree.h \
 	D:/Qt/code/album/protreeitem.cpp \
 	D:/Qt/code/album/protreeitem.h \
+	D:/Qt/code/album/protreethread.cpp \
+	D:/Qt/code/album/protreethread.h \
 	D:/Qt/code/album/src.qrc \
 	D:/Qt/code/album/wizard.cpp \
 	D:/Qt/code/album/wizard.h \

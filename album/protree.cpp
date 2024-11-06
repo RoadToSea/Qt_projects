@@ -7,8 +7,9 @@
 #include <QMenu>
 #include <QCursor>
 #include <QProgressDialog>
+#include <QFileDialog>
 
-ProTree::ProTree(QWidget *parent):QTreeWidget(parent)
+ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr)
 {
     this->header()->hide();
 
@@ -62,6 +63,8 @@ void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
             //弹出菜单
             menu.addAction(_actionImport);
             menu.exec(QCursor::pos());
+            //记录点击的列表项
+            m_clickItem = item;
         }
     }
 }
@@ -69,8 +72,29 @@ void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
 void ProTree::slotImportPro()
 {
     qDebug()<<"import project";
+    if (m_clickItem==nullptr)
+        return;
+    ProTreeItem* clickItem = dynamic_cast<ProTreeItem*>(m_clickItem);
+
+    // 弹出文件对话框
+    QString path = clickItem->getPath();
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::Directory);
+    dialog.setDirectory(path);
+    //设置详细预览文件
+    dialog.setViewMode(QFileDialog::Detail);
+    QStringList fileNames;
+    if(dialog.exec())
+    {
+        fileNames = dialog.selectedFiles();
+    }
+    //如果没有选择文件夹
+    if(fileNames.length()<=0)
+        return;
+    QString importPath = fileNames[0];
 
 
-    QProgressDialog dialog;
-    dialog.exec();
+    //开启线程导入文件
+    // QProgressDialog dialog;
+    // dialog.exec();
 }

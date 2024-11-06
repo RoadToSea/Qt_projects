@@ -16,6 +16,7 @@ public:
     void addItem(QString name,QString path);
 private:
     QSet<QString> projects;
+    QTreeWidgetItem* m_clickItem;
     QAction* _actionImport;
 
 };

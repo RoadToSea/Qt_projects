@@ -1413,6 +1413,7 @@ D:/Qt/code/album/wizard.cpp
  uic:ui_wizard.h
 D:/Qt/code/album/protree.cpp
 D:/Qt/code/album/config.h
+D:/Qt/code/album/protreethread.cpp
 D:/Qt/code/album/protreeitem.h
 D:/Qt/code/album/protreeitem.cpp
 D:/Qt/code/album/proopenpage.h
@@ -1763,3 +1764,4 @@ D:/Qt/code/album/proopenpage.h
  mdp:D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/moc_predefs.h
  mdp:D:/Qt/code/album/proopenpage.h
 D:/Qt/code/album/proopenpage.cpp
+D:/Qt/code/album/protreethread.h
