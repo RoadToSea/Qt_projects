@@ -311,6 +311,12 @@
 			null
 		],
 		[
+			"D:/Qt/code/album/proopenpage.h",
+			"MU",
+			"EWIEGA46WW/moc_proopenpage.cpp",
+			null
+		],
+		[
 			"D:/Qt/code/album/prosetpage.h",
 			"MU",
 			"EWIEGA46WW/moc_prosetpage.cpp",
@@ -326,6 +332,12 @@
 			"D:/Qt/code/album/protreeitem.h",
 			"MU",
 			"EWIEGA46WW/moc_protreeitem.cpp",
+			null
+		],
+		[
+			"D:/Qt/code/album/protreethread.h",
+			"MU",
+			"EWIEGA46WW/moc_protreethread.cpp",
 			null
 		],
 		[ "D:/Qt/code/album/wizard.h", "MU", "EWIEGA46WW/moc_wizard.cpp", null ]
@@ -403,9 +415,11 @@
 		[ "D:/Qt/code/album/comfirmpage.cpp", "MU", null ],
 		[ "D:/Qt/code/album/main.cpp", "MU", null ],
 		[ "D:/Qt/code/album/mainwindow.cpp", "MU", null ],
+		[ "D:/Qt/code/album/proopenpage.cpp", "MU", null ],
 		[ "D:/Qt/code/album/prosetpage.cpp", "MU", null ],
 		[ "D:/Qt/code/album/protree.cpp", "MU", null ],
 		[ "D:/Qt/code/album/protreeitem.cpp", "MU", null ],
+		[ "D:/Qt/code/album/protreethread.cpp", "MU", null ],
 		[ "D:/Qt/code/album/wizard.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

@@ -9,6 +9,7 @@ MainWindow QLabel{
 }
 
 MainWindow QTreeView{
+    color: white;
     background-color:rgb(46,47,48);
 }
 

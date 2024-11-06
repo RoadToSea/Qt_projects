@@ -138,6 +138,7 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWidget \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWizard \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWizardPage \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qdialog.h \
@@ -559,6 +560,8 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/main.cpp \
 	D:/Qt/code/album/mainwindow.cpp \
 	D:/Qt/code/album/mainwindow.h \
+	D:/Qt/code/album/proopenpage.cpp \
+	D:/Qt/code/album/proopenpage.h \
 	D:/Qt/code/album/prosetpage.cpp \
 	D:/Qt/code/album/prosetpage.h \
 	D:/Qt/code/album/protree.cpp \

@@ -1,17 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-void MainWindow::slot_createPro()
-{
-    Wizard wizard(this);
-    auto* page1 = wizard.page(0);
-    wizard.setWindowTitle("创建项目");
-    connect(&wizard,&Wizard::finishSetting,ui->treeView,&ProTree::addItem);
-    wizard.show();
-    wizard.exec();
-    disconnect(&wizard);
-}
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -40,5 +29,26 @@ void MainWindow::UIinit()
     music->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_J));
     ui->menu_setting->addAction(music);
 
+    //创建项目
     connect(createPro,&QAction::triggered,this,&MainWindow::slot_createPro);
+    //打开项目
+    connect(openPro,&QAction::triggered,this,&MainWindow::slot_openPro);
+}
+
+void MainWindow::slot_createPro()
+{
+    Wizard wizard(this);
+    wizard.setWindowTitle("创建项目");
+    connect(&wizard,&Wizard::finishSetting,ui->treeView,&ProTree::addItem);
+    wizard.show();
+    wizard.exec();
+    disconnect(&wizard);
+}
+
+void MainWindow::slot_openPro()
+{
+    proOpenPage page(this);
+    connect(&page ,&proOpenPage::finishOpenPro,ui->treeView,&ProTree::addItem);
+    page.openPro();
+    disconnect(&page);
 }

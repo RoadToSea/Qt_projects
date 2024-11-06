@@ -1,4 +1,4 @@
-D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Qt/code/album/mainwindow.h \
+D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA46WW/moc_proopenpage.cpp: D:/Qt/code/album/proopenpage.h \
   D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/moc_predefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
@@ -138,18 +138,12 @@ D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA4
   D:/Qt/6.6.3/mingw_64/include/QtGui/qtransform.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWidget \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWizard \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qdialog.h \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qsizepolicy.h \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/qwidget.h \
-  D:/Qt/6.6.3/mingw_64/include/QtWidgets/qwizard.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
   D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/algorithm \
@@ -348,6 +342,4 @@ D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA4
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/sys/types.h \
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/Qt/code/album/proopenpage.h \
-  D:/Qt/code/album/wizard.h
+  D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h

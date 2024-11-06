@@ -3,10 +3,21 @@
 #include <QDir>
 #include "protreeitem.h"
 #include "config.h"
+#include <QGuiApplication>
+#include <QMenu>
+#include <QCursor>
+#include <QProgressDialog>
 
 ProTree::ProTree(QWidget *parent):QTreeWidget(parent)
 {
     this->header()->hide();
+
+    _actionImport = new QAction("导入",this);
+
+    //绑定自定义点击事件
+    connect(this,&ProTree::itemPressed,this,&ProTree::slotItemPressed);
+    //绑定导入文件
+    connect(_actionImport,&QAction::triggered,this,&ProTree::slotImportPro);
 }
 
 void ProTree::addItem(QString name, QString path)
@@ -38,4 +49,28 @@ void ProTree::addItem(QString name, QString path)
     item->setData(0,Qt::DecorationRole,QIcon(":/res/icon/文件夹.svg"));
     item->setData(0,Qt::ToolTipRole,path);
     this->addTopLevelItem(item);
+}
+
+void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
+{
+    if(QGuiApplication::mouseButtons()==Qt::RightButton)
+    {
+        QMenu menu(this);
+        //如果是根目录
+        if(item->type() == TreeItemPro)
+        {
+            //弹出菜单
+            menu.addAction(_actionImport);
+            menu.exec(QCursor::pos());
+        }
+    }
+}
+
+void ProTree::slotImportPro()
+{
+    qDebug()<<"import project";
+
+
+    QProgressDialog dialog;
+    dialog.exec();
 }

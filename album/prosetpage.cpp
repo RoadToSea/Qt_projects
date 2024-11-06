@@ -11,20 +11,25 @@ Prosetpage::Prosetpage(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //注册域,便于将用户选择的路径传输出去
     registerField("name",ui->ProjectName);
     registerField("path",ui->ProjectPath);
 
+    //当输入框中的文件路径出现变化,调用继承的信号,间接调用isComplete()检测路径是否合法
     connect(ui->ProjectName,&QLineEdit::textEdited,this,&Prosetpage::completeChanged);
     connect(ui->ProjectPath,&QLineEdit::textEdited,this,&Prosetpage::completeChanged);
 
+    //设置默认路径为当前运行路径
     QString curDir = QDir::currentPath();
     ui->ProjectPath->setText(curDir);
 
+    //添加一键清除按钮
     ui->ProjectName->setClearButtonEnabled(true);
     ui->ProjectPath->setClearButtonEnabled(true);
 
 }
 
+//检测路径是否合法
 bool Prosetpage::isComplete() const
 {
     QString ProjectName = ui->ProjectName->text();
@@ -49,10 +54,11 @@ bool Prosetpage::isComplete() const
     return QWizardPage::isComplete();
 }
 
+//获取注册域里name和path
 void Prosetpage::getSettings(QString &name, QString &path)
 {
-    name = ui->ProjectName->text();
-    path = ui->ProjectPath->text();
+    name = field("name").toString();
+    path = field("path").toString();
 }
 
 Prosetpage::~Prosetpage()
@@ -60,6 +66,7 @@ Prosetpage::~Prosetpage()
     delete ui;
 }
 
+//点击浏览文件按钮槽函数
 void Prosetpage::on_Pb_Brower_clicked()
 {
     QFileDialog dialog(this,"选择文件夹",QDir::currentPath());
