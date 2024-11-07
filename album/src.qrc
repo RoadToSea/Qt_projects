@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>res/style/mainwindow.qss</file>
         <file>res/icon/文件夹.svg</file>
+        <file>res/icon/图片.svg</file>
     </qresource>
 </RCC>

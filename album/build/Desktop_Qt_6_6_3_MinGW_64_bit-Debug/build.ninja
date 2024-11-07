@@ -249,7 +249,7 @@ build album_autogen/timestamp album_autogen/mocs_compilation.cpp | ${cmake_ninja
 #############################################
 # Custom command for album_autogen\EWIEGA46WW\qrc_src.cpp
 
-build album_autogen/EWIEGA46WW/qrc_src.cpp | ${cmake_ninja_workdir}album_autogen/EWIEGA46WW/qrc_src.cpp: CUSTOM_COMMAND D$:/Qt/code/album/src.qrc CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Info.json D$:/Qt/code/album/res/icon/文件夹.svg D$:/Qt/code/album/res/style/mainwindow.qss D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe || album_autogen album_autogen_timestamp_deps
+build album_autogen/EWIEGA46WW/qrc_src.cpp | ${cmake_ninja_workdir}album_autogen/EWIEGA46WW/qrc_src.cpp: CUSTOM_COMMAND D$:/Qt/code/album/src.qrc CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Info.json D$:/Qt/code/album/res/icon/图片.svg D$:/Qt/code/album/res/icon/文件夹.svg D$:/Qt/code/album/res/style/mainwindow.qss D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe || album_autogen album_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Qt\code\album\build\Desktop_Qt_6_6_3_MinGW_64_bit-Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for src.qrc
   restat = 1

@@ -13,6 +13,16 @@ ProTreeItem::ProTreeItem(QTreeWidget *parent, QTreeWidgetItem *root, QString nam
 
 }
 
+void ProTreeItem::setNextItem(QTreeWidgetItem *item)
+{
+    _nextItem = item;
+}
+
+void ProTreeItem::setPreItem(QTreeWidgetItem *item)
+{
+    _preItem = item;
+}
+
 QString ProTreeItem::getPath()
 {
     return _path;

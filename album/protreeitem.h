@@ -8,7 +8,8 @@ class ProTreeItem : public QTreeWidgetItem
 public:
     ProTreeItem(QTreeWidget* view, QString name,QString path, int type);
     ProTreeItem(QTreeWidget* parent,QTreeWidgetItem* root, QString name,QString path, int type);
-
+    void setNextItem(QTreeWidgetItem* item);
+    void setPreItem(QTreeWidgetItem* item);
     QString getPath(void);
 private:
     QString _name;
