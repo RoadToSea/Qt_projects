@@ -48,7 +48,8 @@ void MainWindow::slot_createPro()
 void MainWindow::slot_openPro()
 {
     proOpenPage page(this);
-    connect(&page ,&proOpenPage::finishOpenPro,ui->treeView,&ProTree::addItem);
+    //打开项目对话框发送选中的文件名字和路径给protree 添加文件树
+    connect(&page ,&proOpenPage::finishOpenPro,ui->treeView,&ProTree::addItems);
     page.openPro();
     disconnect(&page);
 }
