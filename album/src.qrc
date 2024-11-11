@@ -3,5 +3,8 @@
         <file>res/style/mainwindow.qss</file>
         <file>res/icon/文件夹.svg</file>
         <file>res/icon/图片.svg</file>
+        <file>res/icon/left.svg</file>
+        <file>res/icon/right.svg</file>
+        <file>res/style/portrayPic.qss</file>
     </qresource>
 </RCC>

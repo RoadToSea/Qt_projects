@@ -23,6 +23,16 @@ void ProTreeItem::setPreItem(QTreeWidgetItem *item)
     _preItem = item;
 }
 
+QTreeWidgetItem *ProTreeItem::getNextItem()
+{
+    return _nextItem;
+}
+
+QTreeWidgetItem *ProTreeItem::getPreItem()
+{
+    return _preItem;
+}
+
 QString ProTreeItem::getPath()
 {
     return _path;

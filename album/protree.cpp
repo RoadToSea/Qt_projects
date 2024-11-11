@@ -9,6 +9,7 @@
 #include <QProgressDialog>
 #include <QFileDialog>
 #include <QThread>
+#include "closeprodialog.h"
 
 
 ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr)
@@ -16,14 +17,26 @@ ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr)
     this->header()->hide();
 
     m_actionImport = new QAction("导入",this);
+    m_actionDelete = new QAction("删除",this);
+    m_actionClose = new QAction("关闭项目",this);
 
     //绑定点击事件
     connect(this,&ProTree::itemPressed,this,&ProTree::slotItemPressed);
     //绑定导入文件
     connect(m_actionImport,&QAction::triggered,this,&ProTree::slotImportPro);
+    //绑定关闭项目
+    connect(m_actionClose,&QAction::triggered,this,&ProTree::slot_closePro);
+    // 绑定显示图片
+    // connect(m_actionPortray,&QAction::triggered,this,&ProTree::slot_portrayPic);
+    //绑定删除图片
+    connect(m_actionDelete,&QAction::triggered,this,&ProTree::slot_deletePic);
+
 
 }
 
+/*
+    导入图片到项目树
+*/
 void ProTree::constructGeneric(QString &src_path, QString &dst_path)
 {
     //创建进度对话框
@@ -48,6 +61,9 @@ void ProTree::constructGeneric(QString &src_path, QString &dst_path)
     m_progress->show();
 }
 
+/*
+    创建一个项目树父节点
+*/
 void ProTree::addItemGeneric(QString& name, QString& path)
 {
     QDir dir(path);
@@ -79,11 +95,29 @@ void ProTree::addItemGeneric(QString& name, QString& path)
     this->addTopLevelItem(item);
 }
 
+/*
+    关闭整个项目
+*/
+void ProTree::CloseProGeneric(QTreeWidgetItem *root)
+{
+    ProTreeItem* item = dynamic_cast<ProTreeItem*>(root);
+    projects.remove(item->getPath());
+    root->takeChildren();
+    delete root;
+
+}
+
+/*
+    添加单个父节点,不导入数据
+*/
 void ProTree::addItem(QString name, QString path)
 {
     addItemGeneric(name,path);
 }
 
+/*
+    添加一个父节点并导入数据
+*/
 void ProTree::addItems(QString name, QString path)
 {
     addItemGeneric(name,path);
@@ -94,24 +128,41 @@ void ProTree::addItems(QString name, QString path)
     constructGeneric(OpenPath,OpenPath);
 }
 
+/*
+    右键点击事件槽函数
+*/
 void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
 {
     if(QGuiApplication::mouseButtons()==Qt::RightButton)
     {
 
         QMenu menu(this);
-        //如果是根目录
-        if(item->type() == TreeItemPro)
+        //记录点击的列表项
+        m_clickItem = item;
+        switch (item->type())
         {
-            //记录点击的列表项
-            m_clickItem = item;
-            //弹出菜单
-            menu.addAction(m_actionImport);
-            menu.exec(QCursor::pos());
+            //如果是根目录
+            case TreeItemPro:
+                //弹出菜单
+                menu.addAction(m_actionImport);
+                menu.addAction(m_actionClose);
+                menu.exec(QCursor::pos());
+                break;
+
+            //如果是图片
+            case TreeItemPic:
+                m_clickItem = item;
+                //弹出菜单
+                menu.addAction(m_actionDelete);
+                menu.exec(QCursor::pos());
+                break;
         }
     }
 }
 
+/*
+    选中菜单中导入行为的槽函数
+*/
 void ProTree::slotImportPro()
 {
     qDebug()<<"import project";
@@ -148,7 +199,7 @@ void ProTree::slotImportPro()
 }
 
 
-//更新进度对话框进度条
+/*更新进度对话框进度条*/
 void ProTree::slot_updateProgress(int pg)
 {
     if(m_progress==nullptr)
@@ -179,5 +230,60 @@ void ProTree::slot_cancelImport()
     delete m_progress;
     m_progress = nullptr;
     emit cancelImport();
+}
+
+/*
+    关闭项目
+        关闭文件树但不删除
+*/
+void ProTree::slot_closePro()
+{
+    CloseProDialog dialog;
+    if(QDialog::Accepted==dialog.exec())
+    {
+        //判断是否需要删除文件
+        if(dialog.isDelete())
+        {
+            ProTreeItem* item = dynamic_cast<ProTreeItem*>(m_clickItem);
+            QString path = item->getPath();
+            QDir delete_dir(path);
+            delete_dir.removeRecursively();
+        }
+        CloseProGeneric(m_clickItem);
+    }
+}
+
+/*  删除图片
+        删除文件树中选中的图片,同时删除本地图片
+*/
+void ProTree::slot_deletePic()
+{
+    ProTreeItem* item = dynamic_cast<ProTreeItem*>(m_clickItem);
+    //先删除本地图片
+    QString path = item->getPath();
+    QFile delete_file(path);
+    delete_file.remove();
+    //删除树中的节点,注意是双向链表
+    ProTreeItem* pre = dynamic_cast<ProTreeItem*>(item->getPreItem());
+    ProTreeItem* next = dynamic_cast<ProTreeItem*>(item->getNextItem());
+    //更改前后指针
+    if(pre)
+        pre->setNextItem(next);
+    if(next)
+        next->setPreItem(pre);
+    item->setPreItem(nullptr);
+    item->setNextItem(nullptr);
+    //从树中移除自己
+    m_clickItem->parent()->removeChild(m_clickItem);
+    delete m_clickItem;
+}
+
+/*
+    绘制图片
+        在右侧空间中绘制选中的图片
+*/
+void ProTree::slot_portrayPic()
+{
+
 }
 

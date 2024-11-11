@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     UIinit();
-
+    ui->porTree->setObjectName("proTree");
 }
 
 MainWindow::~MainWindow()
@@ -17,6 +17,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::UIinit()
 {
+    portrayPic = new PortrayPic();
+    ui->picShow->addWidget(portrayPic);
+
     QAction* createPro = new QAction("创建项目",ui->menu_file);
     createPro->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_N));
     ui->menu_file->addAction(createPro);

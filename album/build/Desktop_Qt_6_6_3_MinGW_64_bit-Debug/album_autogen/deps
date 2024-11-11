@@ -148,6 +148,7 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qvalidator.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QDialog \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QProgressDialog \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QTreeWidget \
@@ -589,12 +590,18 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeRCCompiler.cmake \
 	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/moc_predefs.h \
+	D:/Qt/code/album/closeprodialog.cpp \
+	D:/Qt/code/album/closeprodialog.h \
 	D:/Qt/code/album/comfirmpage.cpp \
 	D:/Qt/code/album/comfirmpage.h \
 	D:/Qt/code/album/config.h \
 	D:/Qt/code/album/main.cpp \
 	D:/Qt/code/album/mainwindow.cpp \
 	D:/Qt/code/album/mainwindow.h \
+	D:/Qt/code/album/picbutton.cpp \
+	D:/Qt/code/album/picbutton.h \
+	D:/Qt/code/album/portraypic.cpp \
+	D:/Qt/code/album/portraypic.h \
 	D:/Qt/code/album/proopenpage.cpp \
 	D:/Qt/code/album/proopenpage.h \
 	D:/Qt/code/album/prosetpage.cpp \
@@ -608,8 +615,10 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/src.qrc \
 	D:/Qt/code/album/wizard.cpp \
 	D:/Qt/code/album/wizard.h \
+	D:/Qt/code/album/closeprodialog.ui \
 	D:/Qt/code/album/comfirmpage.ui \
 	D:/Qt/code/album/mainwindow.ui \
+	D:/Qt/code/album/portraypic.ui \
 	D:/Qt/code/album/prosetpage.ui \
 	D:/Qt/code/album/wizard.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe

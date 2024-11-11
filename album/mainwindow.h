@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "wizard.h"
 #include "proopenpage.h"
+#include "portraypic.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,6 +25,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    PortrayPic* portrayPic;
     void UIinit(void);
 };
 #endif // MAINWINDOW_H

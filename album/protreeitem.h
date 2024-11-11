@@ -10,6 +10,8 @@ public:
     ProTreeItem(QTreeWidgetItem* root,QTreeWidgetItem* parent, QString name,QString path, int type);
     void setNextItem(QTreeWidgetItem* item);
     void setPreItem(QTreeWidgetItem* item);
+    QTreeWidgetItem* getNextItem(void);
+    QTreeWidgetItem* getPreItem(void);
     QString getPath(void);
 private:
     QString _name;

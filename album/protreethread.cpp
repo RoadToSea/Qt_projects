@@ -37,7 +37,6 @@ void proTreeThread::importToPro(QTreeWidget* self,QTreeWidgetItem *root,QTreeWid
     if(src_path == dst_path)
     {
         isCopy=false;
-        qDebug()<<"目录一致无需复制";
     }
     QDir ImportDir(src_path);
     //设置文件过滤,只要文件夹和文件,不要linux下的. ..格式

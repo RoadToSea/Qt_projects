@@ -1,4 +1,4 @@
-/*mainwindow 样式*/
+/*mainwindow 样式 , 不支持//类型的注释*/
 MainWindow {
     /* 背景色 */
     background-color:rgb(46,47,48);
@@ -8,9 +8,15 @@ MainWindow QLabel{
     color:white;
 }
 
-MainWindow QTreeView{
+MainWindow #proTree{
     color: white;
+    border : 0.5px solid white;
     background-color:rgb(46,47,48);
+}
+
+MainWindow QTreeWidget {
+    background-color:rgb(46,47,48);
+    border : none;
 }
 
 /*菜单栏基本样式*/
@@ -44,3 +50,22 @@ QWizard{
 QWizard QLabel#tips{
     color: red;
 }
+
+
+/*不知道为什么这部分不生效,在ui界面中设置可以生效*/
+/*右侧部分*/
+PortrayPic {
+    border: 1px solid white;
+    padding: 10px;
+    background-color: rgb(64,66,68);
+}
+
+QWidget#picture QPushButton {
+    border: none;                   /* 隐藏边框 */
+    background: transparent;        /* 背景透明 */
+    padding: 0;                      /* 去除内边距 */
+}
+
+
+
+
