@@ -3,8 +3,12 @@
         <file>res/style/mainwindow.qss</file>
         <file>res/icon/文件夹.svg</file>
         <file>res/icon/图片.svg</file>
-        <file>res/icon/left.svg</file>
-        <file>res/icon/right.svg</file>
         <file>res/style/portrayPic.qss</file>
+        <file>res/icon/left_clicked.svg</file>
+        <file>res/icon/left_hover.svg</file>
+        <file>res/icon/left_normal.svg</file>
+        <file>res/icon/right_clicked.svg</file>
+        <file>res/icon/right_hover.svg</file>
+        <file>res/icon/right_normal.svg</file>
     </qresource>
 </RCC>

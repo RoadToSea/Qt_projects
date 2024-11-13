@@ -2,6 +2,7 @@
 #include "EWIEGA46WW/moc_closeprodialog.cpp"
 #include "EWIEGA46WW/moc_comfirmpage.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_picbutton.cpp"
 #include "EWIEGA46WW/moc_portraypic.cpp"
 #include "EWIEGA46WW/moc_proopenpage.cpp"
 #include "EWIEGA46WW/moc_prosetpage.cpp"

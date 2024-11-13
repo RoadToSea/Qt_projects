@@ -9,7 +9,12 @@ enum TreeItemType{
 };
 
 
-
+#define LEFT_CLICKED        ":/res/icon/left_clicked.svg"
+#define LEFT_HOVER          ":/res/icon/left_hover.svg"
+#define LEFT_NORMAL         ":/res/icon/left_normal.svg"
+#define RIGHT_CLICKED       ":/res/icon/right_clicked.svg"
+#define RIGHT_HOVER         ":/res/icon/right_hover.svg"
+#define RIGHT_NORMAL        ":/res/icon/right_normal.svg"
 
 
 #endif // CONFIG_H

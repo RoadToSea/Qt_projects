@@ -39,7 +39,7 @@
         </property>
         <layout class="QGridLayout" name="gridLayout">
          <item row="0" column="0">
-          <widget class="picButton" name="pushButton">
+          <widget class="picButton" name="left_btn">
            <property name="text">
             <string/>
            </property>
@@ -71,7 +71,7 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="0" column="0">
-          <widget class="picButton" name="pushButton_2">
+          <widget class="picButton" name="right_btn">
            <property name="text">
             <string/>
            </property>

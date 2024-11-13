@@ -14,9 +14,11 @@ class PortrayPic : public QDialog
 public:
     explicit PortrayPic(QWidget *parent = nullptr);
     ~PortrayPic();
-
+protected:
+    bool eventFilter(QObject *object, QEvent *event) override;
 private:
     Ui::PortrayPic *ui;
+    void initUI(void);
 };
 
 #endif // PORTRAYPIC_H
