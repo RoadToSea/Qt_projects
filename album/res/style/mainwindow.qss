@@ -17,6 +17,7 @@ MainWindow #proTree{
 MainWindow QTreeWidget {
     background-color:rgb(46,47,48);
     border : none;
+    color : white;
 }
 
 /*菜单栏基本样式*/

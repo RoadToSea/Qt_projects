@@ -21,12 +21,15 @@ private slots:
     void slot_closePro();
     void slot_deletePic();
     void slot_portrayPic();
+
 public slots:
     void addItem(QString name,QString path);
     void addItems(QString name,QString path);
+    void slot_portrayPrePic();
+    void slot_portrayNextPic();
 signals:
     void cancelImport();
-
+    void portrayPic(QString& picPath);
 public:
     ProTree(QWidget *parent = nullptr);
 

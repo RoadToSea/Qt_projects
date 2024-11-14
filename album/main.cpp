@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
     {
         QString styleSheet = QLatin1String(style.readAll());
         a.setStyleSheet(styleSheet);
-        qDebug()<<"main";
     }
     style.close();
 

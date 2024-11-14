@@ -27,10 +27,9 @@ ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr)
     //绑定关闭项目
     connect(m_actionClose,&QAction::triggered,this,&ProTree::slot_closePro);
     // 绑定显示图片
-    // connect(m_actionPortray,&QAction::triggered,this,&ProTree::slot_portrayPic);
-    //绑定删除图片
+    connect(this,&ProTree::itemDoubleClicked,this,&ProTree::slot_portrayPic);
+    //绑定删除图片节点
     connect(m_actionDelete,&QAction::triggered,this,&ProTree::slot_deletePic);
-
 
 }
 
@@ -133,12 +132,12 @@ void ProTree::addItems(QString name, QString path)
 */
 void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
 {
+    m_clickItem = item;
     if(QGuiApplication::mouseButtons()==Qt::RightButton)
     {
 
         QMenu menu(this);
         //记录点击的列表项
-        m_clickItem = item;
         switch (item->type())
         {
             //如果是根目录
@@ -151,7 +150,6 @@ void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
 
             //如果是图片
             case TreeItemPic:
-                m_clickItem = item;
                 //弹出菜单
                 menu.addAction(m_actionDelete);
                 menu.exec(QCursor::pos());
@@ -280,10 +278,49 @@ void ProTree::slot_deletePic()
 
 /*
     绘制图片
-        在右侧空间中绘制选中的图片
+        在右侧空间中绘制当前双击选中的图片
 */
 void ProTree::slot_portrayPic()
 {
+    if(QGuiApplication::mouseButtons() == Qt::LeftButton)
+    {
+        ProTreeItem* item = static_cast<ProTreeItem*>(m_clickItem);
+        if(!item)
+            return;
+        //是图片节点才发送绘制信号
+        if(m_clickItem->type() == TreeItemPic)
+        {
+            emit portrayPic(item->getPath());
+        }
+    }
 
+}
+
+/*
+    接收绘制上一张图片的信号
+*/
+void ProTree::slot_portrayPrePic()
+{
+    ProTreeItem* item = static_cast<ProTreeItem*>(m_clickItem);
+    if(!item)
+        return;
+    if(!item->getPreItem())
+        return;
+    m_clickItem = item->getPreItem();
+    emit portrayPic(static_cast<ProTreeItem*>(item->getPreItem())->getPath());
+}
+
+/*
+    接收绘制下一张图片的信号
+*/
+void ProTree::slot_portrayNextPic()
+{
+    ProTreeItem* item = static_cast<ProTreeItem*>(m_clickItem);
+    if(!item)
+        return;
+    if(!item->getNextItem())
+        return;
+    m_clickItem = item->getNextItem();
+    emit portrayPic(static_cast<ProTreeItem*>(item->getNextItem())->getPath());
 }
 

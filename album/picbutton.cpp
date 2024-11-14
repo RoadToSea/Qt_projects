@@ -20,6 +20,9 @@ void picButton::setIcons(QString &normal, QString &hover, QString &clicked)
     this->setIconSize(tmp.size());
 }
 
+/*
+
+*/
 void picButton::setOpacity(double op)
 {
     Opacity = op;
@@ -70,6 +73,7 @@ bool picButton::event(QEvent *e)
             break;
         case QEvent::MouseButtonRelease:
             setHover();
+            emit btnClicked();
             break;
         default:
             break;

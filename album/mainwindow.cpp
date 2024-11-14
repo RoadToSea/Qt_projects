@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     UIinit();
-    ui->porTree->setObjectName("proTree");
+    ui->proTree->setObjectName("proTree");
 }
 
 MainWindow::~MainWindow()
@@ -36,6 +36,13 @@ void MainWindow::UIinit()
     connect(createPro,&QAction::triggered,this,&MainWindow::slot_createPro);
     //打开项目
     connect(openPro,&QAction::triggered,this,&MainWindow::slot_openPro);
+
+    //连接protree和picshow,双击绘制图片
+    connect(ui->treeView,&ProTree::portrayPic,portrayPic,&PortrayPic::slot_showPic);
+    //绘制上一张图片
+    connect(portrayPic,&PortrayPic::showPrePic,ui->treeView,&ProTree::slot_portrayPrePic);
+    //绘制下一张图片
+    connect(portrayPic,&PortrayPic::showNextPic,ui->treeView,&ProTree::slot_portrayNextPic);
 }
 
 void MainWindow::slot_createPro()

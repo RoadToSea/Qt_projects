@@ -11,6 +11,9 @@ class picButton : public QPushButton
 {
     Q_OBJECT
     Q_PROPERTY(int opacity READ opacity WRITE setOpacity)
+signals:
+    void btnClicked(void);
+
 public:
     picButton(QWidget *parent = nullptr) ;
     void setIcons(QString& normal ,QString& hover,QString& clicked);

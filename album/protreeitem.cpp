@@ -33,7 +33,7 @@ QTreeWidgetItem *ProTreeItem::getPreItem()
     return _preItem;
 }
 
-QString ProTreeItem::getPath()
+QString& ProTreeItem::getPath()
 {
     return _path;
 }

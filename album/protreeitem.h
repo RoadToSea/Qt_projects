@@ -12,7 +12,7 @@ public:
     void setPreItem(QTreeWidgetItem* item);
     QTreeWidgetItem* getNextItem(void);
     QTreeWidgetItem* getPreItem(void);
-    QString getPath(void);
+    QString& getPath(void);
 private:
     QString _name;
     QString _path;

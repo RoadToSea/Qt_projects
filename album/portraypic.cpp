@@ -2,7 +2,6 @@
 #include "ui_portraypic.h"
 #include "config.h"
 
-
 PortrayPic::PortrayPic(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::PortrayPic)
@@ -11,6 +10,11 @@ PortrayPic::PortrayPic(QWidget *parent)
     initUI();
     ui->left_btn->installEventFilter(this);
     ui->right_btn->installEventFilter(this);
+    ui->label->setFixedSize(this->width() - 50,this->height() - 20);
+
+    connect(ui->left_btn,&picButton::btnClicked,this,&PortrayPic::slot_prePic);
+    connect(ui->right_btn,&picButton::btnClicked,this,&PortrayPic::slot_nextPic);
+
 }
 
 PortrayPic::~PortrayPic()
@@ -54,4 +58,36 @@ void PortrayPic::initUI()
     ui->right_btn->setAnimation(0,1000);
     ui->left_btn->setBtnVisible(false);
     ui->right_btn->setBtnVisible(false);
+}
+
+/*
+    在label上绘制图像
+
+    QPixmap和QPicture:
+        QPixmap:进行图像的显示和快速更新。对在屏幕显示有优化
+        QPicture:记录绘图操作，尤其是当你需要在不同地方重复绘图时。
+
+    由于每次设置图片大小都会让控件大小改变,进而让窗口大小不停变化,所以在构造函数
+    中设置了label为固定大小
+*/
+void PortrayPic::slot_showPic(QString &picPath)
+{
+    m_pixmap.load(picPath);
+    int height = this->height() - 20;
+    int width = this->width() -20;
+    m_pixmap = m_pixmap.scaled(width,height,Qt::KeepAspectRatio);
+
+    ui->label->setPixmap(m_pixmap);
+    //ui->label->setFixedSize(width,height);
+
+}
+
+void PortrayPic::slot_prePic()
+{
+    emit showPrePic();
+}
+
+void PortrayPic::slot_nextPic()
+{
+    emit showNextPic();
 }
