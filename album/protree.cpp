@@ -12,7 +12,7 @@
 #include "closeprodialog.h"
 
 
-ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr)
+ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr),m_lastItem(nullptr)
 {
     this->header()->hide();
 
@@ -43,7 +43,9 @@ void ProTree::constructGeneric(QString &src_path, QString &dst_path)
     m_progress->setRange(0,PROGRESS_MAX);
     //初始化线程连接
     int FileCount =0;
-    m_importThread = std::make_shared<proTreeThread>(this,m_clickItem,std::ref(src_path),std::ref(dst_path),std::ref(FileCount));
+    if(!m_lastItem)
+        m_lastItem = m_clickItem;
+    m_importThread = std::make_shared<proTreeThread>(this,m_clickItem,m_lastItem,std::ref(src_path),std::ref(dst_path),std::ref(FileCount));
     m_importThread->setStopFlag(false);
 
     //连接和线程有关的槽函数
@@ -166,7 +168,6 @@ void ProTree::slotImportPro()
     qDebug()<<"import project";
     if (m_clickItem==nullptr)
     {
-        qDebug()<<"m_clickItem is nullptr";
         return;
     }
 
@@ -212,10 +213,11 @@ void ProTree::slot_updateProgress(int pg)
     完成文件导入
         将进度条设置成满并关闭对话框
 */
-void ProTree::slot_finishImport()
+void ProTree::slot_finishImport(QTreeWidgetItem* item)
 {
     m_progress->setValue(PROGRESS_MAX);
     m_progress->deleteLater();
+    m_lastItem = item;
 }
 
 

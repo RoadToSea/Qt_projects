@@ -37,6 +37,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         closeprodialog.h closeprodialog.cpp closeprodialog.ui
         portraypic.h portraypic.cpp portraypic.ui
         picbutton.h picbutton.cpp
+        function.md
 
 
 

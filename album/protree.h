@@ -16,7 +16,7 @@ private slots:
     void slotItemPressed(QTreeWidgetItem *item, int column);
     void slotImportPro(void);
     void slot_updateProgress(int pg);
-    void slot_finishImport();
+    void slot_finishImport(QTreeWidgetItem* lastItem);
     void slot_cancelImport();
     void slot_closePro();
     void slot_deletePic();
@@ -36,6 +36,7 @@ public:
 private:
     QSet<QString> projects;
     QTreeWidgetItem* m_clickItem;
+    QTreeWidgetItem* m_lastItem;
     std::shared_ptr<proTreeThread> m_importThread;
     QProgressDialog* m_progress;
     void constructGeneric(QString& src_path,QString& dst_path);

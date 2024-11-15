@@ -11,11 +11,17 @@ void proTreeThread::slot_cancelImport()
     stopFlag=true;
 }
 
-//最开始根节点和父亲节点都是root,必须初始化,不然添加节点的时候会内存异常
-//父亲节点是当前要添加节点的父节点,有文件夹嵌套的情况会变化
-proTreeThread::proTreeThread(QTreeWidget* self,QTreeWidgetItem* root,QString src_path,QString dst_path,
+/*最开始根节点和父亲节点都是root,必须初始化,不然添加节点的时候会内存异常
+  父亲节点是当前要添加节点的父节点,有文件夹嵌套的情况会变化\
+    root:文件树根节点,在删除整个项目时使用
+    lastItem: 记录最后一个节点,也就是下次添加的节点的父亲节点
+    src_path:图片文件夹源地址
+    dst_path:项目地址
+    file_count:已复制的文件个数
+*/
+proTreeThread::proTreeThread(QTreeWidget* self,QTreeWidgetItem* root,QTreeWidgetItem* lastItem,QString src_path,QString dst_path,
                              int& file_count,QObject*parent)
-    :QThread(parent),m_self(self),m_root(root),m_parent(root),m_srcPath(src_path),m_dstPath(dst_path),m_fileCount(file_count)
+    :QThread(parent),m_self(self),m_root(root),m_parent(lastItem),m_srcPath(src_path),m_dstPath(dst_path),m_fileCount(file_count)
 {
 
 }
@@ -112,6 +118,9 @@ void proTreeThread::importToPro(QTreeWidget* self,QTreeWidgetItem *root,QTreeWid
         }
         else
         {
+            //如果父亲节点是图片节点,不能在图片节点上添加子项,要获取他的父亲文件夹节点再添加
+            if(parent->type() == TreeItemPic)
+                parent = parent->parent();
             //通过当前文件夹下的图片构造文件树显示节点
             auto* item = new ProTreeItem(root,parent,file.fileName(),tmpPath,TreeItemPic);
             item->setData(0,Qt::DisplayRole,file.fileName());
@@ -125,6 +134,7 @@ void proTreeThread::importToPro(QTreeWidget* self,QTreeWidgetItem *root,QTreeWid
             }
             item->setPreItem(pre_item);
             pre_item = dynamic_cast<QTreeWidgetItem*>(item);
+            m_lastItem = pre_item;
         }
     }
 }
@@ -136,7 +146,7 @@ void proTreeThread::setStopFlag(bool flag)
 
 void proTreeThread::run()
 {
-    importToPro(m_self,m_root,m_parent,m_fileCount,m_srcPath,m_dstPath,m_root);
+    importToPro(m_self,m_root,m_parent,m_fileCount,m_srcPath,m_dstPath,m_parent);
     if(stopFlag)
     {
         //先从文件树中移除
@@ -150,6 +160,6 @@ void proTreeThread::run()
     }
 
     //发送创建结束信号
-    emit finishImport();
+    emit finishImport(m_lastItem);
 }
 
