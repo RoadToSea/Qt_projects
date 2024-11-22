@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "wizard.h"
+#include "proopenpage.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,8 +20,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::UIinit()
 {
+    //创建右侧图片显示窗口
     portrayPic = new PortrayPic();
     ui->picShow->addWidget(portrayPic);
+
+    //创建幻灯片放映窗口
+    slideDlg = new SlideDlg();
 
     QAction* createPro = new QAction("创建项目",ui->menu_file);
     createPro->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_N));
@@ -43,6 +50,9 @@ void MainWindow::UIinit()
     connect(portrayPic,&PortrayPic::showPrePic,ui->treeView,&ProTree::slot_portrayPrePic);
     //绘制下一张图片
     connect(portrayPic,&PortrayPic::showNextPic,ui->treeView,&ProTree::slot_portrayNextPic);
+    //打开幻灯片窗口
+    connect(ui->treeView,&ProTree::showSlideDlg,this,&MainWindow::slot_showSlideDlg);
+
 }
 
 void MainWindow::slot_createPro()
@@ -62,4 +72,9 @@ void MainWindow::slot_openPro()
     connect(&page ,&proOpenPage::finishOpenPro,ui->treeView,&ProTree::addItems);
     page.openPro();
     disconnect(&page);
+}
+
+void MainWindow::slot_showSlideDlg()
+{
+    slideDlg->show();
 }

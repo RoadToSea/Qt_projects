@@ -10,5 +10,14 @@
         <file>res/icon/right_clicked.svg</file>
         <file>res/icon/right_hover.svg</file>
         <file>res/icon/right_normal.svg</file>
+        <file>res/icon/pause.png</file>
+        <file>res/icon/pause_hover.png</file>
+        <file>res/icon/pause_press.png</file>
+        <file>res/icon/play.png</file>
+        <file>res/icon/play_hover.png</file>
+        <file>res/icon/play_press.png</file>
+        <file>res/icon/closeshow.png</file>
+        <file>res/icon/closeshow_hover.png</file>
+        <file>res/icon/closeshow_press.png</file>
     </qresource>
 </RCC>

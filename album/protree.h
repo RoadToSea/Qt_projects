@@ -21,6 +21,7 @@ private slots:
     void slot_closePro();
     void slot_deletePic();
     void slot_portrayPic();
+    void slot_slidePic();
 
 public slots:
     void addItem(QString name,QString path);
@@ -30,6 +31,7 @@ public slots:
 signals:
     void cancelImport();
     void portrayPic(QString& picPath);
+    void showSlideDlg(void);
 public:
     ProTree(QWidget *parent = nullptr);
 
@@ -47,6 +49,7 @@ private:
     QAction* m_actionImport;
     QAction* m_actionDelete;
     QAction* m_actionClose;
+    QAction* m_actionSlide;
 };
 
 #endif // PROTREE_H

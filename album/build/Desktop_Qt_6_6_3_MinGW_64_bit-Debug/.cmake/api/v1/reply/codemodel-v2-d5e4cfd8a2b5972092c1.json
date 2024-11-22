@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-5a2f199c92935a7658e3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "album",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "album::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-album-Debug-dc3bf35e8a861350589c.json",
+					"name" : "album",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "album_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-album_autogen-Debug-115fee792648c1f22329.json",
+					"name" : "album_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "album_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-album_autogen_timestamp_deps-Debug-f71ad386b5f8c0be8cc7.json",
+					"name" : "album_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
+		"source" : "D:/Qt/code/album"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

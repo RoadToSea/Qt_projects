@@ -12,13 +12,16 @@ public:
     void setPreItem(QTreeWidgetItem* item);
     QTreeWidgetItem* getNextItem(void);
     QTreeWidgetItem* getPreItem(void);
+    QString& getName(void);
+    QTreeWidgetItem* getFirstChild(QTreeWidgetItem* curItem);
+    QTreeWidgetItem* getLastChild(QTreeWidgetItem* curItem);
     QString& getPath(void);
 private:
-    QString _name;
-    QString _path;
-    QTreeWidgetItem* _root;
-    QTreeWidgetItem* _preItem;
-    QTreeWidgetItem* _nextItem;
+    QString m_name;
+    QString m_path;
+    QTreeWidgetItem* m_root;
+    QTreeWidgetItem* m_preItem;
+    QTreeWidgetItem* m_nextItem;
 };
 
 #endif // PROTREEITEM_H

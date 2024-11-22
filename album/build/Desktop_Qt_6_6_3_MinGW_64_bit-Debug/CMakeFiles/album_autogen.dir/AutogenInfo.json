@@ -358,6 +358,18 @@
 			"EWIEGA46WW/moc_protreethread.cpp",
 			null
 		],
+		[
+			"D:/Qt/code/album/slideStateButton.h",
+			"MU",
+			"EWIEGA46WW/moc_slideStateButton.cpp",
+			null
+		],
+		[
+			"D:/Qt/code/album/slidedlg.h",
+			"MU",
+			"EWIEGA46WW/moc_slidedlg.cpp",
+			null
+		],
 		[ "D:/Qt/code/album/wizard.h", "MU", "EWIEGA46WW/moc_wizard.cpp", null ]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -441,6 +453,8 @@
 		[ "D:/Qt/code/album/protree.cpp", "MU", null ],
 		[ "D:/Qt/code/album/protreeitem.cpp", "MU", null ],
 		[ "D:/Qt/code/album/protreethread.cpp", "MU", null ],
+		[ "D:/Qt/code/album/slideStatebutton.cpp", "MU", null ],
+		[ "D:/Qt/code/album/slidedlg.cpp", "MU", null ],
 		[ "D:/Qt/code/album/wizard.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

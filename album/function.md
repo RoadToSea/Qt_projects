@@ -1,51 +1,15 @@
-# First Level Heading
+## todo ...
+- 图片幻灯片播放
+- 淡入淡出效果
+- 编辑修改图片
+- 图片重命名
 
-Paragraph.
+<br/>
 
-## Second Level Heading
+- 后续添加进项目的文件连接到图片树双向链表中 ✓
 
-Paragraph.
+<br/>
+<br/>
 
-- bullet
-+ other bullet
-* another bullet
-    * child bullet
-
-1. ordered
-2. next ordered
-
-### Third Level Heading
-
-Some *italic* and **bold** text and `inline code`.
-
-An empty line starts a new paragraph.
-
-Use two spaces at the end  
-to force a line break.
-
-A horizontal ruler follows:
-
----
-
-Add links inline like [this link to the Qt homepage](https://www.qt.io),
-or with a reference like [this other link to the Qt homepage][1].
-
-    Add code blocks with
-    four spaces at the front.
-
-> A blockquote
-> starts with >
->
-> and has the same paragraph rules as normal text.
-
-First Level Heading in Alternate Style
-======================================
-
-Paragraph.
-
-Second Level Heading in Alternate Style
----------------------------------------
-
-Paragraph.
-
-[1]: https://www.qt.io
+## BUGS .....
+- 同时打开两个项目第二个项目父节点不对,文件添加到第一个项目的最后 

@@ -8,4 +8,5 @@
 #include "EWIEGA46WW/moc_prosetpage.cpp"
 #include "EWIEGA46WW/moc_protree.cpp"
 #include "EWIEGA46WW/moc_protreethread.cpp"
+#include "EWIEGA46WW/moc_slidedlg.cpp"
 #include "EWIEGA46WW/moc_wizard.cpp"

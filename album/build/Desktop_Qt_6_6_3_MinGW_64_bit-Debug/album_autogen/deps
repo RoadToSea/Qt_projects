@@ -161,6 +161,7 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QProgressDialog \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QPushButton \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QTreeWidget \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QTreeWidgetItem \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWidget \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWizard \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QWizardPage \
@@ -624,6 +625,10 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/protreeitem.h \
 	D:/Qt/code/album/protreethread.cpp \
 	D:/Qt/code/album/protreethread.h \
+	D:/Qt/code/album/slideStateButton.h \
+	D:/Qt/code/album/slideStatebutton.cpp \
+	D:/Qt/code/album/slidedlg.cpp \
+	D:/Qt/code/album/slidedlg.h \
 	D:/Qt/code/album/src.qrc \
 	D:/Qt/code/album/wizard.cpp \
 	D:/Qt/code/album/wizard.h \
@@ -632,5 +637,6 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/mainwindow.ui \
 	D:/Qt/code/album/portraypic.ui \
 	D:/Qt/code/album/prosetpage.ui \
+	D:/Qt/code/album/slidedlg.ui \
 	D:/Qt/code/album/wizard.ui \
 	D:/Qt/Tools/CMake_64/bin/cmake.exe

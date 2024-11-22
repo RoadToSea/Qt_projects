@@ -19,17 +19,21 @@ ProTree::ProTree(QWidget *parent):QTreeWidget(parent),m_clickItem(nullptr),m_las
     m_actionImport = new QAction("导入",this);
     m_actionDelete = new QAction("删除",this);
     m_actionClose = new QAction("关闭项目",this);
+    m_actionSlide = new QAction("幻灯片放映");
 
     //绑定点击事件
     connect(this,&ProTree::itemPressed,this,&ProTree::slotItemPressed);
-    //绑定导入文件
+    //绑定导入文件 m_actionImport
     connect(m_actionImport,&QAction::triggered,this,&ProTree::slotImportPro);
-    //绑定关闭项目
+    //绑定关闭项目 m_actionClose
     connect(m_actionClose,&QAction::triggered,this,&ProTree::slot_closePro);
+    //绑定删除图片节点 m_actionDelete
+    connect(m_actionDelete,&QAction::triggered,this,&ProTree::slot_deletePic);
+    //绑定幻灯片放映
+    connect(m_actionSlide,&QAction::triggered,this,&ProTree::slot_slidePic);
     // 绑定显示图片
     connect(this,&ProTree::itemDoubleClicked,this,&ProTree::slot_portrayPic);
-    //绑定删除图片节点
-    connect(m_actionDelete,&QAction::triggered,this,&ProTree::slot_deletePic);
+
 
 }
 
@@ -147,6 +151,7 @@ void ProTree::slotItemPressed(QTreeWidgetItem *item, int column)
                 //弹出菜单
                 menu.addAction(m_actionImport);
                 menu.addAction(m_actionClose);
+                menu.addAction(m_actionSlide);
                 menu.exec(QCursor::pos());
                 break;
 
@@ -296,6 +301,12 @@ void ProTree::slot_portrayPic()
         }
     }
 
+}
+
+//通知mainwindow打开幻灯片播放窗口
+void ProTree::slot_slidePic()
+{
+    emit showSlideDlg();
 }
 
 /*

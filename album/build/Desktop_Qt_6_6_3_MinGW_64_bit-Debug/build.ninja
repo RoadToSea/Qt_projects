@@ -57,6 +57,22 @@ build CMakeFiles/album.dir/album_autogen/mocs_compilation.cpp.obj: CXX_COMPILER_
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir\album_autogen
 
+build CMakeFiles/album.dir/closeprodialog.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/closeprodialog.cpp || cmake_object_order_depends_target_album
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\album.dir\closeprodialog.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\album.dir
+  OBJECT_FILE_DIR = CMakeFiles\album.dir
+
+build CMakeFiles/album.dir/comfirmpage.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/comfirmpage.cpp || cmake_object_order_depends_target_album
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\album.dir\comfirmpage.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\album.dir
+  OBJECT_FILE_DIR = CMakeFiles\album.dir
+
 build CMakeFiles/album.dir/main.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/main.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\album.dir\main.cpp.obj.d
@@ -73,9 +89,25 @@ build CMakeFiles/album.dir/mainwindow.cpp.obj: CXX_COMPILER__album_unscanned_Deb
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir
 
-build CMakeFiles/album.dir/wizard.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/wizard.cpp || cmake_object_order_depends_target_album
+build CMakeFiles/album.dir/picbutton.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/picbutton.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\album.dir\wizard.cpp.obj.d
+  DEP_FILE = CMakeFiles\album.dir\picbutton.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\album.dir
+  OBJECT_FILE_DIR = CMakeFiles\album.dir
+
+build CMakeFiles/album.dir/portraypic.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/portraypic.cpp || cmake_object_order_depends_target_album
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\album.dir\portraypic.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\album.dir
+  OBJECT_FILE_DIR = CMakeFiles\album.dir
+
+build CMakeFiles/album.dir/proopenpage.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/proopenpage.cpp || cmake_object_order_depends_target_album
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\album.dir\proopenpage.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\album.dir
@@ -84,14 +116,6 @@ build CMakeFiles/album.dir/wizard.cpp.obj: CXX_COMPILER__album_unscanned_Debug D
 build CMakeFiles/album.dir/prosetpage.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/prosetpage.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\album.dir\prosetpage.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\album.dir
-  OBJECT_FILE_DIR = CMakeFiles\album.dir
-
-build CMakeFiles/album.dir/comfirmpage.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/comfirmpage.cpp || cmake_object_order_depends_target_album
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\album.dir\comfirmpage.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\album.dir
@@ -113,14 +137,6 @@ build CMakeFiles/album.dir/protreeitem.cpp.obj: CXX_COMPILER__album_unscanned_De
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir
 
-build CMakeFiles/album.dir/proopenpage.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/proopenpage.cpp || cmake_object_order_depends_target_album
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\album.dir\proopenpage.cpp.obj.d
-  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
-  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
-  OBJECT_DIR = CMakeFiles\album.dir
-  OBJECT_FILE_DIR = CMakeFiles\album.dir
-
 build CMakeFiles/album.dir/protreethread.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/protreethread.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\album.dir\protreethread.cpp.obj.d
@@ -129,25 +145,25 @@ build CMakeFiles/album.dir/protreethread.cpp.obj: CXX_COMPILER__album_unscanned_
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir
 
-build CMakeFiles/album.dir/closeprodialog.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/closeprodialog.cpp || cmake_object_order_depends_target_album
+build CMakeFiles/album.dir/slideStatebutton.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/slideStatebutton.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\album.dir\closeprodialog.cpp.obj.d
+  DEP_FILE = CMakeFiles\album.dir\slideStatebutton.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir
 
-build CMakeFiles/album.dir/portraypic.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/portraypic.cpp || cmake_object_order_depends_target_album
+build CMakeFiles/album.dir/slidedlg.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/slidedlg.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\album.dir\portraypic.cpp.obj.d
+  DEP_FILE = CMakeFiles\album.dir\slidedlg.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir
 
-build CMakeFiles/album.dir/picbutton.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/picbutton.cpp || cmake_object_order_depends_target_album
+build CMakeFiles/album.dir/wizard.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/wizard.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\album.dir\picbutton.cpp.obj.d
+  DEP_FILE = CMakeFiles\album.dir\wizard.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\album.dir
@@ -169,7 +185,7 @@ build CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable album.exe
 
-build album.exe: CXX_EXECUTABLE_LINKER__album_Debug CMakeFiles/album.dir/album_autogen/mocs_compilation.cpp.obj CMakeFiles/album.dir/main.cpp.obj CMakeFiles/album.dir/mainwindow.cpp.obj CMakeFiles/album.dir/wizard.cpp.obj CMakeFiles/album.dir/prosetpage.cpp.obj CMakeFiles/album.dir/comfirmpage.cpp.obj CMakeFiles/album.dir/protree.cpp.obj CMakeFiles/album.dir/protreeitem.cpp.obj CMakeFiles/album.dir/proopenpage.cpp.obj CMakeFiles/album.dir/protreethread.cpp.obj CMakeFiles/album.dir/closeprodialog.cpp.obj CMakeFiles/album.dir/portraypic.cpp.obj CMakeFiles/album.dir/picbutton.cpp.obj CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj | D$:/Qt/6.6.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Core.a D$:/Qt/6.6.3/mingw_64/lib/libQt6EntryPoint.a || album_autogen album_autogen_timestamp_deps
+build album.exe: CXX_EXECUTABLE_LINKER__album_Debug CMakeFiles/album.dir/album_autogen/mocs_compilation.cpp.obj CMakeFiles/album.dir/closeprodialog.cpp.obj CMakeFiles/album.dir/comfirmpage.cpp.obj CMakeFiles/album.dir/main.cpp.obj CMakeFiles/album.dir/mainwindow.cpp.obj CMakeFiles/album.dir/picbutton.cpp.obj CMakeFiles/album.dir/portraypic.cpp.obj CMakeFiles/album.dir/proopenpage.cpp.obj CMakeFiles/album.dir/prosetpage.cpp.obj CMakeFiles/album.dir/protree.cpp.obj CMakeFiles/album.dir/protreeitem.cpp.obj CMakeFiles/album.dir/protreethread.cpp.obj CMakeFiles/album.dir/slideStatebutton.cpp.obj CMakeFiles/album.dir/slidedlg.cpp.obj CMakeFiles/album.dir/wizard.cpp.obj CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj | D$:/Qt/6.6.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Core.a D$:/Qt/6.6.3/mingw_64/lib/libQt6EntryPoint.a || album_autogen album_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = D:/Qt/6.6.3/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.6.3/mingw_64/lib/libQt6Gui.a  D:/Qt/6.6.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Qt/6.6.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -256,7 +272,7 @@ build album_autogen_timestamp_deps: phony
 #############################################
 # Utility command for album_autogen
 
-build album_autogen: phony CMakeFiles/album_autogen album_autogen/include/ui_wizard.h album_autogen/include/ui_prosetpage.h album_autogen/include/ui_comfirmpage.h album_autogen/include/ui_mainwindow.h album_autogen/include/ui_closeprodialog.h album_autogen/include/ui_portraypic.h album_autogen/timestamp album_autogen/mocs_compilation.cpp album_autogen_timestamp_deps
+build album_autogen: phony CMakeFiles/album_autogen album_autogen/include/ui_closeprodialog.h album_autogen/include/ui_comfirmpage.h album_autogen/include/ui_mainwindow.h album_autogen/include/ui_portraypic.h album_autogen/include/ui_prosetpage.h album_autogen/include/ui_slidedlg.h album_autogen/include/ui_wizard.h album_autogen/timestamp album_autogen/mocs_compilation.cpp album_autogen_timestamp_deps
 
 
 #############################################
@@ -273,7 +289,7 @@ build album_autogen/timestamp album_autogen/mocs_compilation.cpp | ${cmake_ninja
 #############################################
 # Custom command for album_autogen\EWIEGA46WW\qrc_src.cpp
 
-build album_autogen/EWIEGA46WW/qrc_src.cpp | ${cmake_ninja_workdir}album_autogen/EWIEGA46WW/qrc_src.cpp: CUSTOM_COMMAND D$:/Qt/code/album/src.qrc CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Info.json D$:/Qt/code/album/res/icon/right_hover.svg D$:/Qt/code/album/res/icon/图片.svg D$:/Qt/code/album/res/icon/文件夹.svg D$:/Qt/code/album/res/icon/right_clicked.svg D$:/Qt/code/album/res/icon/left_clicked.svg D$:/Qt/code/album/res/icon/left_hover.svg D$:/Qt/code/album/res/icon/right_normal.svg D$:/Qt/code/album/res/icon/left_normal.svg D$:/Qt/code/album/res/style/portrayPic.qss D$:/Qt/code/album/res/style/mainwindow.qss D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe || album_autogen album_autogen_timestamp_deps
+build album_autogen/EWIEGA46WW/qrc_src.cpp | ${cmake_ninja_workdir}album_autogen/EWIEGA46WW/qrc_src.cpp: CUSTOM_COMMAND D$:/Qt/code/album/src.qrc CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Info.json D$:/Qt/code/album/res/icon/right_hover.svg D$:/Qt/code/album/res/icon/pause_hover.png D$:/Qt/code/album/res/icon/play_press.png D$:/Qt/code/album/res/icon/pause_press.png D$:/Qt/code/album/res/icon/pause.png D$:/Qt/code/album/res/icon/图片.svg D$:/Qt/code/album/res/icon/文件夹.svg D$:/Qt/code/album/res/icon/right_clicked.svg D$:/Qt/code/album/res/icon/left_clicked.svg D$:/Qt/code/album/res/icon/play_hover.png D$:/Qt/code/album/res/icon/closeshow_hover.png D$:/Qt/code/album/res/icon/left_hover.svg D$:/Qt/code/album/res/icon/closeshow_press.png D$:/Qt/code/album/res/icon/right_normal.svg D$:/Qt/code/album/res/icon/left_normal.svg D$:/Qt/code/album/res/icon/play.png D$:/Qt/code/album/res/icon/closeshow.png D$:/Qt/code/album/res/style/portrayPic.qss D$:/Qt/code/album/res/style/mainwindow.qss D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe D$:/Qt/6.6.3/mingw_64/./bin/rcc.exe || album_autogen album_autogen_timestamp_deps
   COMMAND = C:\Windows\system32\cmd.exe /C "cd /D D:\Qt\code\album\build\Desktop_Qt_6_6_3_MinGW_64_bit-Debug && D:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autorcc D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/album_autogen.dir/AutoRcc_src_EWIEGA46WW_Info.json Debug"
   DESC = Automatic RCC for src.qrc
   restat = 1
@@ -282,7 +298,7 @@ build album_autogen/EWIEGA46WW/qrc_src.cpp | ${cmake_ninja_workdir}album_autogen
 #############################################
 # Phony custom command for CMakeFiles\album_autogen
 
-build CMakeFiles/album_autogen album_autogen/include/ui_wizard.h album_autogen/include/ui_prosetpage.h album_autogen/include/ui_comfirmpage.h album_autogen/include/ui_mainwindow.h album_autogen/include/ui_closeprodialog.h album_autogen/include/ui_portraypic.h | ${cmake_ninja_workdir}CMakeFiles/album_autogen ${cmake_ninja_workdir}album_autogen/include/ui_wizard.h ${cmake_ninja_workdir}album_autogen/include/ui_prosetpage.h ${cmake_ninja_workdir}album_autogen/include/ui_comfirmpage.h ${cmake_ninja_workdir}album_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}album_autogen/include/ui_closeprodialog.h ${cmake_ninja_workdir}album_autogen/include/ui_portraypic.h: phony album_autogen/timestamp || album_autogen_timestamp_deps
+build CMakeFiles/album_autogen album_autogen/include/ui_closeprodialog.h album_autogen/include/ui_comfirmpage.h album_autogen/include/ui_mainwindow.h album_autogen/include/ui_portraypic.h album_autogen/include/ui_prosetpage.h album_autogen/include/ui_slidedlg.h album_autogen/include/ui_wizard.h | ${cmake_ninja_workdir}CMakeFiles/album_autogen ${cmake_ninja_workdir}album_autogen/include/ui_closeprodialog.h ${cmake_ninja_workdir}album_autogen/include/ui_comfirmpage.h ${cmake_ninja_workdir}album_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}album_autogen/include/ui_portraypic.h ${cmake_ninja_workdir}album_autogen/include/ui_prosetpage.h ${cmake_ninja_workdir}album_autogen/include/ui_slidedlg.h ${cmake_ninja_workdir}album_autogen/include/ui_wizard.h: phony album_autogen/timestamp || album_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

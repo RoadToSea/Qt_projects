@@ -2,9 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "wizard.h"
-#include "proopenpage.h"
 #include "portraypic.h"
+#include "slidedlg.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,6 +18,7 @@ class MainWindow : public QMainWindow
 public slots:
     void slot_createPro(void);
     void slot_openPro(void);
+    void slot_showSlideDlg(void);
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -26,6 +27,7 @@ public:
 private:
     Ui::MainWindow *ui;
     PortrayPic* portrayPic;
+    SlideDlg* slideDlg;
     void UIinit(void);
 };
 #endif // MAINWINDOW_H

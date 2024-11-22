@@ -9,39 +9,24 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(ALBUM_INC ./Inc/)
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
-set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-
+file(GLOB SrcList
+    "./*.cpp"
+    "./*.h"
+    "./*.ui"
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(album
         MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
         src.qrc
-        mainwindow.h mainwindow.cpp main.cpp
-        wizard.h wizard.cpp wizard.ui
-        prosetpage.h prosetpage.cpp prosetpage.ui
-        comfirmpage.h comfirmpage.cpp comfirmpage.ui
-        mainwindow.ui
-        protree.h protree.cpp
-        protreeitem.h protreeitem.cpp
-        config.h
-        proopenpage.h proopenpage.cpp
-        protreethread.h protreethread.cpp
-        closeprodialog.h closeprodialog.cpp closeprodialog.ui
-        portraypic.h portraypic.cpp portraypic.ui
-        picbutton.h picbutton.cpp
+        ${SrcList}
         function.md
-
-
-
-
+        slideStateButton.h slideStatebutton.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET album APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
