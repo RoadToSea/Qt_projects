@@ -37,7 +37,7 @@
        </widget>
       </item>
       <item row="0" column="1" rowspan="2">
-       <widget class="QWidget" name="showPicWidget" native="true"/>
+       <widget class="SlideAnimationWid" name="showPicWidget" native="true"/>
       </item>
       <item row="1" column="2">
        <widget class="QWidget" name="nextPicWidget" native="true">
@@ -100,6 +100,12 @@
    <class>picButton</class>
    <extends>QPushButton</extends>
    <header>../../../code/album/picbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SlideAnimationWid</class>
+   <extends>QWidget</extends>
+   <header>../../../code/album/slideanimationwid.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

@@ -306,7 +306,10 @@ void ProTree::slot_portrayPic()
 //通知mainwindow打开幻灯片播放窗口
 void ProTree::slot_slidePic()
 {
-    emit showSlideDlg();
+    ProTreeItem* tmp = static_cast<ProTreeItem*>(m_clickItem);
+    auto* first = tmp->getFirstChild(tmp);
+    auto* last = tmp->getLastChild(tmp);
+    emit showSlideDlg(first,last);
 }
 
 /*

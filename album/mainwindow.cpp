@@ -24,9 +24,6 @@ void MainWindow::UIinit()
     portrayPic = new PortrayPic();
     ui->picShow->addWidget(portrayPic);
 
-    //创建幻灯片放映窗口
-    slideDlg = new SlideDlg();
-
     QAction* createPro = new QAction("创建项目",ui->menu_file);
     createPro->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_N));
     ui->menu_file->addAction(createPro);
@@ -50,7 +47,7 @@ void MainWindow::UIinit()
     connect(portrayPic,&PortrayPic::showPrePic,ui->treeView,&ProTree::slot_portrayPrePic);
     //绘制下一张图片
     connect(portrayPic,&PortrayPic::showNextPic,ui->treeView,&ProTree::slot_portrayNextPic);
-    //打开幻灯片窗口
+    //打开幻灯片窗口并播放幻灯片
     connect(ui->treeView,&ProTree::showSlideDlg,this,&MainWindow::slot_showSlideDlg);
 
 }
@@ -74,7 +71,17 @@ void MainWindow::slot_openPro()
     disconnect(&page);
 }
 
-void MainWindow::slot_showSlideDlg()
+
+/*
+ * 打开幻灯片窗口并播放幻灯片
+*/
+void MainWindow::slot_showSlideDlg(QTreeWidgetItem* first,QTreeWidgetItem* last)
 {
-    slideDlg->show();
+    slideDlg = std::make_shared<SlideDlg>(first,last);
+    slideDlg->setModal(true);
+
+    slideDlg->showMaximized();
+    slideDlg->play();
 }
+
+

@@ -365,6 +365,12 @@
 			null
 		],
 		[
+			"D:/Qt/code/album/slideanimationwid.h",
+			"MU",
+			"EWIEGA46WW/moc_slideanimationwid.cpp",
+			null
+		],
+		[
 			"D:/Qt/code/album/slidedlg.h",
 			"MU",
 			"EWIEGA46WW/moc_slidedlg.cpp",
@@ -454,6 +460,7 @@
 		[ "D:/Qt/code/album/protreeitem.cpp", "MU", null ],
 		[ "D:/Qt/code/album/protreethread.cpp", "MU", null ],
 		[ "D:/Qt/code/album/slideStatebutton.cpp", "MU", null ],
+		[ "D:/Qt/code/album/slideanimationwid.cpp", "MU", null ],
 		[ "D:/Qt/code/album/slidedlg.cpp", "MU", null ],
 		[ "D:/Qt/code/album/wizard.cpp", "MU", null ]
 	],

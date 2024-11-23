@@ -18,8 +18,9 @@ class MainWindow : public QMainWindow
 public slots:
     void slot_createPro(void);
     void slot_openPro(void);
-    void slot_showSlideDlg(void);
-
+    void slot_showSlideDlg(QTreeWidgetItem* first,QTreeWidgetItem* last);
+signals:
+    void slidePlay();
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -27,7 +28,7 @@ public:
 private:
     Ui::MainWindow *ui;
     PortrayPic* portrayPic;
-    SlideDlg* slideDlg;
+    std::shared_ptr<SlideDlg> slideDlg;
     void UIinit(void);
 };
 #endif // MAINWINDOW_H

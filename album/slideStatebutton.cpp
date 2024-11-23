@@ -32,9 +32,15 @@ bool slideStateButton::event(QEvent *e)
             break;
         case QEvent::MouseButtonRelease:
             if(m_state)
-                setStateIcon(playHover);
-            else
+            {
                 setStateIcon(album::stopHover);
+                emit sigStart();
+            }
+            else
+            {
+                setStateIcon(album::playHover);
+                emit sigStop();
+            }
             m_state = !m_state;
             break;
         default:

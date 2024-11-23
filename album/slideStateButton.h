@@ -8,14 +8,19 @@ using namespace album ;
 
 class slideStateButton : public QPushButton
 {
+    Q_OBJECT
+
+signals:
+    void sigStart();
+    void sigStop();
 public:
     slideStateButton(QWidget *parent);
-    bool event(QEvent *e) override;
     void setIcons(QString playNormal, QString playHover, QString playPress,
                   QString stopNormal, QString stopHover, QString stopPress);
     void setStateIcon(album::buttonState state);
     bool& getState(void);
-
+protected:
+    bool event(QEvent *e) override;
 private:
     QString m_playNormal;
     QString m_playHover;

@@ -153,6 +153,14 @@ build CMakeFiles/album.dir/slideStatebutton.cpp.obj: CXX_COMPILER__album_unscann
   OBJECT_DIR = CMakeFiles\album.dir
   OBJECT_FILE_DIR = CMakeFiles\album.dir
 
+build CMakeFiles/album.dir/slideanimationwid.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/slideanimationwid.cpp || cmake_object_order_depends_target_album
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\album.dir\slideanimationwid.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/include -isystem D:/Qt/6.6.3/mingw_64/include/QtCore -isystem D:/Qt/6.6.3/mingw_64/include -isystem D:/Qt/6.6.3/mingw_64/mkspecs/win32-g++ -isystem D:/Qt/6.6.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.6.3/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\album.dir
+  OBJECT_FILE_DIR = CMakeFiles\album.dir
+
 build CMakeFiles/album.dir/slidedlg.cpp.obj: CXX_COMPILER__album_unscanned_Debug D$:/Qt/code/album/slidedlg.cpp || cmake_object_order_depends_target_album
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\album.dir\slidedlg.cpp.obj.d
@@ -185,7 +193,7 @@ build CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable album.exe
 
-build album.exe: CXX_EXECUTABLE_LINKER__album_Debug CMakeFiles/album.dir/album_autogen/mocs_compilation.cpp.obj CMakeFiles/album.dir/closeprodialog.cpp.obj CMakeFiles/album.dir/comfirmpage.cpp.obj CMakeFiles/album.dir/main.cpp.obj CMakeFiles/album.dir/mainwindow.cpp.obj CMakeFiles/album.dir/picbutton.cpp.obj CMakeFiles/album.dir/portraypic.cpp.obj CMakeFiles/album.dir/proopenpage.cpp.obj CMakeFiles/album.dir/prosetpage.cpp.obj CMakeFiles/album.dir/protree.cpp.obj CMakeFiles/album.dir/protreeitem.cpp.obj CMakeFiles/album.dir/protreethread.cpp.obj CMakeFiles/album.dir/slideStatebutton.cpp.obj CMakeFiles/album.dir/slidedlg.cpp.obj CMakeFiles/album.dir/wizard.cpp.obj CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj | D$:/Qt/6.6.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Core.a D$:/Qt/6.6.3/mingw_64/lib/libQt6EntryPoint.a || album_autogen album_autogen_timestamp_deps
+build album.exe: CXX_EXECUTABLE_LINKER__album_Debug CMakeFiles/album.dir/album_autogen/mocs_compilation.cpp.obj CMakeFiles/album.dir/closeprodialog.cpp.obj CMakeFiles/album.dir/comfirmpage.cpp.obj CMakeFiles/album.dir/main.cpp.obj CMakeFiles/album.dir/mainwindow.cpp.obj CMakeFiles/album.dir/picbutton.cpp.obj CMakeFiles/album.dir/portraypic.cpp.obj CMakeFiles/album.dir/proopenpage.cpp.obj CMakeFiles/album.dir/prosetpage.cpp.obj CMakeFiles/album.dir/protree.cpp.obj CMakeFiles/album.dir/protreeitem.cpp.obj CMakeFiles/album.dir/protreethread.cpp.obj CMakeFiles/album.dir/slideStatebutton.cpp.obj CMakeFiles/album.dir/slideanimationwid.cpp.obj CMakeFiles/album.dir/slidedlg.cpp.obj CMakeFiles/album.dir/wizard.cpp.obj CMakeFiles/album.dir/album_autogen/EWIEGA46WW/qrc_src.cpp.obj | D$:/Qt/6.6.3/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Gui.a D$:/Qt/6.6.3/mingw_64/lib/libQt6Core.a D$:/Qt/6.6.3/mingw_64/lib/libQt6EntryPoint.a || album_autogen album_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = D:/Qt/6.6.3/mingw_64/lib/libQt6Widgets.a  D:/Qt/6.6.3/mingw_64/lib/libQt6Gui.a  D:/Qt/6.6.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Qt/6.6.3/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

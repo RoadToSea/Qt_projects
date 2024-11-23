@@ -31,7 +31,7 @@ public slots:
 signals:
     void cancelImport();
     void portrayPic(QString& picPath);
-    void showSlideDlg(void);
+    void showSlideDlg(QTreeWidgetItem* first,QTreeWidgetItem* last);
 public:
     ProTree(QWidget *parent = nullptr);
 

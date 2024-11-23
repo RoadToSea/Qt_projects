@@ -627,6 +627,8 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/protreethread.h \
 	D:/Qt/code/album/slideStateButton.h \
 	D:/Qt/code/album/slideStatebutton.cpp \
+	D:/Qt/code/album/slideanimationwid.cpp \
+	D:/Qt/code/album/slideanimationwid.h \
 	D:/Qt/code/album/slidedlg.cpp \
 	D:/Qt/code/album/slidedlg.h \
 	D:/Qt/code/album/src.qrc \

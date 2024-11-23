@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 66,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 49,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -376,19 +376,20 @@
 				27,
 				30,
 				31,
-				34,
-				46
+				33,
+				36,
+				48
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "album_autogen::@6890427a1f51a3e7e1df"
+			"id" : "album_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "album_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "album_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "album::@6890427a1f51a3e7e1df",
@@ -512,8 +513,9 @@
 				27,
 				30,
 				31,
-				34,
-				46
+				33,
+				36,
+				48
 			]
 		},
 		{
@@ -526,10 +528,10 @@
 				12,
 				17,
 				22,
-				33,
-				36,
-				37,
-				45
+				35,
+				38,
+				39,
+				47
 			]
 		},
 		{
@@ -549,22 +551,23 @@
 				28,
 				29,
 				32,
-				35,
-				38,
-				39,
+				34,
+				37,
 				40,
 				41,
 				42,
 				43,
-				44
+				44,
+				45,
+				46
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				47,
-				48
+				49,
+				50
 			]
 		}
 	],
@@ -738,6 +741,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "slideStatebutton.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "slideanimationwid.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "slideanimationwid.h",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 4,
