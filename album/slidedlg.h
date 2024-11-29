@@ -21,6 +21,8 @@ public:
 
 signals:
     void sigSlidePlay(void);
+    void sigPrePic(void);
+    void sigNextPic(void);
 public slots:
     void close(void);
     void play();

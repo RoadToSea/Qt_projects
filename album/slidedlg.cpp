@@ -1,4 +1,5 @@
 #include "slidedlg.h"
+#include "prelistwid.h"
 #include "ui_slidedlg.h"
 
 SlideDlg::SlideDlg(QTreeWidgetItem* firstItem,QTreeWidgetItem* lastItem,QWidget *parent)
@@ -32,12 +33,27 @@ SlideDlg::SlideDlg(QTreeWidgetItem* firstItem,QTreeWidgetItem* lastItem,QWidget 
     ui->prePicBtn->setIcons(left_normal,left_hover,left_clicked);
     ui->nextPicBtn->setIcons(right_normal,right_hover,right_clicked);
 
-    //为幻灯片控件设置第一个图片节点
-    ui->showPicWidget->setPixmap(m_firstItem);
+
     //连接暂停和继续,关闭信号
     connect(ui->playBtn,&slideStateButton::sigStart,this,&SlideDlg::play);
     connect(ui->playBtn,&slideStateButton::sigStop,this,&SlideDlg::stop);
     connect(ui->closeBtn,&picButton::released,this,&SlideDlg::close);
+
+    //连接上一张和下一张信号
+    connect(ui->prePicBtn,&picButton::clicked,ui->showPicWidget,&SlideAnimationWid::slot_prePic);
+    connect(ui->nextPicBtn,&picButton::clicked,ui->showPicWidget,&SlideAnimationWid::slot_nextPic);
+
+    //连接缩略图更新信号
+    connect(ui->showPicWidget,&SlideAnimationWid::picListUpdate,ui->listPicWidget,&PreListWid::slot_update);
+    //连接通知缩略图选中当前图片信号
+    connect(ui->showPicWidget,&SlideAnimationWid::picListChoosed,ui->listPicWidget,&PreListWid::slot_choosed);
+    //连接选中缩略图图片通知动画区域更新
+    connect(ui->listPicWidget,&PreListWid::sig_select,ui->showPicWidget,&SlideAnimationWid::slot_selected) ;
+
+    //为幻灯片控件设置第一个图片节点
+    /*一定要在信号连接后,不然发送更新信号的时候信号还没连接*/
+    ui->showPicWidget->setPixmap(m_firstItem);
+
 }
 
 SlideDlg::~SlideDlg()

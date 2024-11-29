@@ -96,19 +96,40 @@ SlideDlg {
     padding: 0;                      /* 去除内边距 */
 }
 
-#prePicBtn{
-    margin-top: 100px;
-}
-
-#nextPicBtn{
-    margin-top: 50px;
-}
-
-#preListWidget::item:selected:active{
+#listPicWidget::item:selected:active{
     border: 2px solid #FFFFFF;
 }
 
-#preListWidget::item:selected{
+#listPicWidget::item:selected{
     border: 2px solid #FFFFFF;
 }
 
+/*音乐播放器部分*/
+
+MusicWid {
+    background-color:rgb(46,47,48);
+
+}
+
+MusicWid MusicListWid{
+    color :rgb(235,235,235);
+    font :normal normal 12pt;
+    background-color:rgb(75,75,75);
+    margin : 10px ;
+    border : 2px solid rgb(220,220,220);
+}
+
+/*字体要设置成pt单位,设置成px不生效*/
+
+MusicWid picButton {
+    color: rgb(235,235,235);
+    font: normal normal 15pt;
+    border: none;                   /* 隐藏边框 */
+    background-color: transparent;        /* 背景透明 */
+    padding: 0;                      /* 去除内边距 */
+}
+
+MusicWid QLabel{
+color: rgb(235,235,235);
+font:normal normal 10pt;
+}

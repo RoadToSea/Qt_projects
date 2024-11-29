@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     MainWindow w;
+
     QFile style(":/res/style/mainwindow.qss");
     if(style.open(QFile::ReadOnly))
     {

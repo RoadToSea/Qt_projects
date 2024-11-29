@@ -12,26 +12,26 @@ bool slideStateButton::event(QEvent *e)
     switch(e->type())
     {
         case QEvent::Enter:
-            if(m_state)
+            if(!m_state)
                 setStateIcon(album::playHover);
             else
                 setStateIcon(album::stopHover);
         break;
 
         case QEvent::Leave:
-            if(m_state)
+            if(!m_state)
                 setStateIcon(album::playNormal);
             else
                 setStateIcon(album::stopNormal);
             break;
         case QEvent::MouseButtonPress:
-            if(m_state)
+            if(!m_state)
                 setStateIcon(album::playPress);
             else
                 setStateIcon(album::stopPress);
             break;
         case QEvent::MouseButtonRelease:
-            if(m_state)
+            if(!m_state)
             {
                 setStateIcon(album::stopHover);
                 emit sigStart();
@@ -58,10 +58,12 @@ void slideStateButton::setIcons(QString playNormal, QString playHover, QString p
     m_stopHover = stopHover;
     m_stopPress = stopPress;
 
-    QPixmap pix(m_playNormal);
+    QPixmap pix(stopNormal);
     this->setIcon(pix);
     this->setIconSize(pix.size());
     this->resize(pix.size());
+    //默认开启自动播放
+    m_state = true;
 }
 
 void slideStateButton::setStateIcon(album::buttonState state)
@@ -91,7 +93,6 @@ void slideStateButton::setStateIcon(album::buttonState state)
         qWarning("Invalid state passed to setState");
         return;
     }
-    qDebug()<<"state:"<<state;
     // 设置按钮图标和大小
     if (!pix.isNull()) {
         this->setIcon(pix);
@@ -107,4 +108,12 @@ bool &slideStateButton::getState()
     return m_state;
 }
 
+void slideStateButton::slot_Start()
+{
 
+}
+
+void slideStateButton::slot_Stop()
+{
+
+}

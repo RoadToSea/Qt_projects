@@ -1,5 +1,6 @@
 D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Qt/code/album/mainwindow.h \
   D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/moc_predefs.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/QList \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -57,6 +58,7 @@ D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA4
   D:/Qt/6.6.3/mingw_64/include/QtCore/qmargins.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qmath.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qmetacontainer.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qmetaobject.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qmetatype.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qminmax.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qnamespace.h \
@@ -112,6 +114,7 @@ D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA4
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtversionchecks.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtypeinfo.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qtypes.h \
+  D:/Qt/6.6.3/mingw_64/include/QtCore/qurl.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qutf8stringview.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qvariant.h \
   D:/Qt/6.6.3/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -143,6 +146,16 @@ D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA4
   D:/Qt/6.6.3/mingw_64/include/QtGui/qvalidator.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/QAudio \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/QAudioOutput \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qaudio.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QDialog \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
   D:/Qt/6.6.3/mingw_64/include/QtWidgets/QTreeWidgetItem \
@@ -367,5 +380,6 @@ D:/Qt/code/album/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/album_autogen/EWIEGA4
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h \
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
+  D:/Qt/code/album/musicwid.h \
   D:/Qt/code/album/portraypic.h \
   D:/Qt/code/album/slidedlg.h

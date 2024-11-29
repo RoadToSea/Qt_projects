@@ -1,5 +1,7 @@
 album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QEvent \
+	D:/Qt/6.6.3/mingw_64/include/QtCore/QList \
+	D:/Qt/6.6.3/mingw_64/include/QtCore/QObject \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QPropertyAnimation \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QSet \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QThread \
@@ -65,6 +67,7 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qmargins.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qmath.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qmetacontainer.h \
+	D:/Qt/6.6.3/mingw_64/include/QtCore/qmetaobject.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qmetatype.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qminmax.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qnamespace.h \
@@ -122,6 +125,7 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qtversionchecks.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qtypeinfo.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qtypes.h \
+	D:/Qt/6.6.3/mingw_64/include/QtCore/qurl.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qutf8stringview.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qvariant.h \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/qvariantanimation.h \
@@ -155,8 +159,19 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qvalidator.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.6.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/QAudio \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/QAudioOutput \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/QMediaPlayer \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qaudio.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qaudiooutput.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qmediaenumdebug.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qmediaplayer.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+	D:/Qt/6.6.3/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QDialog \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QGraphicsOpacityEffect \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QListWidget \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QMainWindow \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QProgressDialog \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QPushButton \
@@ -174,6 +189,8 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qdialog.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qframe.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qgraphicseffect.h \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qlistview.h \
+	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qlistwidget.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qmainwindow.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qprogressdialog.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/qpushbutton.h \
@@ -331,6 +348,48 @@ album_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginAdditionalTargetInfo.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginConfig.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets-relwithdebinfo.cmake \
@@ -611,10 +670,20 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/main.cpp \
 	D:/Qt/code/album/mainwindow.cpp \
 	D:/Qt/code/album/mainwindow.h \
+	D:/Qt/code/album/musiclistwid.cpp \
+	D:/Qt/code/album/musiclistwid.h \
+	D:/Qt/code/album/musiclistwiditem.cpp \
+	D:/Qt/code/album/musiclistwiditem.h \
+	D:/Qt/code/album/musicwid.cpp \
+	D:/Qt/code/album/musicwid.h \
 	D:/Qt/code/album/picbutton.cpp \
 	D:/Qt/code/album/picbutton.h \
 	D:/Qt/code/album/portraypic.cpp \
 	D:/Qt/code/album/portraypic.h \
+	D:/Qt/code/album/prelistwid.cpp \
+	D:/Qt/code/album/prelistwid.h \
+	D:/Qt/code/album/prelistwiditem.cpp \
+	D:/Qt/code/album/prelistwiditem.h \
 	D:/Qt/code/album/proopenpage.cpp \
 	D:/Qt/code/album/proopenpage.h \
 	D:/Qt/code/album/prosetpage.cpp \
@@ -637,6 +706,7 @@ album_autogen/timestamp: \
 	D:/Qt/code/album/closeprodialog.ui \
 	D:/Qt/code/album/comfirmpage.ui \
 	D:/Qt/code/album/mainwindow.ui \
+	D:/Qt/code/album/musicwid.ui \
 	D:/Qt/code/album/portraypic.ui \
 	D:/Qt/code/album/prosetpage.ui \
 	D:/Qt/code/album/slidedlg.ui \

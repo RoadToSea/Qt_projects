@@ -1,3 +1,4 @@
+#include "config.h"
 #include "protreeitem.h"
 #include "slideanimationwid.h"
 #include <QTimer>
@@ -7,13 +8,15 @@ SlideAnimationWid::SlideAnimationWid(QWidget *parent)
     : QWidget{parent},m_timer(nullptr),m_curItem(nullptr),m_factor(0),m_start(false)
 {
     m_timer = new QTimer();
+    m_pauseTimer = new QTimer();
     //连接定时器到期事件
     connect(m_timer,&QTimer::timeout,this,&SlideAnimationWid::slot_timeout);
+    connect(m_pauseTimer,&QTimer::timeout,this,&SlideAnimationWid::slot_pauseTimeout);
 }
 
 SlideAnimationWid::~SlideAnimationWid()
 {
-    qDebug()<<"SlideAnimationWid has been destroyed";
+    qDebug()<<"destroyed";
     m_timer->stop();
     delete m_timer;
 }
@@ -22,7 +25,7 @@ void SlideAnimationWid::start()
 {
     //发送动画开始信号
     //...
-    m_timer->start(50);
+    m_timer->start(25);
     m_start = true;
 }
 
@@ -35,6 +38,29 @@ void SlideAnimationWid::stop()
     m_start = false;
 }
 
+/*
+    更新当前图片为传入的图片路径并恢复幻灯片逻辑
+*/
+void SlideAnimationWid::set_updateCurPic(QString &path)
+{
+    auto iter = m_itemMap.find(path);
+    if(iter == m_itemMap.end())
+        return;
+    ProTreeItem* cur = static_cast<ProTreeItem*>(iter.value());
+
+    //设置当前节点
+    m_curItem = cur;
+    //更新图片缓存
+    setPixmap(cur);
+    //设置遮罩透明度为0
+    m_factor = 0;
+    //重新绘一次图
+    update();
+    //绘完一次缓重500ms再更新
+    m_pauseTimer->start(500);
+    m_timer->stop();
+}
+
 
 void SlideAnimationWid::slot_timeout()
 {
@@ -44,7 +70,11 @@ void SlideAnimationWid::slot_timeout()
         update();
         return;
     }
-
+    //当前图片刚开始加载
+    if(m_factor==0)
+    {
+        //picListChoosed(m_curItem);
+    }
     m_factor+=0.01;
 
     //说明当前图片播放完,需要加载后一张图片
@@ -62,23 +92,73 @@ void SlideAnimationWid::slot_timeout()
         //加载下一张图片
         setPixmap(next);
         update();
+        //启动缓冲定时器,让当前图片显示久一点
+        m_pauseTimer->start(500);
+        m_timer->stop();
         return ;
     }
     update();
+
+}
+
+void SlideAnimationWid::slot_pauseTimeout()
+{
+    m_pauseTimer->stop();
+    m_timer->start(25);
+}
+
+void SlideAnimationWid::slot_selected(QString &path)
+{
+    set_updateCurPic(path);
+}
+
+void SlideAnimationWid::slot_prePic()
+{
+    ProTreeItem* cur = static_cast<ProTreeItem*>(m_curItem);
+    ProTreeItem* pre = static_cast<ProTreeItem*>(cur->getPreItem());
+    //如果没有前一个节点
+    if(!pre)
+        return;
+    QString path = pre->getPath();
+    auto iter = m_itemMap.find(path);
+    //如果前一个节点没有加入过,那就不是要展示的
+    if(iter == m_itemMap.end())
+        return;
+    set_updateCurPic(pre->getPath());
+}
+
+void SlideAnimationWid::slot_nextPic()
+{
+    ProTreeItem* cur = static_cast<ProTreeItem*>(m_curItem);
+    ProTreeItem* next = static_cast<ProTreeItem*>(cur->getNextItem());
+    //如果没有后一个节点
+    if(!next)
+        return;
+    QString path = next->getPath();
+    auto iter = m_itemMap.find(path);
+    //如果后一个节点没有加入过,那就不是要展示的
+    if(iter == m_itemMap.end())
+        return;
+    set_updateCurPic(next->getPath());
 }
 
 void SlideAnimationWid::setPixmap(QTreeWidgetItem *item)
 {
-    auto* _item = static_cast<ProTreeItem*>(item);
+    auto _item = static_cast<ProTreeItem*>(item);
     //加载图片到变量中
     QString path = _item->getPath();
     m_curPixmap.load(path);
     //用于查找是否是新的图片,如果是,就通知下方预览图更新
     if(m_itemMap.find(path) == m_itemMap.end())
     {
-        m_itemMap.insert(std::make_pair(path,_item));
+        m_itemMap.insert(path,_item);
         //通知下方预览图更新
-        emit picListUpdate();
+        emit picListUpdate(_item);
+    }
+    else
+    {
+        //通知预览图选中当前图片
+        emit picListChoosed(_item);
     }
 
     //更新当前节点为后一个节点
@@ -94,9 +174,9 @@ void SlideAnimationWid::setPixmap(QTreeWidgetItem *item)
     m_nextPixmap.load(path);
     if(m_itemMap.find(path) == m_itemMap.end())
     {
-        m_itemMap.insert(std::make_pair(path,_nextItem));
+        m_itemMap.insert(path,_nextItem);
         //通知下方预览图更新
-        emit picListUpdate();
+        emit picListUpdate(_nextItem);
     }
 }
 
@@ -154,9 +234,9 @@ void SlideAnimationWid::paintEvent(QPaintEvent *event)
     p2.fillRect(alphaPix2.rect(),QColor(0,0,0,alpha));
     p2.end();
 
-    //找到图片居中时左上角的坐标绘制图片
-    upleft_x = (w-m_curPixmap.width())/2;
-    upleft_y = (h-m_curPixmap.height())/2;
+    //找到**当前图片**居中时左上角的坐标绘制图片
+    upleft_x = (w-m_nextPixmap.width())/2;
+    upleft_y = (h-m_nextPixmap.height())/2;
     painter.drawPixmap(upleft_x,upleft_y,alphaPix2);
 
     return QWidget::paintEvent(event);

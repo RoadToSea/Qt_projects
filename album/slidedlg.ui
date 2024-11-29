@@ -13,11 +13,29 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="7,3">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="8,0,3">
    <item>
     <widget class="QWidget" name="widget" native="true">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0" rowspan="2">
+      <item row="0" column="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_16">
+        <item>
+         <widget class="slideStateButton" name="playBtn">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="picButton" name="closeBtn">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
        <widget class="QWidget" name="prePicWidget" native="true">
         <property name="maximumSize">
          <size>
@@ -36,8 +54,21 @@
         </layout>
        </widget>
       </item>
-      <item row="0" column="1" rowspan="2">
-       <widget class="SlideAnimationWid" name="showPicWidget" native="true"/>
+      <item row="1" column="1">
+       <widget class="SlideAnimationWid" name="showPicWidget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
       </item>
       <item row="1" column="2">
        <widget class="QWidget" name="nextPicWidget" native="true">
@@ -58,32 +89,46 @@
         </layout>
        </widget>
       </item>
-      <item row="0" column="2">
-       <layout class="QHBoxLayout" name="horizontalLayout_16">
-        <item>
-         <widget class="slideStateButton" name="playBtn">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="picButton" name="closeBtn">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
      </layout>
     </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
    </item>
    <item>
     <widget class="QWidget" name="widget_2" native="true">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QListWidget" name="listPicWidget"/>
+       <widget class="PreListWid" name="listPicWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>180</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>180</height>
+         </size>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -106,6 +151,11 @@
    <extends>QWidget</extends>
    <header>../../../code/album/slideanimationwid.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PreListWid</class>
+   <extends>QListWidget</extends>
+   <header>../../../code/album/prelistwid.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

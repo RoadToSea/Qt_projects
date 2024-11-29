@@ -78,8 +78,14 @@
      <string>设置(&amp;S)</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menu_music">
+    <property name="title">
+     <string>音乐(&amp;M)</string>
+    </property>
+   </widget>
    <addaction name="menu_file"/>
    <addaction name="menu_setting"/>
+   <addaction name="menu_music"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

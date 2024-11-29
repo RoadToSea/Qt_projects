@@ -19,5 +19,6 @@
         <file>res/icon/closeshow.png</file>
         <file>res/icon/closeshow_hover.png</file>
         <file>res/icon/closeshow_press.png</file>
+        <file>res/icon/music.svg</file>
     </qresource>
 </RCC>

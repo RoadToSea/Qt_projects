@@ -97,7 +97,6 @@ void picButton::initUI()
     m_animation = new QPropertyAnimation(m_opacity,"opacity",this);
     m_animation->setEasingCurve(QEasingCurve::Linear);
     m_animation->setDuration(500);//持续时间
-
 }
 
 void picButton::setNormal()

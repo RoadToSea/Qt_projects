@@ -19,6 +19,8 @@ enum buttonState {
 };
 }
 
+#define PRELISTITEM_SIZE     180
+#define PRELISTITEM_INTERVAL    20
 
 #define LEFT_CLICKED        ":/res/icon/left_clicked.svg"
 #define LEFT_HOVER          ":/res/icon/left_hover.svg"

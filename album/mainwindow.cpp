@@ -2,15 +2,20 @@
 #include "./ui_mainwindow.h"
 #include "wizard.h"
 #include "proopenpage.h"
-
+#include <QFileDialog>
+#include <QUrl>
+#include <QtMultimedia/QAudioDevice>
+#include <QtMultimedia/QAudioOutput>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),musicIndex(0)
 {
     ui->setupUi(this);
     UIinit();
     ui->proTree->setObjectName("proTree");
+    musicPlayer = new QMediaPlayer();
+    audioOutput = new QAudioOutput();
 }
 
 MainWindow::~MainWindow()
@@ -32,14 +37,27 @@ void MainWindow::UIinit()
     openPro->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_O));
     ui->menu_file->addAction(openPro);
 
-    QAction* music = new QAction("音乐",ui->menu_setting);
-    music->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_J));
-    ui->menu_setting->addAction(music);
+    QAction* choosemusic = new QAction("选择音乐",ui->menu_setting);
+    choosemusic->setShortcut(QKeySequence(Qt::CTRL|Qt::Key_J));
+    ui->menu_music->addAction(choosemusic);
+
+    QAction* turnOnMusic = new QAction("播放音乐");
+    ui->menu_music->addAction(turnOnMusic);
+
+    QAction* turnOffMusic = new QAction("停止播放");
+    ui->menu_music->addAction(turnOffMusic);
 
     //创建项目
     connect(createPro,&QAction::triggered,this,&MainWindow::slot_createPro);
     //打开项目
     connect(openPro,&QAction::triggered,this,&MainWindow::slot_openPro);
+
+    //打开音乐窗口
+    connect(choosemusic,&QAction::triggered,this,&MainWindow::slot_chooseMusic);
+    //播放音乐
+    connect(turnOnMusic,&QAction::triggered,this,&MainWindow::slot_turnOnMusic);
+    //停止播放
+    connect(turnOffMusic,&QAction::triggered,this,&MainWindow::slot_turnOffMusic);
 
     //连接protree和picshow,双击绘制图片
     connect(ui->treeView,&ProTree::portrayPic,portrayPic,&PortrayPic::slot_showPic);
@@ -82,6 +100,25 @@ void MainWindow::slot_showSlideDlg(QTreeWidgetItem* first,QTreeWidgetItem* last)
 
     slideDlg->showMaximized();
     slideDlg->play();
+}
+
+void MainWindow::slot_chooseMusic()
+{
+    if(!musicWid)
+        musicWid = std::make_unique<MusicWid>();
+    musicWid->show();
+}
+
+void MainWindow::slot_turnOnMusic()
+{
+    musicPlayer->setAudioOutput(audioOutput);
+    musicPlayer->setSource(musicList.at(musicIndex));
+    musicPlayer->play();
+}
+
+void MainWindow::slot_turnOffMusic()
+{
+    musicPlayer->stop();
 }
 
 

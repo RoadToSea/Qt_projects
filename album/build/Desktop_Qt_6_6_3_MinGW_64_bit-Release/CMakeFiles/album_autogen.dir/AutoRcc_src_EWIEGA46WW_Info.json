@@ -10,13 +10,22 @@
 	"INPUTS" : 
 	[
 		"D:/Qt/code/album/res/icon/right_hover.svg",
+		"D:/Qt/code/album/res/icon/pause_hover.png",
+		"D:/Qt/code/album/res/icon/play_press.png",
+		"D:/Qt/code/album/res/icon/pause_press.png",
+		"D:/Qt/code/album/res/icon/pause.png",
 		"D:/Qt/code/album/res/icon/\u56fe\u7247.svg",
 		"D:/Qt/code/album/res/icon/\u6587\u4ef6\u5939.svg",
 		"D:/Qt/code/album/res/icon/right_clicked.svg",
 		"D:/Qt/code/album/res/icon/left_clicked.svg",
+		"D:/Qt/code/album/res/icon/play_hover.png",
+		"D:/Qt/code/album/res/icon/closeshow_hover.png",
 		"D:/Qt/code/album/res/icon/left_hover.svg",
+		"D:/Qt/code/album/res/icon/closeshow_press.png",
 		"D:/Qt/code/album/res/icon/right_normal.svg",
 		"D:/Qt/code/album/res/icon/left_normal.svg",
+		"D:/Qt/code/album/res/icon/play.png",
+		"D:/Qt/code/album/res/icon/closeshow.png",
 		"D:/Qt/code/album/res/style/portrayPic.qss",
 		"D:/Qt/code/album/res/style/mainwindow.qss"
 	],

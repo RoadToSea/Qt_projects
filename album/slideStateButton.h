@@ -9,10 +9,6 @@ using namespace album ;
 class slideStateButton : public QPushButton
 {
     Q_OBJECT
-
-signals:
-    void sigStart();
-    void sigStop();
 public:
     slideStateButton(QWidget *parent);
     void setIcons(QString playNormal, QString playHover, QString playPress,
@@ -30,6 +26,12 @@ private:
     QString m_stopPress;
     //状态0: 暂停,  状态1:  播放
     bool  m_state;
+signals:
+    void sigStart();
+    void sigStop();
+public slots:
+    void slot_Start();
+    void slot_Stop();
 };
 
 #endif // SLIDESTATEBUTTON_H
