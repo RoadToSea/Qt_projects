@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1116</width>
+    <height>813</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout" rowstretch="3,2" columnstretch="5,4">
+        <item row="0" column="0" colspan="2">
+         <widget class="GraphWid" name="graphWid" native="true"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="DataWid" name="dataWid" native="true"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="ControlWid" name="controlWid" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="TableData" name="widget" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1116</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphWid</class>
+   <extends>QWidget</extends>
+   <header>../../../code/Gesture/graph/graphwid.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DataWid</class>
+   <extends>QWidget</extends>
+   <header>../../../code/Gesture/sensor/datawid.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ControlWid</class>
+   <extends>QWidget</extends>
+   <header>../../../code/Gesture/control/controlwid.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TableData</class>
+   <extends>QWidget</extends>
+   <header>../../../code/Gesture/data/tabledata.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
