@@ -330,6 +330,36 @@
 		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsTargets-relwithdebinfo.cmake",
 		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake",
 		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsVersionlessTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake",
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake",
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake",
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake",
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake",
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/CMakeFindDependencyMacro.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake",
+		"D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake",
 		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/Qt/code/Gesture",
@@ -345,9 +375,21 @@
 			null
 		],
 		[
-			"D:/Qt/code/Gesture/data/tabledata.h",
+			"D:/Qt/code/Gesture/data/datastorethread.h",
 			"MU",
-			"QYFM2Z2WYQ/moc_tabledata.cpp",
+			"QYFM2Z2WYQ/moc_datastorethread.cpp",
+			null
+		],
+		[
+			"D:/Qt/code/Gesture/data/sqliteoperator.h",
+			"MU",
+			"QYFM2Z2WYQ/moc_sqliteoperator.cpp",
+			null
+		],
+		[
+			"D:/Qt/code/Gesture/data/tableWid.h",
+			"MU",
+			"QYFM2Z2WYQ/moc_tableWid.cpp",
 			null
 		],
 		[
@@ -375,6 +417,12 @@
 			null
 		],
 		[
+			"D:/Qt/code/Gesture/tools/dataparse.h",
+			"MU",
+			"CB6E7VNMGS/moc_dataparse.cpp",
+			null
+		],
+		[
 			"D:/Qt/code/Gesture/tools/serialmanager.h",
 			"MU",
 			"CB6E7VNMGS/moc_serialmanager.cpp",
@@ -394,6 +442,7 @@
 		"QT_OPENGLWIDGETS_LIB",
 		"QT_OPENGL_LIB",
 		"QT_SERIALPORT_LIB",
+		"QT_SQL_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -425,6 +474,7 @@
 		"D:/Qt/6.6.3/mingw_64/include/QtCharts",
 		"D:/Qt/6.6.3/mingw_64/include/QtOpenGL",
 		"D:/Qt/6.6.3/mingw_64/include/QtOpenGLWidgets",
+		"D:/Qt/6.6.3/mingw_64/include/QtSql",
 		"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++",
 		"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32",
 		"D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward",
@@ -465,11 +515,14 @@
 	"SOURCES" : 
 	[
 		[ "D:/Qt/code/Gesture/control/controlwid.cpp", "MU", null ],
-		[ "D:/Qt/code/Gesture/data/tabledata.cpp", "MU", null ],
+		[ "D:/Qt/code/Gesture/data/datastorethread.cpp", "MU", null ],
+		[ "D:/Qt/code/Gesture/data/sqliteoperator.cpp", "MU", null ],
+		[ "D:/Qt/code/Gesture/data/tableWid.cpp", "MU", null ],
 		[ "D:/Qt/code/Gesture/graph/graphwid.cpp", "MU", null ],
 		[ "D:/Qt/code/Gesture/main.cpp", "MU", null ],
 		[ "D:/Qt/code/Gesture/mainwindow.cpp", "MU", null ],
 		[ "D:/Qt/code/Gesture/sensor/datawid.cpp", "MU", null ],
+		[ "D:/Qt/code/Gesture/tools/dataparse.cpp", "MU", null ],
 		[ "D:/Qt/code/Gesture/tools/serialmanager.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

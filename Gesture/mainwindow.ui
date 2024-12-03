@@ -18,7 +18,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout" rowstretch="3,2" columnstretch="5,4">
@@ -36,7 +36,7 @@
       <widget class="QWidget" name="page_2">
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="TableData" name="widget" native="true"/>
+         <widget class="TableWid" name="widget" native="true"/>
         </item>
        </layout>
       </widget>
@@ -76,9 +76,9 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>TableData</class>
+   <class>TableWid</class>
    <extends>QWidget</extends>
-   <header>../../../code/Gesture/data/tabledata.h</header>
+   <header>../../../code/Gesture/data/tableWid.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

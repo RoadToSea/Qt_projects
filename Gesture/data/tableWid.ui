@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>TableData</class>
- <widget class="QWidget" name="TableData">
+ <class>TableWid</class>
+ <widget class="QWidget" name="TableWid">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,46 +18,63 @@
     <widget class="QTableWidget" name="tableWidget"/>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,1,1,1">
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,1,1,1,1">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="firstPageBtn">
        <property name="text">
         <string>首页</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="lastPageBtn">
        <property name="text">
         <string>尾页</string>
        </property>
       </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,1">
        <item>
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="inputPage"/>
        </item>
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>TextLabel</string>
+          <string>/</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="totalPage">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="prePageBtn">
        <property name="text">
         <string>上一页</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="nextPageBtn">
        <property name="text">
         <string>下一页</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="exportBtn">
+       <property name="text">
+        <string>导出数据</string>
        </property>
       </widget>
      </item>

@@ -349,6 +349,9 @@ Qt6Qt6SerialPort_DIR:PATH=Qt6Qt6SerialPort_DIR-NOTFOUND
 //The directory containing a CMake configuration file for Qt6SerialPort.
 Qt6SerialPort_DIR:PATH=D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6SerialPort
 
+//The directory containing a CMake configuration file for Qt6Sql.
+Qt6Sql_DIR:PATH=D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql
+
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
 Qt6WidgetsTools_DIR:PATH=D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6WidgetsTools
 
@@ -1097,6 +1100,8 @@ QT_FEATURE_splashscreen:INTERNAL=ON
 QT_FEATURE_splitter:INTERNAL=ON
 //Qt feature: sql (from target Qt6::Core)
 QT_FEATURE_sql:INTERNAL=ON
+//Qt feature: sqlmodel (from target Qt6::Sql)
+QT_FEATURE_sqlmodel:INTERNAL=ON
 //Qt feature: sse2 (from target Qt6::Core)
 QT_FEATURE_sse2:INTERNAL=ON
 //Qt feature: sse3 (from target Qt6::Core)

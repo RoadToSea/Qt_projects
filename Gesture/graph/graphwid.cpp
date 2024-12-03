@@ -136,7 +136,7 @@ void GraphWid::slot_update(double val)
 void GraphWid::slot_setUpInterVal()
 {
     int index = ui->comboBox->currentIndex();
-    qDebug()<<"index:"<<index;
+    //qDebug()<<"index:"<<index;
     switch(index)
     {
         case 0:
@@ -158,8 +158,9 @@ void GraphWid::slot_setUpInterVal()
             setUpInterval(_500msUpdate);
             break;
         case 6:
+            //获取自定义值
             int time = ui->inputTime->text().toInt();
-            qDebug()<<"time:"<<time;
+            if(time<=0)  time = 100;
             setUpInterval(time);
             break;
     }

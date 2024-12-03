@@ -97,6 +97,7 @@ Gesture_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QSizeF \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QString \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QStringList \
+	D:/Qt/6.6.3/mingw_64/include/QtCore/QThread \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QVariant \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QtCore \
 	D:/Qt/6.6.3/mingw_64/include/QtCore/QtCoreDepends \
@@ -514,6 +515,11 @@ Gesture_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qserialportglobal.h \
 	D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qserialportinfo.h \
 	D:/Qt/6.6.3/mingw_64/include/QtSerialPort/qtserialportexports.h \
+	D:/Qt/6.6.3/mingw_64/include/QtSql/QSqlDatabase \
+	D:/Qt/6.6.3/mingw_64/include/QtSql/qsqldatabase.h \
+	D:/Qt/6.6.3/mingw_64/include/QtSql/qtsql-config.h \
+	D:/Qt/6.6.3/mingw_64/include/QtSql/qtsqlexports.h \
+	D:/Qt/6.6.3/mingw_64/include/QtSql/qtsqlglobal.h \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QCommonStyle \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QGraphicsView \
 	D:/Qt/6.6.3/mingw_64/include/QtWidgets/QGraphicsWidget \
@@ -817,6 +823,31 @@ Gesture_autogen/timestamp: \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets-relwithdebinfo.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortTargets.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6SerialPort/Qt6SerialPortVersionlessTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake \
+	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginAdditionalTargetInfo.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginConfig.cmake \
 	D:/Qt/6.6.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets-relwithdebinfo.cmake \
@@ -1344,8 +1375,12 @@ Gesture_autogen/timestamp: \
 	D:/Qt/code/Gesture/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/moc_predefs.h \
 	D:/Qt/code/Gesture/control/controlwid.cpp \
 	D:/Qt/code/Gesture/control/controlwid.h \
-	D:/Qt/code/Gesture/data/tabledata.cpp \
-	D:/Qt/code/Gesture/data/tabledata.h \
+	D:/Qt/code/Gesture/data/datastorethread.cpp \
+	D:/Qt/code/Gesture/data/datastorethread.h \
+	D:/Qt/code/Gesture/data/sqliteoperator.cpp \
+	D:/Qt/code/Gesture/data/sqliteoperator.h \
+	D:/Qt/code/Gesture/data/tableWid.cpp \
+	D:/Qt/code/Gesture/data/tableWid.h \
 	D:/Qt/code/Gesture/graph/graphwid.cpp \
 	D:/Qt/code/Gesture/graph/graphwid.h \
 	D:/Qt/code/Gesture/main.cpp \
@@ -1354,10 +1389,12 @@ Gesture_autogen/timestamp: \
 	D:/Qt/code/Gesture/sensor/datawid.cpp \
 	D:/Qt/code/Gesture/sensor/datawid.h \
 	D:/Qt/code/Gesture/tools/config.h \
+	D:/Qt/code/Gesture/tools/dataparse.cpp \
+	D:/Qt/code/Gesture/tools/dataparse.h \
 	D:/Qt/code/Gesture/tools/serialmanager.cpp \
 	D:/Qt/code/Gesture/tools/serialmanager.h \
 	D:/Qt/code/Gesture/control/controlwid.ui \
-	D:/Qt/code/Gesture/data/tabledata.ui \
+	D:/Qt/code/Gesture/data/tableWid.ui \
 	D:/Qt/code/Gesture/graph/graphwid.ui \
 	D:/Qt/code/Gesture/mainwindow.ui \
 	D:/Qt/code/Gesture/sensor/datawid.ui \

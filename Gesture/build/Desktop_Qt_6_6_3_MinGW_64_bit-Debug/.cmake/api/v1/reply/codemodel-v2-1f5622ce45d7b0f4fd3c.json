@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-a552f87b248d11ae35b9.json",
+					"jsonFile" : "directory-.-Debug-88c1d5315175700b6185.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Gesture::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Gesture-Debug-3f147611f1e1daab08f3.json",
+					"jsonFile" : "target-Gesture-Debug-2e706bfae1987ccc0255.json",
 					"name" : "Gesture",
 					"projectIndex" : 0
 				},

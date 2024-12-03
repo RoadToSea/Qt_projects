@@ -23,7 +23,8 @@
 			"include",
 			"find_package",
 			"find_dependency",
-			"_qt_internal_find_qt_dependencies"
+			"_qt_internal_find_qt_dependencies",
+			"target_include_directories"
 		],
 		"files" : 
 		[
@@ -82,19 +83,19 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 77,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 59,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 60,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
@@ -168,7 +169,7 @@
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 58,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
@@ -384,6 +385,12 @@
 				"file" : 21,
 				"line" : 61,
 				"parent" : 60
+			},
+			{
+				"command" : 11,
+				"file" : 1,
+				"line" : 44,
+				"parent" : 0
 			}
 		]
 	},
@@ -466,6 +473,26 @@
 					"path" : "D:/Qt/code/Gesture/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/include"
 				},
 				{
+					"backtrace" : 62,
+					"path" : "D:/Qt/code/Gesture/./control"
+				},
+				{
+					"backtrace" : 62,
+					"path" : "D:/Qt/code/Gesture/./data"
+				},
+				{
+					"backtrace" : 62,
+					"path" : "D:/Qt/code/Gesture/./graph"
+				},
+				{
+					"backtrace" : 62,
+					"path" : "D:/Qt/code/Gesture/./sensor"
+				},
+				{
+					"backtrace" : 62,
+					"path" : "D:/Qt/code/Gesture/./tools"
+				},
+				{
 					"backtrace" : 33,
 					"isSystem" : true,
 					"path" : "D:/Qt/6.6.3/mingw_64/include/QtCore"
@@ -529,19 +556,21 @@
 				5,
 				8,
 				11,
-				14,
-				17
+				13,
+				16,
+				20,
+				22
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "Gesture_autogen::@6890427a1f51a3e7e1df"
+			"id" : "Gesture_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "Gesture_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "Gesture_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Gesture::@6890427a1f51a3e7e1df",
@@ -682,8 +711,10 @@
 				5,
 				8,
 				11,
-				14,
-				17
+				13,
+				16,
+				20,
+				22
 			]
 		},
 		{
@@ -694,13 +725,16 @@
 				6,
 				9,
 				12,
-				15,
-				18,
+				14,
+				17,
 				19,
-				20,
 				21,
-				22,
-				23
+				23,
+				24,
+				25,
+				26,
+				27,
+				28
 			]
 		},
 		{
@@ -710,16 +744,16 @@
 				4,
 				7,
 				10,
-				13,
-				16,
-				24
+				15,
+				18,
+				29
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				25
+				30
 			]
 		}
 	],
@@ -789,17 +823,28 @@
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "data/tabledata.cpp",
+			"path" : "data/datastorethread.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-			"path" : "data/tabledata.h",
+			"path" : "data/datastorethread.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
-			"path" : "data/tabledata.ui",
+			"compileGroupIndex" : 0,
+			"path" : "data/tableWid.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "data/tableWid.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "data/tableWid.ui",
 			"sourceGroupIndex" : 2
 		},
 		{
@@ -817,6 +862,22 @@
 			"backtrace" : 4,
 			"path" : "sensor/datawid.ui",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "tools/config.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "tools/dataparse.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "tools/dataparse.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
@@ -850,7 +911,7 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/include/data/ui_tabledata.h",
+			"path" : "build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/include/data/ui_tableWid.h",
 			"sourceGroupIndex" : 1
 		},
 		{
