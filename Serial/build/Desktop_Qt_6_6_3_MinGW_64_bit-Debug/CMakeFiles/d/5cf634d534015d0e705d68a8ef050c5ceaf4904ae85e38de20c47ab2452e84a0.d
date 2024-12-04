@@ -1,9 +1,12 @@
 Serial_autogen/timestamp: \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QDeadlineTimer \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QMutex \
   D:/qt/6.6.3/mingw_64/include/QtCore/QObject \
   D:/qt/6.6.3/mingw_64/include/QtCore/QRegularExpression \
   D:/qt/6.6.3/mingw_64/include/QtCore/QRunnable \
   D:/qt/6.6.3/mingw_64/include/QtCore/QTimer \
   D:/qt/6.6.3/mingw_64/include/QtCore/QVector \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QWaitCondition \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -36,7 +39,9 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qcontiguouscache.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qdatastream.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qdeadlinetimer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qdebug.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qelapsedtimer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qflags.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qfloat16.h \
@@ -64,6 +69,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qmetacontainer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qmetatype.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qminmax.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qmutex.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qnamespace.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qnumeric.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qobject.h \
@@ -113,6 +119,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtnoop.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtresource.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qtsan_impl.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qttranslation.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qttypetraits.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtversion.h \
@@ -125,6 +132,7 @@ Serial_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qvector.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qversiontagging.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qwaitcondition.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qxptype_traits.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qaction.h \
   D:/qt/6.6.3/mingw_64/include/QtGui/qbitmap.h \

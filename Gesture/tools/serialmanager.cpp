@@ -3,9 +3,19 @@
 #include <QTimer>
 
 
+QMap<QString,QString> commandTemplate=
+    {
+        {"i2cDrv temp\n\r",""},
+        {"i2cDrv press\n\r",""},
+        {"i2cDrv acc\n\r",""},
+        {"i2cDrv light\n\r",""}
+};
+
+
 SerialManager::SerialManager(const QString &serialName, QString lineBreak, QSerialPort::BaudRate baudRate,
                              QSerialPort::DataBits dataBits, QSerialPort::Parity parity, QSerialPort::StopBits stopBits,
                              QSerialPort::FlowControl flowControl, QObject *parent):QObject(parent),commandIndex(0)
+    ,m_commands(commandTemplate),m_linesBreak(lineBreak)
 {
     // 创建 QSerialPort 对象并设置端口名称
     m_serial = new QSerialPort(serialName, this);
@@ -59,6 +69,17 @@ void SerialManager::registerCommand(QMap<QString, QString> &map)
 void SerialManager::readData()
 {
 
+    // 接收当前命令的答复
+    //m_serial->readLine();
+    QByteArray receivedData = m_serial->readLine();
+    QString reply(receivedData);
+    qDebug()<<"readline:"<<reply;
+
+    auto iter = m_commands.begin();
+    std::advance(iter,commandIndex);
+    m_commands[iter.key()] = reply;
+
+    commandIndex++;
     if(commandIndex>=m_commands.size())
     {
         //一套数据接收完成,发送出去
@@ -67,17 +88,8 @@ void SerialManager::readData()
         commandIndex=0;
         return;
     }
-
-    // 接收当前命令的答复
-    QByteArray receivedData = m_serial->readAll();
-    QString reply(receivedData);
-
-    auto iter = m_commands.begin();
-    std::advance(iter,commandIndex);
-    m_commands[iter.key()] = reply;
-
-    commandIndex++;
-    QTimer::singleShot(100, this, &SerialManager::sendNextCommand);
+    sendNextCommand();
+    //QTimer::singleShot(100, this, &SerialManager::sendNextCommand);
 }
 
 void SerialManager::sendNextCommand()
@@ -87,6 +99,7 @@ void SerialManager::sendNextCommand()
         auto iter = m_commands.begin();
         std::advance(iter,commandIndex);
         QString cmd = iter.key();
+        qDebug()<<"current cmd:"<<cmd;
         m_serial->write(cmd.toUtf8());
     }
     else

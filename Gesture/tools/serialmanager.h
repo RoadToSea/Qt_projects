@@ -33,6 +33,7 @@ public:
 
 private:
     QSerialPort* m_serial;
+    QString m_linesBreak;
     QMap<QString,QString> m_commands;
     int commandIndex;
 

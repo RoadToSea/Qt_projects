@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "serialmanager.h"
+#include "dataparse.h"
+
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,5 +23,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    SerialManager* serial;
+    dataParse* parser;
 };
 #endif // MAINWINDOW_H

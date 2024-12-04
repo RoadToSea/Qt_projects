@@ -1,6 +1,9 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#include <QString>
+#include <QMap>
+
 //曲线图横坐标最大值
 #define GRAPH_MAX_X     30
 
@@ -32,8 +35,6 @@
 
 
 //datastorethread
-
-
 
 
 enum Label{
