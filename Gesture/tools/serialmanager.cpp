@@ -1,6 +1,7 @@
 #include "serialmanager.h"
 #include <QDebug>
 #include <QTimer>
+#include <qthread.h>
 
 
 QMap<QString,QString> commandTemplate=
@@ -70,10 +71,14 @@ void SerialManager::readData()
 {
 
     // 接收当前命令的答复
-    //m_serial->readLine();
-    QByteArray receivedData = m_serial->readLine();
+    //QString str1 =m_serial->readLine();
+    //QString str2 = m_serial->readLine();
+    QByteArray receivedData = m_serial->readAll();
     QString reply(receivedData);
-    qDebug()<<"readline:"<<reply;
+    m_serial->clear(QSerialPort::Input);
+    //qDebug()<<"readline1:"<<str1;
+    //qDebug()<<"readline2:"<<str2;
+    qDebug()<<"readline3:"<<reply;
 
     auto iter = m_commands.begin();
     std::advance(iter,commandIndex);
@@ -86,7 +91,6 @@ void SerialManager::readData()
         emit sig_dataReady(m_commands);
         //进行下一次接收
         commandIndex=0;
-        return;
     }
     sendNextCommand();
     //QTimer::singleShot(100, this, &SerialManager::sendNextCommand);
@@ -101,6 +105,7 @@ void SerialManager::sendNextCommand()
         QString cmd = iter.key();
         qDebug()<<"current cmd:"<<cmd;
         m_serial->write(cmd.toUtf8());
+        //QThread::msleep(10);
     }
     else
     {
