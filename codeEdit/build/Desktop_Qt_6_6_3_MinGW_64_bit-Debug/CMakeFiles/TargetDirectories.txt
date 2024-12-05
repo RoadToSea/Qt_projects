@@ -1,9 +1,0 @@
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/codeEdit.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/install.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/codeEdit_autogen_timestamp_deps.dir
-D:/qt/code/codeEdit/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/codeEdit_autogen.dir
