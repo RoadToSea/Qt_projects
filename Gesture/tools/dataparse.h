@@ -11,10 +11,11 @@ public:
     explicit dataParse(QObject *parent = nullptr);
 
 private:
+    QMap<QString,QString> m_receive;
     QMap<QString,QString> m_data;
     QRegularExpression* expression;
 signals:
-
+    void sig_parseOver(QMap<QString,QString>& data);
 public slots:
     void slot_parseData(QMap<QString,QString>& map);
 };

@@ -2,6 +2,7 @@ D:/qt/code/Gesture/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/CB6
   D:/qt/code/Gesture/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/moc_predefs.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/QMap \
   D:/qt/6.6.3/mingw_64/include/QtCore/QObject \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QTimer \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20functional.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h \
@@ -14,6 +15,7 @@ D:/qt/code/Gesture/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/CB6
   D:/qt/6.6.3/mingw_64/include/QtCore/qatomic.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qatomic_cxx11.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbasicatomic.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qbasictimer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbindingstorage.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbytearray.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -87,6 +89,7 @@ D:/qt/code/Gesture/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/Gesture_autogen/CB6
   D:/qt/6.6.3/mingw_64/include/QtCore/qtcoreexports.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h \
+  D:/qt/6.6.3/mingw_64/include/QtCore/qtimer.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtnoop.h \
   D:/qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h \

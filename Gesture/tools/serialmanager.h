@@ -5,7 +5,7 @@
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <QMap>
-
+#include <QTimer>
 
 #define DEBUG 1
 
@@ -27,11 +27,15 @@ public:
                            QSerialPort::StopBits stopBits = QSerialPort::OneStop,
                            QSerialPort::FlowControl flowControl = QSerialPort::SoftwareControl,
                            QObject *parent = nullptr);
+    ~SerialManager();
     void start(void);
     void stop(void);
     void registerCommand(QMap<QString,QString>& map);
 
 private:
+    QTimer* m_sampleTimer;
+    unsigned m_count;
+    unsigned m_sample;
     QSerialPort* m_serial;
     QString m_linesBreak;
     QMap<QString,QString> m_commands;
@@ -39,10 +43,12 @@ private:
 
 signals:
     void sig_dataReady(QMap<QString,QString>& map);
+    void sig_sampleReady(unsigned& sample);
 
 private slots:
     void readData(void);
     void sendNextCommand(void);
+    void slot_sampleCal(void);
 };
 
 #endif // SERIALMANAGER_H

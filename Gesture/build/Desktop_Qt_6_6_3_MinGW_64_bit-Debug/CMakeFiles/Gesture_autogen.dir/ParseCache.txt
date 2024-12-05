@@ -2116,6 +2116,7 @@ D:/qt/code/Gesture/mainwindow.h
  mmc:Q_OBJECT
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/QMap
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/QObject
+ mdp:D:/qt/6.6.3/mingw_64/include/QtCore/QTimer
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/q20functional.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/q20memory.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h
@@ -2129,6 +2130,7 @@ D:/qt/code/Gesture/mainwindow.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qatomic.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbasictimer.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbindingstorage.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbytearray.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -2215,6 +2217,7 @@ D:/qt/code/Gesture/mainwindow.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtextstream.h
+ mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtimer.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtnoop.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -3426,6 +3429,7 @@ D:/qt/code/Gesture/tools/serialmanager.h
  mmc:Q_OBJECT
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/QMap
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/QObject
+ mdp:D:/qt/6.6.3/mingw_64/include/QtCore/QTimer
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/q20functional.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/q20memory.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/q20type_traits.h
@@ -3438,6 +3442,7 @@ D:/qt/code/Gesture/tools/serialmanager.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qatomic.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qatomic_cxx11.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbasicatomic.h
+ mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbasictimer.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbindingstorage.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbytearray.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qbytearrayalgorithms.h
@@ -3511,6 +3516,7 @@ D:/qt/code/Gesture/tools/serialmanager.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtcoreexports.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtdeprecationmarkers.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtenvironmentvariables.h
+ mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtimer.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtmetamacros.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtnoop.h
  mdp:D:/qt/6.6.3/mingw_64/include/QtCore/qtpreprocessorsupport.h

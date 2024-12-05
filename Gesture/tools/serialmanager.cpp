@@ -16,7 +16,7 @@ QMap<QString,QString> commandTemplate=
 SerialManager::SerialManager(const QString &serialName, QString lineBreak, QSerialPort::BaudRate baudRate,
                              QSerialPort::DataBits dataBits, QSerialPort::Parity parity, QSerialPort::StopBits stopBits,
                              QSerialPort::FlowControl flowControl, QObject *parent):QObject(parent),commandIndex(0)
-    ,m_commands(commandTemplate),m_linesBreak(lineBreak)
+    ,m_commands(commandTemplate),m_linesBreak(lineBreak),m_count(0),m_sample(0)
 {
     // 创建 QSerialPort 对象并设置端口名称
     m_serial = new QSerialPort(serialName, this);
@@ -35,6 +35,17 @@ SerialManager::SerialManager(const QString &serialName, QString lineBreak, QSeri
     // }
 
     connect(m_serial,&QSerialPort::readyRead,this,&SerialManager::readData);
+
+    //初始化采样率定时器
+    m_sampleTimer = new QTimer();
+    //每秒计算一次采样率
+    connect(m_sampleTimer,&QTimer::timeout,this,&SerialManager::slot_sampleCal);
+}
+
+SerialManager::~SerialManager()
+{
+    if(m_sampleTimer->isActive())
+        m_sampleTimer->stop();
 }
 
 void SerialManager::start()
@@ -78,7 +89,7 @@ void SerialManager::readData()
     m_serial->clear(QSerialPort::Input);
     //qDebug()<<"readline1:"<<str1;
     //qDebug()<<"readline2:"<<str2;
-    qDebug()<<"readline3:"<<reply;
+    //qDebug()<<"readline3:"<<reply;
 
     auto iter = m_commands.begin();
     std::advance(iter,commandIndex);
@@ -89,8 +100,11 @@ void SerialManager::readData()
     {
         //一套数据接收完成,发送出去
         emit sig_dataReady(m_commands);
+        emit sig_sampleReady(m_sample);
         //进行下一次接收
         commandIndex=0;
+        //计数器加一
+        ++m_count;
     }
     sendNextCommand();
     //QTimer::singleShot(100, this, &SerialManager::sendNextCommand);
@@ -103,9 +117,13 @@ void SerialManager::sendNextCommand()
         auto iter = m_commands.begin();
         std::advance(iter,commandIndex);
         QString cmd = iter.key();
-        qDebug()<<"current cmd:"<<cmd;
+        //qDebug()<<"current cmd:"<<cmd;
         m_serial->write(cmd.toUtf8());
         //QThread::msleep(10);
+
+        //打开采样率计时器
+        if(!m_sampleTimer->isActive())
+            m_sampleTimer->start(1000);
     }
     else
     {
@@ -113,4 +131,10 @@ void SerialManager::sendNextCommand()
         qDebug() <<  "command下标越界出现未知错误!";
         m_serial->close(); // Close when done
     }
+}
+
+void SerialManager::slot_sampleCal()
+{
+    m_sample = m_count;
+    m_count=0;
 }

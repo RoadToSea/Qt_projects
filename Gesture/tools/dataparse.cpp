@@ -10,9 +10,8 @@ dataParse::dataParse(QObject *parent)
 
 void dataParse::slot_parseData(QMap<QString, QString> &map)
 {
-    qDebug()<<map;
-    m_data = map;
-    for(auto iter = m_data.begin();iter!=m_data.end();iter++)
-    {
-    }
+    //传进来就是数据不需要解析
+    //qDebug()<<map;
+    //m_receive = map;
+    emit sig_parseOver(map);
 }

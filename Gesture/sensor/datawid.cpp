@@ -13,6 +13,32 @@ DataWid::~DataWid()
     delete ui;
 }
 
+void DataWid::setTempAndHumi(const QString &val)
+{
+    QStringList vals = val.split(",");
+    ui->tempLabel->setText(vals[0]);
+    ui->humiLabel->setText(vals[1]);
+}
+
+void DataWid::setPress(const QString &val)
+{
+    ui->pressLabel->setText(val);
+}
+
+void DataWid::setLight(const QString &val)
+{
+    ui->lightLabel->setText(val);
+}
+
+void DataWid::setAcc(const QString &val)
+{
+    QStringList vals = val.split(",");
+    ui->XLabel->setText(vals[0]);             // X轴
+    ui->YLabel->setText(vals[1]);             // Y轴
+    ui->ZLabel->setText(vals[2]);             // Z轴
+}
+
+
 void DataWid::setData(QString &temp, QString &humi, QString &press, QString &light, QString &X_, QString &Y_, QString &Z_)
 {
     // 更新 UI 控件的文本
@@ -26,19 +52,37 @@ void DataWid::setData(QString &temp, QString &humi, QString &press, QString &lig
 }
 
 
-void DataWid::parseMsg(QString &command, QString &val)
+void DataWid::parseMsg(const QString &command, const QString &val)
 {
-    if(command == "")
+    if(command == "i2cDrv temp\n\r")
     {
-
+        setTempAndHumi(val);
     }
-    else if(command == "")
+    else if(command == "i2cDrv press\n\r")
     {
-
+        setPress(val);
+    }
+    else if(command == "i2cDrv acc\n\r")
+    {
+        setAcc(val);
+    }
+    else if(command == "i2cDrv light\n\r")
+    {
+        setLight(val);
     }
 }
 
-void DataWid::slot_dataReceive(QMap<QString, QString> &map)
+void DataWid::slot_dataReceive(QMap<QString, QString> &data)
 {
+    m_data.clear();
+    m_data = data;
+    for(auto iter = m_data.begin();iter!=m_data.end();iter++)
+    {
+        parseMsg(iter.key(),iter.value());
+    }
+}
 
+void DataWid::slot_sampleReceive(unsigned int &sample)
+{
+    ui->rateLabel->setText(QString::number(sample));
 }

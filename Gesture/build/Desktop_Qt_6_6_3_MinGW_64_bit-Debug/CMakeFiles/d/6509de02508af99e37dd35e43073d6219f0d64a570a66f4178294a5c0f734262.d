@@ -98,6 +98,7 @@ Gesture_autogen/timestamp: \
   D:/qt/6.6.3/mingw_64/include/QtCore/QString \
   D:/qt/6.6.3/mingw_64/include/QtCore/QStringList \
   D:/qt/6.6.3/mingw_64/include/QtCore/QThread \
+  D:/qt/6.6.3/mingw_64/include/QtCore/QTimer \
   D:/qt/6.6.3/mingw_64/include/QtCore/QVariant \
   D:/qt/6.6.3/mingw_64/include/QtCore/QtCore \
   D:/qt/6.6.3/mingw_64/include/QtCore/QtCoreDepends \
