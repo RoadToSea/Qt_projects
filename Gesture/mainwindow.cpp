@@ -11,10 +11,12 @@ MainWindow::MainWindow(QWidget *parent)
     serial = new SerialManager("COM7","\n\r",QSerialPort::Baud115200);
     parser = new dataParse();
 
-
+    //连接串口接受和数据处理
     connect(serial,&SerialManager::sig_dataReady,parser,&dataParse::slot_parseData);
     //连接数据解析完成和显示
     connect(parser,&dataParse::sig_parseOver,ui->dataWid,&DataWid::slot_dataReceive);
+    //连接数据解析和曲线绘制
+    connect(parser,&dataParse::sig_parseOver,ui->graphWid,&GraphWid::slot_update);
     //采样率
     connect(serial,&SerialManager::sig_sampleReady,ui->dataWid,&DataWid::slot_sampleReceive);
     serial->start();

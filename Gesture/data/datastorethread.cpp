@@ -9,9 +9,6 @@ dataStoreThread::dataStoreThread(QObject *parent)
 
 }
 
-
-
-
 void dataStoreThread::setStoreFlag(bool bl)
 {
     m_storeFlag = bl;
