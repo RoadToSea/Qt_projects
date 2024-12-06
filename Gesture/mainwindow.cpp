@@ -17,6 +17,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(parser,&dataParse::sig_parseOver,ui->dataWid,&DataWid::slot_dataReceive);
     //采样率
     connect(serial,&SerialManager::sig_sampleReady,ui->dataWid,&DataWid::slot_sampleReceive);
+    //连接数据会绘制曲线图
+    connect(parser,&dataParse::sig_parseOver,ui->graphWid,&GraphWid::slot_update);
+
     serial->start();
 }
 

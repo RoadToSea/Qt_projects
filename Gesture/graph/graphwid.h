@@ -34,7 +34,7 @@ private slots:
     void updateGraph(void);
     void slot_setUpInterVal(void);
 public slots:
-    void slot_update(double val);
+    void slot_update(QMap<QString,QString>& data);
 };
 
 #endif // GRAPHWID_H
