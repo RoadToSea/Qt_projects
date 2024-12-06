@@ -21,6 +21,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(parser,&dataParse::sig_parseOver,ui->graphWid,&GraphWid::slot_update);
 
     serial->start();
+
+
+    connect(ui->sensorPage_Btn,&QPushButton::clicked,this,[&](){
+        this->ui->stackedWidget->setCurrentIndex(0);
+    });
+    connect(ui->dataPage_Btn,&QPushButton::clicked,this,[&](){
+        this->ui->stackedWidget->setCurrentIndex(1);
+    });
 }
 
 MainWindow::~MainWindow()

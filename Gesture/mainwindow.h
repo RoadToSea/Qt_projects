@@ -25,5 +25,7 @@ private:
     Ui::MainWindow *ui;
     SerialManager* serial;
     dataParse* parser;
+private slots:
+
 };
 #endif // MAINWINDOW_H
