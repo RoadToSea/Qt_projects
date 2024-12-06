@@ -28,7 +28,7 @@ void GraphWid::graphInit()
     x_Axis->setMin(0);
     x_Axis->setMax(GRAPH_MAX_X);
     y_Axis->setMin(-10);
-    y_Axis->setMax(10);
+    y_Axis->setMax(15);
 
     m_chart->addAxis(x_Axis,Qt::AlignBottom);
     m_chart->addAxis(y_Axis,Qt::AlignLeft);
@@ -109,6 +109,12 @@ void GraphWid::updateGraph()
 
 void GraphWid::slot_update(QMap<QString,QString>& data)
 {
+    double val;
+    if(!data.isEmpty())
+    {
+        QStringList list= data["i2cDrv acc\n\r"].split(",");
+        val = list[2].toDouble();
+    }
     // 添加新的数据点
     QString str = data["i2cDrv acc\n\r"];
     QStringList tmp = str.split(",");
