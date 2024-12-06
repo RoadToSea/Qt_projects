@@ -42,24 +42,24 @@ void TableWid::showEvent(QShowEvent *event)
     //qDebug() << "内容高度:" << contentHeight;
 
     // 模拟测试数据填充
-    QVector<QVector<double>> testData;
-    for (int i = 0; i < m_lines; ++i) {
-        QVector<double> rowData;
-        for (int j = 0; j < 8; ++j) {
-            rowData.append(i * 10 + j + 1); // 模拟数据
-        }
-        testData.append(rowData);
-    }
+    // QVector<QVector<double>> testData;
+    // for (int i = 0; i < m_lines; ++i) {
+    //     QVector<double> rowData;
+    //     for (int j = 0; j < 8; ++j) {
+    //         rowData.append(i * 10 + j + 1); // 模拟数据
+    //     }
+    //     testData.append(rowData);
+    // }
 
-    // 调用槽函数进行测试
-    slot_receiveData(testData);
+    // // 调用槽函数进行测试
+    // slot_receiveData(testData);
 }
 
 void TableWid::UIinit()
 {
 
     QStringList header;
-    header << "id" << "温度" << "湿度" << "大气压力" << "光照" << "X轴" << "Y轴" << "Z轴";
+    header << "X轴" << "Y轴" << "Z轴" << "温度" << "湿度" << "大气压力" << "光照" << "动作标签";
     ui->tableWidget->setColumnCount(header.size()); // 设置列数
     ui->tableWidget->setHorizontalHeaderLabels(header); // 设置表头
     //设置表头高度
@@ -76,7 +76,7 @@ void TableWid::UIinit()
     ui->totalPage->setText("0");
 }
 
-void TableWid::slot_receiveData(QVector<QVector<double>> &data)
+void TableWid::slot_receiveData(QVector<QVector<QString>> &data)
 {
     m_data = data;
     int rows = data.size();
@@ -92,7 +92,7 @@ void TableWid::slot_receiveData(QVector<QVector<double>> &data)
     for (int row = 0; row < rows; ++row) {
         ui->tableWidget->insertRow(row); // 插入新行
         for (int column = 0; column < columns; ++column) {
-            QTableWidgetItem *item = new QTableWidgetItem(QString::number(data[row][column]));
+            QTableWidgetItem *item = new QTableWidgetItem(data[row][column]);
             item->setTextAlignment(Qt::AlignCenter); // 数据居中对齐
             ui->tableWidget->setItem(row, column, item);
         }
@@ -122,6 +122,7 @@ void TableWid::slot_prePage()
     if(m_curPage<=1)
         return;
     //todo...
+
     emit sig_requestData(m_curPage-1,m_lines);
 }
 

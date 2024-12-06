@@ -2,6 +2,8 @@
 #define TABLEWID_H
 
 #include <QWidget>
+#include "sqliteoperator.h"
+
 
 namespace Ui {
 class TableWid;
@@ -21,12 +23,12 @@ private:
     int m_lines;
     int m_curPage;
     int m_totalPage;
-    QVector<QVector<double>> m_data;
+    QVector<QVector<QString>> m_data;
     void UIinit(void);
 signals:
     void sig_requestData(int page,int rows);
 public slots:
-    void slot_receiveData(QVector<QVector<double>>& data);
+    void slot_receiveData(QVector<QVector<QString>>& data);
 private slots:
     void slot_curPage(void);
     void slot_prePage(void);

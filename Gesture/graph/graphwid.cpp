@@ -112,13 +112,9 @@ void GraphWid::slot_update(QMap<QString,QString>& data)
     double val;
     if(!data.isEmpty())
     {
-        QStringList list= data["i2cDrv acc\n\r"].split(",");
-        val = list[2].toDouble();
+        val = data["accel_z"].toDouble();
     }
     // 添加新的数据点
-    QString str = data["i2cDrv acc\n\r"];
-    QStringList tmp = str.split(",");
-    double val = tmp[2].toDouble();
     m_points.append(QPointF(m_points.size(), val));  // 横坐标是点的数量，纵坐标是加速度值
     // 如果点数超过GRAPH_MAX_X个，删除最旧的点
     if (m_points.size() > GRAPH_MAX_X) {

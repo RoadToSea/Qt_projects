@@ -31,7 +31,7 @@ private:
     int m_interval;
 
 private slots:
-    void updateGraph();
+    void updateGraph(void);
     void slot_setUpInterVal(void);
 public slots:
     void slot_update(QMap<QString,QString>& data);

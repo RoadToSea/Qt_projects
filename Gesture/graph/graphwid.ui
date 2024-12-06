@@ -47,7 +47,7 @@
     </spacer>
    </item>
    <item row="1" column="1">
-    <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,2,1,2">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,2,2,2">
      <item>
       <widget class="QLabel" name="label">
        <property name="font">

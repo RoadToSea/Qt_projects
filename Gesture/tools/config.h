@@ -32,7 +32,8 @@
 //datastorethread
 //默认一次性储存个数(到达这个数量才存入数据库)
 #define MIN_STORE       30
-
+//最大缓存多少个数据
+#define MAX_CACHE       50
 
 //datastorethread
 

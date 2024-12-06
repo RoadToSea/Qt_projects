@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "serialmanager.h"
 #include "dataparse.h"
-
+#include "datastorethread.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -25,7 +25,10 @@ private:
     Ui::MainWindow *ui;
     SerialManager* serial;
     dataParse* parser;
+    std::shared_ptr<dataStoreThread> worker;
 private slots:
+    void slot_startStore();
+    void slot_stopStore();
 
 };
 #endif // MAINWINDOW_H

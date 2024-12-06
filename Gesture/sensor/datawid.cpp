@@ -54,22 +54,35 @@ void DataWid::setData(QString &temp, QString &humi, QString &press, QString &lig
 
 void DataWid::parseMsg(const QString &command, const QString &val)
 {
-    if(command == "i2cDrv temp\n\r")
+    if(command == "accel_x")
     {
-        setTempAndHumi(val);
+        ui->XLabel->setText(val);
     }
-    else if(command == "i2cDrv press\n\r")
+    else if(command == "accel_y")
     {
-        setPress(val);
+        ui->YLabel->setText(val);
     }
-    else if(command == "i2cDrv acc\n\r")
+    else if(command == "accel_z")
     {
-        setAcc(val);
+        ui->ZLabel->setText(val);
     }
-    else if(command == "i2cDrv light\n\r")
+    else if(command == "temperature")
     {
-        setLight(val);
+        ui->tempLabel->setText(val);
     }
+    else if(command == "humidity")
+    {
+        ui->humiLabel->setText(val);
+    }
+    else if(command == "pressure")
+    {
+        ui->pressLabel->setText(val);
+    }
+    else if(command == "light")
+    {
+        ui->lightLabel->setText(val);
+    }
+
 }
 
 void DataWid::slot_dataReceive(QMap<QString, QString> &data)

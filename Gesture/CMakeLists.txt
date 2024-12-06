@@ -39,6 +39,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         tools/dataparse.h tools/dataparse.cpp
         data/datastorethread.h data/datastorethread.cpp
         data/sqliteoperator.h data/sqliteoperator.cpp
+        res.qrc
 
     )
 

@@ -13,11 +13,14 @@ public:
 private:
     QMap<QString,QString> m_receive;
     QMap<QString,QString> m_data;
+    QString m_acLabel;
     QRegularExpression* expression;
 signals:
     void sig_parseOver(QMap<QString,QString>& data);
 public slots:
     void slot_parseData(QMap<QString,QString>& map);
+    void slot_acLabel(const QString& text);
+
 };
 
 #endif // DATAPARSE_H
