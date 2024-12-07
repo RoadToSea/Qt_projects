@@ -18,6 +18,8 @@ public:
     void insertData(QVector<QString>& data);
     //插入多行数据
     void insertDatas(QVector<QVector<QString>>& datas);
+    //查询总数据条数
+    unsigned getTotalNum(void);
     //通过id范围查询数据
     QVector<QVector<QString>> querydataById(int start,int end);
 

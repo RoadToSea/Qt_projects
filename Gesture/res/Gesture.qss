@@ -1,0 +1,7 @@
+MainWindow{
+    background-color: rgb(249, 249, 249);
+}
+
+DataWid{
+    background-color: rgb(46, 47, 48);
+}

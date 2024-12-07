@@ -1,5 +1,6 @@
 #include "controlwid.h"
 #include "ui_controlwid.h"
+#include "sqliteoperator.h"
 
 ControlWid::ControlWid(QWidget *parent)
     : QWidget(parent)
@@ -9,7 +10,7 @@ ControlWid::ControlWid(QWidget *parent)
 
     //更改动作标签
     connect(ui->label_Combox,&QComboBox::currentIndexChanged,this,&ControlWid::slot_acLabel);
-    //存入数据库
+    //存入数据库按钮
     connect(ui->storeBtn,&QPushButton::clicked,this,&ControlWid::slot_storeFlag);
 }
 
@@ -48,10 +49,13 @@ void ControlWid::slot_storeFlag()
     //如果是启动存入数据库
     if(m_status)
     {
+        qDebug()<<"开启存入数据库";
         emit sig_startStore();
     }
     else
     {
+        qDebug()<<"停止存入数据库";
         emit sig_stopStore();
     }
 }
+

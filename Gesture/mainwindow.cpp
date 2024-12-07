@@ -26,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
     //是否存入数据库
     connect(ui->controlWid,&ControlWid::sig_startStore,this,&MainWindow::slot_startStore);
     connect(ui->controlWid,&ControlWid::sig_stopStore,this,&MainWindow::slot_stopStore);
+    //读取数据
+
 
     //页面跳转按钮
     connect(ui->sensorPage_Btn,&QPushButton::clicked,this,[&](){
@@ -36,6 +38,8 @@ MainWindow::MainWindow(QWidget *parent)
     });
 
     serial->start();
+    SqliteOperator::getInstance()->createTable("SensorData");
+
 }
 
 MainWindow::~MainWindow()
@@ -51,6 +55,7 @@ void MainWindow::slot_startStore()
         worker = std::make_shared<dataStoreThread>();
     }
     worker->setStoreFlag(true);
+    worker->start();
 }
 
 void MainWindow::slot_stopStore()

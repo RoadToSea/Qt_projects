@@ -5,8 +5,7 @@
 dataStoreThread::dataStoreThread(QObject *parent)
     : QThread{parent},m_storeFlag(false)
 {
-
-
+    qDebug()<<"线程被创建";
 }
 
 
@@ -20,16 +19,31 @@ void dataStoreThread::setStoreFlag(bool bl)
 
 void dataStoreThread::run()
 {
-    //如果不允许存储就等待信号
-    if(!m_storeFlag)
+    while (true) // 循环检查条件
     {
-        m_condition.wait(&m_mutex);
-    }
-    else
-    {
-        SqliteOperator::getInstance()->insertDatas(m_data);
+        m_mutex.lock();
+        if (!m_storeFlag)
+        {
+            //qDebug() << "等待数据";
+            m_condition.wait(&m_mutex);
+        }
+        else if (!m_data.isEmpty())
+        {
+            auto data = m_data;
+            m_data.clear();
+            m_mutex.unlock();
+
+            //qDebug() << "处理数据";
+            SqliteOperator::getInstance()->insertDatas(data);
+        }
+        else
+        {
+            m_mutex.unlock();
+            QThread::msleep(100); // 延迟一小段时间，避免高占用 CPU
+        }
     }
 }
+
 
 void dataStoreThread::slot_ReceiveSensor(QMap<QString,QString>& data)
 {
@@ -52,7 +66,7 @@ void dataStoreThread::slot_ReceiveSensor(QMap<QString,QString>& data)
     //防止数据过多占用过多内存
     if(m_data.size()>=MAX_CACHE)
     {
-
+        m_data.clear();
     }
 }
 

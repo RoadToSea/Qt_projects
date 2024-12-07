@@ -23,8 +23,12 @@ private:
     int m_lines;
     int m_curPage;
     int m_totalPage;
+    int m_totalNum;
+    QTimer* m_timer;
     QVector<QVector<QString>> m_data;
     void UIinit(void);
+    void setCurPage(int page);
+    void updateCurPage(void);
 signals:
     void sig_requestData(int page,int rows);
 public slots:
@@ -35,6 +39,7 @@ private slots:
     void slot_nextPage(void);
     void slot_firstPage(void);
     void slot_lastPage(void);
+    void slot_getTotalPage(void);
 };
 
 #endif // TABLEWID_H

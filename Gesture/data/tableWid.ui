@@ -36,7 +36,11 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,1">
        <item>
-        <widget class="QLineEdit" name="inputPage"/>
+        <widget class="QLineEdit" name="inputPage">
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="label">

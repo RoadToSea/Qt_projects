@@ -28,7 +28,7 @@ void GraphWid::graphInit()
     x_Axis->setMin(0);
     x_Axis->setMax(GRAPH_MAX_X);
     y_Axis->setMin(-10);
-    y_Axis->setMax(15);
+    y_Axis->setMax(20);
 
     m_chart->addAxis(x_Axis,Qt::AlignBottom);
     m_chart->addAxis(y_Axis,Qt::AlignLeft);
@@ -123,7 +123,7 @@ void GraphWid::slot_update(QMap<QString,QString>& data)
         {
             m_points[i].setX(i+1);
         }
-        qDebug()<<"point:"<<m_points[GRAPH_MAX_X-1].x()<<","<<m_points[GRAPH_MAX_X-1].y();
+        //qDebug()<<"point:"<<m_points[GRAPH_MAX_X-1].x()<<","<<m_points[GRAPH_MAX_X-1].y();
     }
 
     //如果是根据输入数据的频率更新
