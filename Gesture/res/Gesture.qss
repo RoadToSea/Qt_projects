@@ -1,7 +1,20 @@
-MainWindow{
-    background-color: rgb(249, 249, 249);
+QStackedWidget{
+
+    color : white;
 }
 
-DataWid{
+QWidget {
+    color:white;
+    background-color: rgb(46, 47, 48);
+}
+
+#DataWid{
+    color:white;
+    background-color: rgb(46, 47, 48);
+
+}
+
+QStackedWidget GraphWid{
+    border : 2px solid black;
     background-color: rgb(46, 47, 48);
 }

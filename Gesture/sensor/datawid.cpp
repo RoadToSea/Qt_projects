@@ -6,6 +6,7 @@ DataWid::DataWid(QWidget *parent)
     , ui(new Ui::DataWid)
 {
     ui->setupUi(this);
+    setObjectName("DataWid");
 }
 
 DataWid::~DataWid()

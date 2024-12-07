@@ -2,6 +2,8 @@
 
 #include <QApplication>
 #include <QFile>
+#include "graph/graphwid.h"
+
 
 void applyQss(const QString qssFilePath, QApplication &app) ;
 
