@@ -12,11 +12,14 @@ QMap<QString,QString> commandTemplate=
         {"i2cDrv light\n\r",""}
 };
 
+QMap<QString,QString> fastCommand = {
+    {"i2cDrv acc\n\r",""}
+};
 
 SerialManager::SerialManager(const QString &serialName, QString lineBreak, QSerialPort::BaudRate baudRate,
                              QSerialPort::DataBits dataBits, QSerialPort::Parity parity, QSerialPort::StopBits stopBits,
                              QSerialPort::FlowControl flowControl, QObject *parent):QObject(parent),commandIndex(0)
-    ,m_commands(commandTemplate),m_linesBreak(lineBreak),m_count(0),m_sample(0)
+    ,m_commands(commandTemplate),m_linesBreak(lineBreak),m_count(0),m_sample(0),fastModeFlag(false)
 {
     // 创建 QSerialPort 对象并设置端口名称
     m_serial = new QSerialPort(serialName, this);
@@ -78,6 +81,33 @@ void SerialManager::registerCommand(QMap<QString, QString> &map)
     m_commands = map;
 }
 
+void SerialManager::slot_fastModeOn()
+{
+
+    fastModeFlag = true;
+    m_commands = fastCommand;
+    commandIndex = 0;
+    m_count=0;
+    if(m_sampleTimer->isActive())
+        m_sampleTimer->stop();
+    m_serial->clear();
+    sendNextCommand();
+}
+
+void SerialManager::slot_fastModeOFF()
+{
+    fastModeFlag = false;
+    m_commands = commandTemplate;
+    commandIndex = 0;
+    m_count=0;
+    if(m_sampleTimer->isActive())
+        m_sampleTimer->stop();
+    QThread::msleep(150);
+    m_serial->clear();
+    sendNextCommand();
+
+}
+
 void SerialManager::readData()
 {
 
@@ -86,14 +116,14 @@ void SerialManager::readData()
     //QString str2 = m_serial->readLine();
     QByteArray receivedData = m_serial->readAll();
     QString reply(receivedData);
-    m_serial->clear(QSerialPort::Input);
-    //qDebug()<<"readline1:"<<str1;
-    //qDebug()<<"readline2:"<<str2;
-    //qDebug()<<"readline3:"<<reply;
+    //m_serial->clear(QSerialPort::Input);
 
     auto iter = m_commands.begin();
     std::advance(iter,commandIndex);
     m_commands[iter.key()] = reply;
+
+    qDebug()<<"readline2:"<<iter.key();
+    qDebug()<<"readline3:"<<reply;
 
     commandIndex++;
     if(commandIndex>=m_commands.size())

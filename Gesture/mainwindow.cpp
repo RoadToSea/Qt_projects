@@ -12,6 +12,12 @@ MainWindow::MainWindow(QWidget *parent)
     parser = new dataParse();
     worker = std::make_shared<dataStoreThread>();
 
+
+    //连接开启关闭高速采样模式
+    connect(ui->controlWid,&ControlWid::sig_fastModeOn,serial,&SerialManager::slot_fastModeOn);
+    connect(ui->controlWid,&ControlWid::sig_fastModeOFF,serial,&SerialManager::slot_fastModeOFF);
+
+    //连接接收数据和数据解析
     connect(serial,&SerialManager::sig_dataReady,parser,&dataParse::slot_parseData);
     //连接数据解析完成和显示
     connect(parser,&dataParse::sig_parseOver,ui->dataWid,&DataWid::slot_dataReceive);

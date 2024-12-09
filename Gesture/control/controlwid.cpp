@@ -4,7 +4,7 @@
 
 ControlWid::ControlWid(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::ControlWid),m_status(false)
+    , ui(new Ui::ControlWid),m_storeStatus(false),m_fastStatus(false)
 {
     ui->setupUi(this);
 
@@ -12,6 +12,8 @@ ControlWid::ControlWid(QWidget *parent)
     connect(ui->label_Combox,&QComboBox::currentIndexChanged,this,&ControlWid::slot_acLabel);
     //存入数据库按钮
     connect(ui->storeBtn,&QPushButton::clicked,this,&ControlWid::slot_storeFlag);
+    //开启高速模式
+    connect(ui->fastBtn,&QPushButton::clicked,this,&ControlWid::slot_fastBtn);
 }
 
 ControlWid::~ControlWid()
@@ -45,9 +47,9 @@ void ControlWid::slot_acLabel(int index)
 
 void ControlWid::slot_storeFlag()
 {
-    m_status = !m_status;
+    m_storeStatus = !m_storeStatus;
     //如果是启动存入数据库
-    if(m_status)
+    if(m_storeStatus)
     {
         qDebug()<<"开启存入数据库";
         emit sig_startStore();
@@ -57,5 +59,19 @@ void ControlWid::slot_storeFlag()
         qDebug()<<"停止存入数据库";
         emit sig_stopStore();
     }
+}
+
+void ControlWid::slot_fastBtn()
+{
+    m_fastStatus = !m_fastStatus;
+    if(m_fastStatus)
+    {
+        emit sig_fastModeOn();
+    }
+    else
+    {
+        emit sig_fastModeOFF();
+    }
+
 }
 

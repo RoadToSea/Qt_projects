@@ -40,11 +40,14 @@ private:
     QString m_linesBreak;
     QMap<QString,QString> m_commands;
     int commandIndex;
+    bool fastModeFlag ;
 
 signals:
     void sig_dataReady(QMap<QString,QString>& map);
     void sig_sampleReady(unsigned& sample);
-
+public slots:
+    void slot_fastModeOn(void);
+    void slot_fastModeOFF(void);
 private slots:
     void readData(void);
     void sendNextCommand(void);
