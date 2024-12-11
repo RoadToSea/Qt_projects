@@ -40,6 +40,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         data/datastorethread.h data/datastorethread.cpp
         data/sqliteoperator.h data/sqliteoperator.cpp
         res.qrc
+        test.py
+        tools/switchbtn.h tools/switchbtn.cpp
+        data/autoclosedialog.h data/autoclosedialog.cpp data/autoclosedialog.ui
+
 
     )
 

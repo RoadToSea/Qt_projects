@@ -1,13 +1,14 @@
 #ifndef DATAWID_H
 #define DATAWID_H
 
+#include <QFrame>
 #include <QWidget>
 
 namespace Ui {
 class DataWid;
 }
 
-class DataWid : public QWidget
+class DataWid : public QFrame
 {
     Q_OBJECT
 
@@ -18,7 +19,8 @@ public:
     void setPress(const QString& val);
     void setLight(const QString& val);
     void setAcc(const QString& val);
-
+protected:
+    //void paintEvent(QPaintEvent *event) override;
 private:
     Ui::DataWid *ui;
     QMap<QString,QString> m_data;

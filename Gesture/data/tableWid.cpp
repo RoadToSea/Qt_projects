@@ -4,17 +4,21 @@
 #include "config.h"
 #include "sqliteoperator.h"
 
+#include <AutoCloseDialog.h>
+#include <qfile.h>
+
 
 TableWid::TableWid(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::TableWid),m_curPage(0),m_totalPage(-1),m_lines(0),m_totalNum(0)
+    , ui(new Ui::TableWid),m_curPage(1),m_totalPage(-1),m_lines(0),m_totalNum(0)
 {
     ui->setupUi(this);
+    this->setAttribute(Qt::WA_StyledBackground, true); // 启用 QSS
     UIinit();
 
+    connect(ui->exportBtn,&QPushButton::clicked,this,&TableWid::slot_exportData);
+
     m_timer = new QTimer();
-
-
     //开启定时器,1秒查询一次
     m_timer->start(1000);
 }
@@ -71,9 +75,15 @@ void TableWid::UIinit()
     // 设置列宽填满表格
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
-
+    // 创建一个 QFont 对象，设置字体大小和字体类型
+    QFont font("Arial", 12);  // 字体为 Arial，大小为 11pt
+    font.setWeight(QFont::Bold);
+    // 应用字体到 QTableWidget
+    ui->tableWidget->horizontalHeader()->setFont(font);
     //设置初始页数
     ui->totalPage->setText("0");
+
+
 }
 
 void TableWid::setCurPage(int page)
@@ -191,6 +201,64 @@ void TableWid::slot_getTotalPage()
     m_totalNum = SqliteOperator::getInstance()->getTotalNum();
     m_totalPage = m_totalNum/m_lines;
     ui->totalPage->setText(QString::number(m_totalPage));
+}
+
+void TableWid::slot_exportData()
+{
+    qDebug()<<"m_totalNum:"<<m_totalNum;
+    qDebug()<<"m_lines:"<<m_lines;
+    //如果没有数据就不做处理
+    if(m_totalNum<=0)
+        return;
+    //每次取出的数量,默认为3页数据
+    int perMount = m_totalNum<3*m_lines?m_totalNum:3*m_lines;
+    //当前取出的数量
+    int totalMount = 0;
+    QVector<QVector<QString>> data;
+
+    //打开文件
+    QFile output("../../output.txt");
+    if(!output.open(QFile::WriteOnly|QFile::Text))
+    {
+        AutoCloseDialog* dialog = new AutoCloseDialog(this);
+        dialog->setMsg("文件打开失败");
+        //qDebug()<<"文件打开失败";
+        return ;
+    }
+    //文件输入流
+    QTextStream ts(&output);
+
+    while(totalMount<m_totalNum)
+    {
+        qDebug()<<"totalMount:"<<totalMount;
+        if(totalMount+perMount>m_totalNum)
+        {
+            perMount = m_totalNum-totalMount;
+        }
+
+        data=SqliteOperator::getInstance()->queryAccById(totalMount,totalMount+perMount);
+
+        for(const QVector<QString>& row:data)
+        {
+            if(row.size()==2)
+            {
+                ts<<row.at(0)<<","<<row.at(1)<<'\n';
+            }
+            else
+            {
+                AutoCloseDialog* dialog = new AutoCloseDialog(this);
+                dialog->setMsg("出数据:读取数据错误");
+                //qDebug()<<"导出数据:读取数据错误";
+            }
+        }
+
+        totalMount +=perMount;
+    }
+
+    output.close();
+    AutoCloseDialog* dialog = new AutoCloseDialog(this);
+    dialog->setMsg("文件导出成功");
+    //qDebug()<<"文件导出成功";
 }
 
 

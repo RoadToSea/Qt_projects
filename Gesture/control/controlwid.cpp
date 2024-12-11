@@ -7,6 +7,8 @@ ControlWid::ControlWid(QWidget *parent)
     , ui(new Ui::ControlWid),m_storeStatus(false),m_fastStatus(false)
 {
     ui->setupUi(this);
+    UIinit();
+    this->setAttribute(Qt::WA_StyledBackground, true); // 启用 QSS
 
     //更改动作标签
     connect(ui->label_Combox,&QComboBox::currentIndexChanged,this,&ControlWid::slot_acLabel);
@@ -20,6 +22,14 @@ ControlWid::~ControlWid()
 {
     delete ui;
 }
+
+void ControlWid::UIinit()
+{
+    ui->storeBtn->setSource(":/res/drawable/switchOn.png",":/res/drawable/switchOff.png");
+    ui->fastBtn->setSource(":/res/drawable/switchOn.png",":/res/drawable/switchOff.png");
+
+}
+
 
 void ControlWid::slot_acLabel(int index)
 {

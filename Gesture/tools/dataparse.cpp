@@ -26,7 +26,9 @@ void dataParse::slot_parseData(QMap<QString, QString> &map)
         {
             QStringList tmp = iter.value().split(",");
             if(tmp.size()!=2)
-                return;
+            {
+                break;
+            }
             m_data["temperature"] = tmp[0];
             m_data["humidity"] = tmp[1];
         }
@@ -38,7 +40,7 @@ void dataParse::slot_parseData(QMap<QString, QString> &map)
         {
             QStringList tmp = iter.value().split(",");
             if(tmp.size()!=3)
-                return;
+                break;
             m_data["accel_x"] = tmp[0];
             m_data["accel_y"] = tmp[1];
             m_data["accel_z"] = tmp[2];

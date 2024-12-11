@@ -49,10 +49,26 @@ void dataStoreThread::slot_ReceiveSensor(QMap<QString,QString>& data)
 {
     QVector<QString> tmp(8,"");
     int i=0;
+    //map中的数据是无序的,不能直接通过索引访问
     for(auto iter = data.begin();iter!=data.end();iter++)
     {
-        tmp[i] = iter.value();
-        ++i;
+        if (iter.key() == "accel_x") {
+            tmp[0] = iter.value();
+        } else if (iter.key() == "accel_y") {
+            tmp[1] = iter.value();
+        } else if (iter.key() == "accel_z") {
+            tmp[2] = iter.value();
+        } else if (iter.key() == "temperature") {
+            tmp[3] = iter.value();
+        } else if (iter.key() == "humidity") {
+            tmp[4] = iter.value();
+        } else if (iter.key() == "pressure") {
+            tmp[5] = iter.value();
+        } else if (iter.key() == "light") {
+            tmp[6] = iter.value();
+        } else if (iter.key() == "action_label") {
+            tmp[7] = iter.value();
+        }
     }
 
     //取出数据添加到缓存中

@@ -22,7 +22,8 @@ public:
     unsigned getTotalNum(void);
     //通过id范围查询数据
     QVector<QVector<QString>> querydataById(int start,int end);
-
+    //通过id范围查询加速度数据
+    QVector<QVector<QString>> queryAccById(int start,int end);
 
 private:
     QSqlDatabase m_database;

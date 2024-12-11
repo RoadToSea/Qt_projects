@@ -58,11 +58,18 @@
         <item row="0" column="0" colspan="2">
          <widget class="GraphWid" name="graphWid" native="true"/>
         </item>
-        <item row="1" column="0">
-         <widget class="DataWid" name="dataWid" native="true"/>
-        </item>
         <item row="1" column="1">
          <widget class="ControlWid" name="controlWid" native="true"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="DataWid" name="dataWid">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -97,12 +104,6 @@
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>DataWid</class>
-   <extends>QWidget</extends>
-   <header>../../../code/Gesture/sensor/datawid.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>ControlWid</class>
    <extends>QWidget</extends>
    <header>../../../code/Gesture/control/controlwid.h</header>
@@ -112,6 +113,12 @@
    <class>TableWid</class>
    <extends>QWidget</extends>
    <header>../../../code/Gesture/data/tableWid.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DataWid</class>
+   <extends>QFrame</extends>
+   <header>../../../code/Gesture/sensor/datawid.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

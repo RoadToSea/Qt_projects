@@ -40,6 +40,7 @@ private slots:
     void slot_firstPage(void);
     void slot_lastPage(void);
     void slot_getTotalPage(void);
+    void slot_exportData(void);
 };
 
 #endif // TABLEWID_H

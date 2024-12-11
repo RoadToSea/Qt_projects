@@ -3,6 +3,7 @@
 #include <QApplication>
 #include <QFile>
 #include "graph/graphwid.h"
+#include "sensor/datawid.h"
 
 
 void applyQss(const QString qssFilePath, QApplication &app) ;
@@ -13,8 +14,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
-    applyQss(":/res/Gesture.qss",a);
+    //DataWid w;
     w.show();
+    applyQss(":/res/Gesture.qss",a);
     return a.exec();
 }
 

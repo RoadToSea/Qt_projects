@@ -19,6 +19,7 @@ private:
     Ui::ControlWid *ui;
     bool m_storeStatus;
     bool m_fastStatus;
+    void UIinit(void);
 
 signals:
     void sig_acLabelChange(const QString& label);

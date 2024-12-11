@@ -126,7 +126,7 @@ void SqliteOperator::insertDatas(QVector<QVector<QString> > &datas)
     query.prepare(intend);
 
     //填入数据
-
+    qDebug()<<datas;
     for(QVector<QString> iter:datas)
     {
         if(iter.size()!=8)
@@ -223,6 +223,40 @@ QVector<QVector<QString>> SqliteOperator::querydataById(int start, int end)
         result.append(row);
     }
 
+    return result;
+}
+
+QVector<QVector<QString> > SqliteOperator::queryAccById(int start, int end)
+{
+    QVector<QVector<QString>> result;
+    if(!m_database.isOpen())
+    {
+        qDebug()<<"读取数据:数据库未打开";
+        return result;
+    }
+
+    QSqlQuery query(m_database);
+    static const QString intend("SELECT action_label,accel_z "
+                                "FROM SensorData WHERE id >= ? AND id <= ?");
+
+    query.prepare(intend);
+
+    query.bindValue(0,start);
+    query.bindValue(1,end);
+
+    if(!query.exec())
+    {
+        qDebug()<<"读出数据语句执行失败"<<query.lastError().text();
+        return result;
+    }
+
+    while(query.next())
+    {
+        QVector<QString> row;
+        row.append(query.value(0).toString());
+        row.append(query.value(1).toString());
+        result.append(row);
+    }
     return result;
 }
 

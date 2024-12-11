@@ -112,8 +112,6 @@ void SerialManager::readData()
 {
 
     // 接收当前命令的答复
-    //QString str1 =m_serial->readLine();
-    //QString str2 = m_serial->readLine();
     QByteArray receivedData = m_serial->readAll();
     QString reply(receivedData);
     //m_serial->clear(QSerialPort::Input);
@@ -122,8 +120,8 @@ void SerialManager::readData()
     std::advance(iter,commandIndex);
     m_commands[iter.key()] = reply;
 
-    qDebug()<<"readline2:"<<iter.key();
-    qDebug()<<"readline3:"<<reply;
+    //qDebug()<<"readline1:"<<iter.key();
+    //qDebug()<<"readline2:"<<reply;
 
     commandIndex++;
     if(commandIndex>=m_commands.size())

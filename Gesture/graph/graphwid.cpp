@@ -8,6 +8,8 @@ GraphWid::GraphWid(QWidget *parent)
     , ui(new Ui::GraphWid),m_interval(-1)
 {
     ui->setupUi(this);
+    this->setAttribute(Qt::WA_StyledBackground, true); // 启用 QSS
+
     m_chart = new QChart();
     m_series = new QSplineSeries();
     x_Axis = new QValueAxis(this);

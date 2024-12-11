@@ -1,12 +1,16 @@
 #include "datawid.h"
 #include "ui_datawid.h"
 
+#include <QPainter>
+#include <QStyleOption>
+
 DataWid::DataWid(QWidget *parent)
-    : QWidget(parent)
+    : QFrame(parent)
     , ui(new Ui::DataWid)
 {
     ui->setupUi(this);
-    setObjectName("DataWid");
+    this->setObjectName("datawid");
+    this->setAttribute(Qt::WA_StyledBackground, true); // 启用 QSS
 }
 
 DataWid::~DataWid()
@@ -38,6 +42,16 @@ void DataWid::setAcc(const QString &val)
     ui->YLabel->setText(vals[1]);             // Y轴
     ui->ZLabel->setText(vals[2]);             // Z轴
 }
+
+// void DataWid::paintEvent(QPaintEvent *event)
+// {
+//     Q_UNUSED(event);
+
+//     QStyleOption opt;
+//     opt.initFrom(this);
+//     QPainter p(this);
+//     style()->drawPrimitive(QStyle::PE_Widget, &opt, &p, this);
+// }
 
 
 void DataWid::setData(QString &temp, QString &humi, QString &press, QString &light, QString &X_, QString &Y_, QString &Z_)
