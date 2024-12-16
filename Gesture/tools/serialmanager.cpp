@@ -31,12 +31,6 @@ SerialManager::SerialManager(const QString &serialName, QString lineBreak, QSeri
     m_serial->setStopBits(stopBits);
     m_serial->setFlowControl(flowControl);
 
-    // 打开串口（读写模式）
-    // if (!m_serial->open(QIODevice::ReadWrite)) {
-    //     qDebug()<<"无法打开串口";
-    //     return;  // 如果打开失败，直接返回
-    // }
-
     connect(m_serial,&QSerialPort::readyRead,this,&SerialManager::readData);
 
     //初始化采样率定时器

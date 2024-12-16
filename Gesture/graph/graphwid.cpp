@@ -30,7 +30,7 @@ void GraphWid::graphInit()
     x_Axis->setMin(0);
     x_Axis->setMax(GRAPH_MAX_X);
     y_Axis->setMin(-10);
-    y_Axis->setMax(20);
+    y_Axis->setMax(30);
 
     m_chart->addAxis(x_Axis,Qt::AlignBottom);
     m_chart->addAxis(y_Axis,Qt::AlignLeft);
@@ -140,6 +140,7 @@ void GraphWid::slot_update(QMap<QString,QString>& data)
     }
 }
 
+//设置更新间隔
 void GraphWid::slot_setUpInterVal()
 {
     int index = ui->comboBox->currentIndex();

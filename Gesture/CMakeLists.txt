@@ -17,6 +17,8 @@ file(GLOB control "./control/*.*")
 file(GLOB data "./data/*.*")
 file(GLOB sensor "./sensor/*.*")
 file(GLOB tools "./tools/*.*")
+file(GLOB predict "./predict/*.*")
+file(GLOB_RECURSE model_files "./model/*")
 
 set(PROJECT_SOURCES
         main.cpp
@@ -35,6 +37,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${data}
         ${sensor}
         ${tools}
+        ${predict}
         tools/config.h
         tools/dataparse.h tools/dataparse.cpp
         data/datastorethread.h data/datastorethread.cpp
@@ -43,13 +46,15 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         test.py
         tools/switchbtn.h tools/switchbtn.cpp
         data/autoclosedialog.h data/autoclosedialog.cpp data/autoclosedialog.ui
-
+        predict/predict.h predict/predict.cpp
+        summary.md
 
     )
 
 target_include_directories(Gesture PRIVATE "./control"
                             "./data"    "./graph"
-                            "./sensor"  "./tools")
+                            "./sensor"  "./tools"
+                            "./predict")
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Gesture APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)

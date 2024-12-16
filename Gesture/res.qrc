@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>res/Gesture.qss</file>
-        <file>output</file>
         <file>res/drawable/downArrow.png</file>
         <file>res/drawable/switchOff.png</file>
         <file>res/drawable/switchOn.png</file>
+        <file>output.txt</file>
     </qresource>
 </RCC>

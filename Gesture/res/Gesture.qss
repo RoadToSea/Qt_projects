@@ -1,10 +1,13 @@
-
 QLabel{
  font: 11pt;
 }
 
 QPushButton{
  font: 11pt;
+}
+
+QMainWindow{
+    background-color: rgb(239, 241, 245);
 }
 
 DataWid {
@@ -47,11 +50,7 @@ ControlWid switchBtn{
 }
 
 GraphWid {
-    background: qlineargradient(
-        spread:pad, x1:0, y1:0, x2:1, y2:1,
-        stop:0 rgba(253, 253, 253, 255),
-        stop:1 rgba(240, 240, 240, 255)
-    );
+    background: rgb(255,255,255);
     border-radius: 15px;
     border: 8px solid rgb(178, 181, 187);          /* 边框颜色 */
     margin-left: 15px;

@@ -1,4 +1,7 @@
-# This Python file uses the following encoding: utf-8
+import matplotlib.pyplot as plt
 
-if __name__ == "__main__":
-    print("hello")
+def temperImg():
+    plt.plot([1, 2, 1, 2])
+    plt.show()
+
+temperImg()
