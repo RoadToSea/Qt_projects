@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>rsc/directory.png</file>
+        <file>rsc/style.qss</file>
+        <file>rsc/help.png</file>
+        <file>rsc/help.md</file>
+    </qresource>
+</RCC>

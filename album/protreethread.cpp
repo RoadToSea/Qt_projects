@@ -125,7 +125,7 @@ void proTreeThread::importToPro(QTreeWidget* self,QTreeWidgetItem *root,QTreeWid
             auto* item = new ProTreeItem(root,parent,file.fileName(),tmpPath,TreeItemPic);
             item->setData(0,Qt::DisplayRole,file.fileName());
             item->setData(0,Qt::DecorationRole,QIcon(":/res/icon/图片.svg"));
-            item->setData(9,Qt::ToolTipRole,tmpPath);
+            item->setData(0,Qt::ToolTipRole,tmpPath);
             //构造双向链表方便后续访问
             if(pre_item!=nullptr)
             {

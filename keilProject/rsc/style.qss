@@ -1,0 +1,76 @@
+QLineEdit {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 6px;
+    color: #202020;
+}
+
+QLineEdit:focus {
+    border: 1px solid #0078d4;
+    background-color: #ffffff;
+}
+
+QPushButton {
+    background-color: transparent;
+    color: #202020;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 32px;
+}
+
+QPushButton:hover {
+    background-color: #e5e5e5;
+}
+
+QPushButton:pressed {
+    background-color: #d5d5d5;
+}
+
+QPushButton#importBtn {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 8px 16px;
+}
+
+QPushButton#importBtn:hover {
+    background-color: #106ebe;
+}
+
+QPushButton#importBtn:pressed {
+    background-color: #005a9e;
+}
+
+QLabel#tips {
+    color: #d13438;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+QTextEdit {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 6px;
+    color: #202020;
+}
+
+PjTree {
+    background-color: #f8f8f8;
+    color: #202020;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+PjTreeWidget {
+    border: none;
+    border-radius: 4px;
+    background-color:  #f8f8f8;
+    padding: 4px;
+    font-size: 13pt;
+}
+

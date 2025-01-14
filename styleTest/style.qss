@@ -1,0 +1,8 @@
+myWidget{
+
+    background-color:black;
+}
+
+myWidget QLabel{
+    color:white;
+}
